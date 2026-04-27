@@ -3,127 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Rental Name</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Base Styles */
-    * { box-sizing: border-box; margin:0; padding:0; font-family: 'Roboto', sans-serif; }
-    body { line-height: 1.6; color: #333; }
-
-    /* Header */
-    header {
-      background: #1e3d59;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 { margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; }
-
-    /* Navigation */
-    nav { margin-top: 1rem; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    /* Hero Section */
-    .hero {
-      background: url('images/hero.jpg') center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    }
-    .hero h2 { font-size: 2.5rem; text-align: center; }
-
-    /* Main Content */
-    main { padding: 2rem 1rem; max-width: 1200px; margin: auto; }
-
-    /* Sections */
-    section { margin-bottom: 3rem; }
-    h2 { margin-bottom: 1rem; color: #1e3d59; }
-
-    /* Gallery */
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .gallery img { width: 100%; border-radius: 8px; }
-
-    /* Amenities */
-    .amenities { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .amenity { background: #f0f0f0; padding: 1rem; border-radius: 8px; flex: 1 1 200px; }
-
-    /* Contact Form */
-    form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: auto; }
-    input, textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; width: 100%; }
-    button { background: #1e3d59; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-size: 1rem; }
-    button:hover { background: #16334a; }
-
-    /* Footer */
-    footer { background: #1e3d59; color: white; text-align: center; padding: 1.5rem 1rem; }
-    footer a { color: #ffd700; text-decoration: none; }
-  </style>
+  <title>My Grand Lake Getaway | Grand Lake, Colorado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Your Rental Name</h1>
-    <p>Cozy retreat in [Location]</p>
-    <nav>
-      <a href="#gallery">Gallery</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">My Grand Lake Getaway</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#availability">Availability</a></li>
+        <li><a href="#contact" class="nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Hero -->
   <section class="hero">
-    <h2>Welcome to Your Home Away from Home</h2>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <p class="hero-tagline">Grand Lake, Colorado</p>
+      <h1>Your Mountain Escape Awaits</h1>
+      <p class="hero-sub">Just minutes from Rocky Mountain National Park's western entrance</p>
+      <a href="#contact" class="btn btn-hero">Check Availability</a>
+    </div>
   </section>
 
-  <main>
-    <!-- Gallery -->
-    <section id="gallery">
-      <h2>Photo Gallery</h2>
-      <div class="gallery">
-        <img src="images/photo1.jpg" alt="Living Room">
-        <img src="images/photo2.jpg" alt="Bedroom">
-        <img src="images/photo3.jpg" alt="Kitchen">
-        <img src="images/photo4.jpg" alt="View">
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-inner about-inner">
+      <div class="about-text">
+        <span class="section-label">The Cabin</span>
+        <h2>A Cozy Retreat in the Heart of the Rockies</h2>
+        <p>Nestled near the shores of Grand Lake — Colorado's largest natural lake — this charming mountain cabin puts you steps away from world-class hiking, skiing, boating, and stargazing. Whether you're here to summit peaks or simply unwind on the deck, this is your home base for unforgettable Rocky Mountain memories.</p>
+        <p>The western entrance to Rocky Mountain National Park is just minutes away, giving you access to over 350 miles of trails, abundant wildlife, and breathtaking alpine scenery without the crowds of the eastern side.</p>
+        <div class="about-highlights">
+          <div class="highlight">&#127968; 3 Bedrooms</div>
+          <div class="highlight">&#128705; Sleeps 8</div>
+          <div class="highlight">&#128205; Grand Lake, CO</div>
+        </div>
       </div>
-    </section>
+      <div class="about-image">
+        <img src="images/cabin.jpg" alt="Grand Lake Getaway cabin exterior">
+      </div>
+    </div>
+  </section>
 
-    <!-- Amenities -->
-    <section id="amenities">
+  <!-- Gallery -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-inner centered">
+      <span class="section-label">Photo Tour</span>
+      <h2>See the Space</h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="images/cabin1.jpg" alt="Cabin interior">
+      <img src="images/cabin2.jpg" alt="Living area">
+      <img src="images/cabin3.jpg" alt="Kitchen">
+      <img src="images/cabin4.jpg" alt="Bedroom">
+      <img src="images/hero.jpg" alt="Mountain view">
+      <img src="images/cabin.jpg" alt="Cabin exterior">
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities-section" id="amenities">
+    <div class="section-inner centered">
+      <span class="section-label">What's Included</span>
       <h2>Amenities</h2>
-      <div class="amenities">
-        <div class="amenity">Wi-Fi</div>
-        <div class="amenity">Pet Friendly</div>
-        <div class="amenity">Kitchen</div>
-        <div class="amenity">Parking</div>
-        <div class="amenity">Hot Tub</div>
-        <div class="amenity">Fireplace</div>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <span class="amenity-icon">&#9731;</span>
+          <h3>Hot Tub</h3>
+          <p>Soak under the stars in your private hot tub</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#128293;</span>
+          <h3>Wood Fireplace</h3>
+          <p>Cozy up by the crackling fire on cool mountain nights</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#127763;</span>
+          <h3>Full Kitchen</h3>
+          <p>Fully equipped kitchen for home-cooked meals</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#128246;</span>
+          <h3>High-Speed Wi-Fi</h3>
+          <p>Stay connected — or completely unplug</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#128021;</span>
+          <h3>Pet Friendly</h3>
+          <p>Your furry family members are welcome</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#128663;</span>
+          <h3>Free Parking</h3>
+          <p>Private driveway with ample space</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#128250;</span>
+          <h3>Smart TV</h3>
+          <p>Stream your favorite shows and movies</p>
+        </div>
+        <div class="amenity-card">
+          <span class="amenity-icon">&#129495;</span>
+          <h3>Mountain Views</h3>
+          <p>Wake up to stunning Rocky Mountain scenery</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Form -->
-    <section id="contact">
-      <h2>Contact / Booking Inquiry</h2>
-      <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Message / Dates you're interested in" required></textarea>
-        <button type="submit">Send Inquiry</button>
+  <!-- Things to Do -->
+  <section class="explore-section" id="explore">
+    <div class="section-inner">
+      <span class="section-label">The Area</span>
+      <h2>Explore Grand Lake &amp; Rocky Mountain National Park</h2>
+      <div class="explore-columns">
+        <div class="explore-col">
+          <h3>&#9968; Summer Adventures</h3>
+          <ul>
+            <li>Hike 350+ miles of RMNP trails</li>
+            <li>Kayak &amp; paddleboard on Grand Lake</li>
+            <li>Fish for trout on Shadow Mountain Lake</li>
+            <li>Mountain bike on Monarch Lake Trail</li>
+            <li>Wildlife watching — elk, moose, bear</li>
+            <li>Trail Head Golf Course (5 min away)</li>
+          </ul>
+        </div>
+        <div class="explore-col">
+          <h3>&#9731; Winter Fun</h3>
+          <ul>
+            <li>Ski &amp; snowboard at SolVista Basin</li>
+            <li>Snowshoe through Rocky Mountain NP</li>
+            <li>Cross-country ski on groomed trails</li>
+            <li>Ice fishing on Grand Lake</li>
+            <li>Snowmobile on 300+ miles of trails</li>
+            <li>Cozy après-ski in Grand Lake Village</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability Calendar -->
+  <section class="calendar-section" id="availability">
+    <div class="section-inner centered">
+      <span class="section-label">Plan Your Stay</span>
+      <h2>Check Availability</h2>
+      <p class="calendar-note">Reach out to check open dates and book your stay.</p>
+      <div class="calendar-embed">
+        <!-- Google Calendar embed goes here — replace the placeholder div below with the iframe from Google Calendar > Settings > Integrate calendar -->
+        <div class="calendar-placeholder">
+          <p>&#128197; Availability calendar coming soon — <a href="#contact">contact us</a> to check open dates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Booking -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner centered">
+      <span class="section-label">Get In Touch</span>
+      <h2>Book Your Stay</h2>
+      <p>Ready to plan your Rocky Mountain getaway? Send us a message with your dates and we'll get back to you quickly.</p>
+      <form class="booking-form" action="mailto:mygrandlakegetaway@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-row">
+          <input type="date" name="checkin">
+          <input type="date" name="checkout">
+        </div>
+        <input type="number" name="guests" placeholder="Number of Guests (max 8)" min="1" max="8">
+        <textarea name="message" rows="4" placeholder="Questions or special requests?"></textarea>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 Your Rental Name | <a href="#">Privacy Policy</a></p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>My Grand Lake Getaway</h3>
+        <p>Grand Lake, Colorado<br>Western Gateway to Rocky Mountain National Park</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#explore">Explore</a>
+        <a href="#contact">Book Now</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 My Grand Lake Getaway. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script>
+    // Navbar: transparent over hero, solid pine green after scrolling down
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 80);
+    });
+  </script>
 
 </body>
 </html>
