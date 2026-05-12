@@ -6,15 +6,15 @@
   <title>My Grand Lake Getaway | Grand Lake, Colorado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Nav -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">My Grand Lake Getaway</a>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Grand Lake Getaway</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -29,11 +29,13 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <p class="hero-tagline">Grand Lake, Colorado</p>
-      <h1>Your Mountain Escape Awaits</h1>
-      <p class="hero-sub">Just minutes from Rocky Mountain National Park's western entrance</p>
-      <a href="#contact" class="btn btn-hero">Check Availability</a>
+    <div class="hero-content">
+      <p class="hero-location">Grand Lake · Colorado · 8,437 ft</p>
+      <h1>Mountain<br>Escape</h1>
+      <p class="hero-sub">Steps from Rocky Mountain National Park's western entrance — where the wild things are.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-outline-light">Check Availability</a>
+      </div>
     </div>
     <div class="hero-scroll">
       <div class="hero-scroll-line"></div>
@@ -41,78 +43,86 @@
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <div class="stats-bar">
-    <div class="stat-item">
-      <span class="stat-num">3</span>
-      <span class="stat-label">Bedrooms</span>
+  <!-- Stats strip -->
+  <div class="stats-strip">
+    <div class="stat">
+      <span class="stat-n">3</span>
+      <span class="stat-l">Bedrooms</span>
     </div>
-    <div class="stat-item">
-      <span class="stat-num">8</span>
-      <span class="stat-label">Guests</span>
+    <div class="stat">
+      <span class="stat-n">8</span>
+      <span class="stat-l">Guests</span>
     </div>
-    <div class="stat-item">
-      <span class="stat-num">8,437</span>
-      <span class="stat-label">Elevation ft</span>
+    <div class="stat">
+      <span class="stat-n">8,437</span>
+      <span class="stat-l">Elevation ft</span>
     </div>
-    <div class="stat-item">
-      <span class="stat-num">★ 4.9</span>
-      <span class="stat-label">Guest Rating</span>
+    <div class="stat">
+      <span class="stat-n">★ 4.9</span>
+      <span class="stat-l">Guest Rating</span>
     </div>
   </div>
 
   <!-- About -->
   <section class="about" id="about">
-    <div class="section-inner about-inner">
-      <div class="about-text">
-        <span class="section-label">The Cabin</span>
-        <h2>A Cozy Retreat in the Heart of the Rockies</h2>
-        <p>Nestled near the shores of Grand Lake — Colorado's largest natural lake — this charming mountain cabin puts you steps away from world-class hiking, skiing, boating, and stargazing. Whether you're here to summit peaks or simply unwind on the deck, this is your home base for unforgettable Rocky Mountain memories.</p>
-        <p>The western entrance to Rocky Mountain National Park is just minutes away, giving you access to over 350 miles of trails, abundant wildlife, and breathtaking alpine scenery without the crowds of the eastern side.</p>
-        <div class="about-highlights">
-          <div class="highlight">&#127968; 3 Bedrooms</div>
-          <div class="highlight">&#128705; Sleeps 8</div>
-          <div class="highlight">&#128205; Grand Lake, CO</div>
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="label">The Cabin</span>
+          <h2>A Cozy Retreat in the Heart of the Rockies</h2>
+          <p>Nestled near the shores of Grand Lake — Colorado's largest natural lake — this mountain cabin puts you steps away from world-class hiking, skiing, boating, and stargazing. Whether you're here to summit peaks or simply unwind on the deck, this is your home base for unforgettable Rocky Mountain memories.</p>
+          <p>The western entrance to Rocky Mountain National Park is just minutes away, giving you access to over 350 miles of trails, abundant wildlife, and breathtaking alpine scenery without the crowds.</p>
+          <div class="about-pills">
+            <span class="pill">3 Bedrooms</span>
+            <span class="pill">Sleeps 8</span>
+            <span class="pill">Grand Lake, CO</span>
+            <span class="pill">Pet Friendly</span>
+          </div>
         </div>
-      </div>
-      <div class="about-image-wrap">
-        <div class="about-image">
+        <div class="about-visual">
           <img src="images/cabin.jpg" alt="Grand Lake Getaway cabin exterior">
+          <div class="about-card">
+            <span class="about-card-num">350+</span>
+            <span class="about-card-label">Miles of trails nearby</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Gallery -->
-  <section class="gallery-section" id="gallery">
-    <div class="section-inner centered">
-      <span class="section-label">Photo Tour</span>
-      <h2>See the Space</h2>
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <div>
+        <span class="label">Photo Tour</span>
+        <h2>The Space</h2>
+      </div>
+      <p>Every room designed for warmth after a long day on the mountain.</p>
     </div>
     <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-item">
-        <img src="images/cabin1.jpg" alt="Cabin interior">
-        <div class="gallery-caption">Living Area</div>
+      <div class="g-item">
+        <img src="images/cabin1.jpg" alt="Living area">
+        <div class="g-overlay"><span class="g-label">Living Area</span></div>
       </div>
-      <div class="gallery-item">
-        <img src="images/cabin2.jpg" alt="Living area">
-        <div class="gallery-caption">Dining Room</div>
+      <div class="g-item">
+        <img src="images/cabin2.jpg" alt="Dining room">
+        <div class="g-overlay"><span class="g-label">Dining Room</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="g-item">
         <img src="images/cabin3.jpg" alt="Kitchen">
-        <div class="gallery-caption">Kitchen</div>
+        <div class="g-overlay"><span class="g-label">Kitchen</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="g-item">
         <img src="images/cabin4.jpg" alt="Bedroom">
-        <div class="gallery-caption">Master Bedroom</div>
+        <div class="g-overlay"><span class="g-label">Master Bedroom</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="g-item">
         <img src="images/hero.jpg" alt="Mountain view">
-        <div class="gallery-caption">Mountain Views</div>
+        <div class="g-overlay"><span class="g-label">Mountain Views</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="g-item">
         <img src="images/cabin.jpg" alt="Cabin exterior">
-        <div class="gallery-caption">Cabin Exterior</div>
+        <div class="g-overlay"><span class="g-label">Cabin Exterior</span></div>
       </div>
     </div>
   </section>
@@ -120,54 +130,54 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
     <span class="lb-close" id="lbClose">&times;</span>
-    <span class="lb-prev" id="lbPrev">&#8249;</span>
-    <img src="" alt="" id="lbImg">
-    <span class="lb-next" id="lbNext">&#8250;</span>
-    <div class="lb-counter" id="lbCounter"></div>
+    <span class="lb-btn lb-prev" id="lbPrev">&#8249;</span>
+    <img class="lb-img" src="" alt="" id="lbImg">
+    <span class="lb-btn lb-next" id="lbNext">&#8250;</span>
+    <div class="lb-count" id="lbCount"></div>
   </div>
 
   <!-- Amenities -->
-  <section class="amenities-section" id="amenities">
-    <div class="section-inner centered">
-      <span class="section-label">What's Included</span>
+  <section class="amenities" id="amenities">
+    <div class="wrap">
+      <span class="label">What's Included</span>
       <h2>Amenities</h2>
-      <div class="amenities-grid">
-        <div class="amenity-card">
+      <div class="amenities-list">
+        <div class="amenity">
           <span class="amenity-icon">&#9731;</span>
           <h3>Hot Tub</h3>
           <p>Soak under the stars in your private hot tub</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#128293;</span>
           <h3>Wood Fireplace</h3>
           <p>Cozy up by the crackling fire on cool mountain nights</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#127763;</span>
           <h3>Full Kitchen</h3>
-          <p>Fully equipped kitchen for home-cooked meals</p>
+          <p>Fully equipped for home-cooked mountain meals</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#128246;</span>
           <h3>High-Speed Wi-Fi</h3>
           <p>Stay connected — or completely unplug</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#128021;</span>
           <h3>Pet Friendly</h3>
           <p>Your furry family members are welcome</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#128663;</span>
           <h3>Free Parking</h3>
           <p>Private driveway with ample space</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#128250;</span>
           <h3>Smart TV</h3>
           <p>Stream your favorite shows and movies</p>
         </div>
-        <div class="amenity-card">
+        <div class="amenity">
           <span class="amenity-icon">&#129495;</span>
           <h3>Mountain Views</h3>
           <p>Wake up to stunning Rocky Mountain scenery</p>
@@ -176,14 +186,14 @@
     </div>
   </section>
 
-  <!-- Things to Do -->
-  <section class="explore-section" id="explore">
-    <div class="section-inner">
-      <span class="section-label">The Area</span>
-      <h2>Explore Grand Lake &amp; Rocky Mountain National Park</h2>
-      <div class="explore-columns">
+  <!-- Explore -->
+  <section class="explore" id="explore">
+    <div class="wrap">
+      <span class="label">The Area</span>
+      <h2>Explore Grand Lake</h2>
+      <div class="explore-grid">
         <div class="explore-col">
-          <h3>&#9968; Summer Adventures</h3>
+          <h3>Summer Adventures</h3>
           <ul>
             <li>Hike 350+ miles of RMNP trails</li>
             <li>Kayak &amp; paddleboard on Grand Lake</li>
@@ -194,39 +204,36 @@
           </ul>
         </div>
         <div class="explore-col">
-          <h3>&#9731; Winter Fun</h3>
+          <h3>Winter Adventures</h3>
           <ul>
             <li>Ski &amp; snowboard at SolVista Basin</li>
             <li>Snowshoe through Rocky Mountain NP</li>
             <li>Cross-country ski on groomed trails</li>
             <li>Ice fishing on Grand Lake</li>
             <li>Snowmobile on 300+ miles of trails</li>
-            <li>Cozy après-ski in Grand Lake Village</li>
+            <li>Après-ski in Grand Lake Village</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Availability Calendar -->
-  <section class="calendar-section" id="availability">
-    <div class="section-inner centered">
-      <span class="section-label">Plan Your Stay</span>
+  <!-- Availability -->
+  <section class="availability" id="availability">
+    <div class="wrap center">
+      <span class="label">Plan Your Stay</span>
       <h2>Check Availability</h2>
-      <p class="calendar-note">Reach out to check open dates and book your stay.</p>
-      <div class="calendar-embed">
-        <!-- Replace this placeholder with your Google Calendar iframe -->
-        <div class="calendar-placeholder">
-          <p>&#128197; Availability calendar coming soon — <a href="#contact">contact us</a> to check open dates.</p>
-        </div>
+      <p class="availability-note">Reach out to check open dates and book your stay.</p>
+      <div class="cal-placeholder">
+        <p>&#128197;&nbsp; Availability calendar coming soon — <a href="#contact">contact us</a> to check open dates.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact / Booking -->
-  <section class="contact-section" id="contact">
-    <div class="section-inner centered">
-      <span class="section-label">Get In Touch</span>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap center">
+      <span class="label">Get In Touch</span>
       <h2>Book Your Stay</h2>
       <p>Ready to plan your Rocky Mountain getaway? Send us a message with your dates and we'll get back to you quickly.</p>
       <form class="booking-form" action="mailto:mygrandlakegetaway@gmail.com" method="POST" enctype="text/plain">
@@ -240,7 +247,7 @@
         </div>
         <input type="number" name="guests" placeholder="Number of Guests (max 8)" min="1" max="8">
         <textarea name="message" rows="4" placeholder="Questions or special requests?"></textarea>
-        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        <button type="submit" class="btn btn-dark">Send Inquiry</button>
       </form>
     </div>
   </section>
@@ -249,83 +256,65 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <h3>My Grand Lake Getaway</h3>
+        <h3>Grand Lake Getaway</h3>
         <p>Grand Lake, Colorado<br>Western Gateway to Rocky Mountain National Park</p>
       </div>
-      <div class="footer-links">
+      <nav class="footer-nav">
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#amenities">Amenities</a>
         <a href="#explore">Explore</a>
         <a href="#contact">Book Now</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 My Grand Lake Getaway. All rights reserved.</p>
+      &copy; 2026 Grand Lake Getaway. All rights reserved.
     </div>
   </footer>
 
   <script>
-    // Navbar scroll behavior
+    // Navbar
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 80);
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Gallery lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lbImg    = document.getElementById('lbImg');
-    const lbCounter = document.getElementById('lbCounter');
-    const items    = Array.from(document.querySelectorAll('.gallery-item img'));
-    let current    = 0;
+    // Lightbox
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCount');
+    const imgs    = Array.from(document.querySelectorAll('.g-item img'));
+    let cur = 0;
 
-    function openLightbox(index) {
-      current = index;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCounter.textContent = (current + 1) + ' / ' + items.length;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
+    function show(i) {
+      cur = (i + imgs.length) % imgs.length;
+      lbImg.src = imgs[cur].src;
+      lbImg.alt = imgs[cur].alt;
+      lbCount.textContent = (cur + 1) + ' / ' + imgs.length;
     }
 
-    function closeLightbox() {
-      lightbox.classList.remove('active');
+    imgs.forEach((img, i) => {
+      img.closest('.g-item').addEventListener('click', () => {
+        show(i);
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLb() {
+      lb.classList.remove('open');
       document.body.style.overflow = '';
     }
 
-    function showNext() {
-      current = (current + 1) % items.length;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCounter.textContent = (current + 1) + ' / ' + items.length;
-    }
-
-    function showPrev() {
-      current = (current - 1 + items.length) % items.length;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lbCounter.textContent = (current + 1) + ' / ' + items.length;
-    }
-
-    items.forEach((img, i) => {
-      img.parentElement.addEventListener('click', () => openLightbox(i));
-    });
-
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    document.getElementById('lbNext').addEventListener('click', showNext);
-    document.getElementById('lbPrev').addEventListener('click', showPrev);
-
-    // Close on backdrop click
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft')  showPrev();
-      if (e.key === 'Escape')     closeLightbox();
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    document.getElementById('lbNext').addEventListener('click', () => show(cur + 1));
+    document.getElementById('lbPrev').addEventListener('click', () => show(cur - 1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowRight') show(cur + 1);
+      if (e.key === 'ArrowLeft')  show(cur - 1);
+      if (e.key === 'Escape')     closeLb();
     });
   </script>
 
