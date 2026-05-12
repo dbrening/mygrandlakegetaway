@@ -35,7 +35,31 @@
       <p class="hero-sub">Just minutes from Rocky Mountain National Park's western entrance</p>
       <a href="#contact" class="btn btn-hero">Check Availability</a>
     </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
   </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Bedrooms</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Guests</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8,437</span>
+      <span class="stat-label">Elevation ft</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">★ 4.9</span>
+      <span class="stat-label">Guest Rating</span>
+    </div>
+  </div>
 
   <!-- About -->
   <section class="about" id="about">
@@ -51,8 +75,10 @@
           <div class="highlight">&#128205; Grand Lake, CO</div>
         </div>
       </div>
-      <div class="about-image">
-        <img src="images/cabin.jpg" alt="Grand Lake Getaway cabin exterior">
+      <div class="about-image-wrap">
+        <div class="about-image">
+          <img src="images/cabin.jpg" alt="Grand Lake Getaway cabin exterior">
+        </div>
       </div>
     </div>
   </section>
@@ -63,15 +89,42 @@
       <span class="section-label">Photo Tour</span>
       <h2>See the Space</h2>
     </div>
-    <div class="gallery-grid">
-      <img src="images/cabin1.jpg" alt="Cabin interior">
-      <img src="images/cabin2.jpg" alt="Living area">
-      <img src="images/cabin3.jpg" alt="Kitchen">
-      <img src="images/cabin4.jpg" alt="Bedroom">
-      <img src="images/hero.jpg" alt="Mountain view">
-      <img src="images/cabin.jpg" alt="Cabin exterior">
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item">
+        <img src="images/cabin1.jpg" alt="Cabin interior">
+        <div class="gallery-caption">Living Area</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cabin2.jpg" alt="Living area">
+        <div class="gallery-caption">Dining Room</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cabin3.jpg" alt="Kitchen">
+        <div class="gallery-caption">Kitchen</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cabin4.jpg" alt="Bedroom">
+        <div class="gallery-caption">Master Bedroom</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/hero.jpg" alt="Mountain view">
+        <div class="gallery-caption">Mountain Views</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cabin.jpg" alt="Cabin exterior">
+        <div class="gallery-caption">Cabin Exterior</div>
+      </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" id="lbClose">&times;</span>
+    <span class="lb-prev" id="lbPrev">&#8249;</span>
+    <img src="" alt="" id="lbImg">
+    <span class="lb-next" id="lbNext">&#8250;</span>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
 
   <!-- Amenities -->
   <section class="amenities-section" id="amenities">
@@ -162,7 +215,7 @@
       <h2>Check Availability</h2>
       <p class="calendar-note">Reach out to check open dates and book your stay.</p>
       <div class="calendar-embed">
-        <!-- Google Calendar embed goes here — replace the placeholder div below with the iframe from Google Calendar > Settings > Integrate calendar -->
+        <!-- Replace this placeholder with your Google Calendar iframe -->
         <div class="calendar-placeholder">
           <p>&#128197; Availability calendar coming soon — <a href="#contact">contact us</a> to check open dates.</p>
         </div>
@@ -213,10 +266,66 @@
   </footer>
 
   <script>
-    // Navbar: transparent over hero, solid pine green after scrolling down
+    // Navbar scroll behavior
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // Gallery lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lbImg    = document.getElementById('lbImg');
+    const lbCounter = document.getElementById('lbCounter');
+    const items    = Array.from(document.querySelectorAll('.gallery-item img'));
+    let current    = 0;
+
+    function openLightbox(index) {
+      current = index;
+      lbImg.src = items[current].src;
+      lbImg.alt = items[current].alt;
+      lbCounter.textContent = (current + 1) + ' / ' + items.length;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showNext() {
+      current = (current + 1) % items.length;
+      lbImg.src = items[current].src;
+      lbImg.alt = items[current].alt;
+      lbCounter.textContent = (current + 1) + ' / ' + items.length;
+    }
+
+    function showPrev() {
+      current = (current - 1 + items.length) % items.length;
+      lbImg.src = items[current].src;
+      lbImg.alt = items[current].alt;
+      lbCounter.textContent = (current + 1) + ' / ' + items.length;
+    }
+
+    items.forEach((img, i) => {
+      img.parentElement.addEventListener('click', () => openLightbox(i));
+    });
+
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lbNext').addEventListener('click', showNext);
+    document.getElementById('lbPrev').addEventListener('click', showPrev);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft')  showPrev();
+      if (e.key === 'Escape')     closeLightbox();
     });
   </script>
 
