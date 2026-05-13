@@ -6,252 +6,80 @@
   <title>My Grand Lake Getaway | Grand Lake, Colorado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Nav -->
+  <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">Grand Lake Getaway</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#amenities">Amenities</a></li>
-        <li><a href="#explore">Explore</a></li>
-        <li><a href="#availability">Availability</a></li>
-        <li><a href="#contact" class="nav-cta">Book Now</a></li>
-      </ul>
+    <div class="nav-logo">
+      <div class="nav-logo-icon">🏔️</div>
+      <span class="nav-logo-text">Grand Lake Getaway</span>
     </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#explore">Things To Do</a></li>
+      <li><a href="#faqs">FAQs</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta-btn">Book Today</a></li>
+    </ul>
   </nav>
 
-  <!-- =====================================================
-       HERO — Grand Lake Quad Topo Map Border + Photo
-       ===================================================== -->
+  <!-- Hero -->
   <section class="hero" id="hero">
-
-    <!-- Topo map SVG fills entire hero background -->
-    <div class="hero-topo">
-      <svg viewBox="0 0 680 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <rect width="680" height="520" fill="#ede8de"/>
-        <!-- Grid lines like real quad sheet -->
-        <g stroke="#c8b896" stroke-width="0.3" opacity="0.5">
-          <line x1="0" y1="104" x2="680" y2="104"/><line x1="0" y1="208" x2="680" y2="208"/>
-          <line x1="0" y1="312" x2="680" y2="312"/><line x1="0" y1="416" x2="680" y2="416"/>
-          <line x1="136" y1="0" x2="136" y2="520"/><line x1="272" y1="0" x2="272" y2="520"/>
-          <line x1="408" y1="0" x2="408" y2="520"/><line x1="544" y1="0" x2="544" y2="520"/>
-        </g>
-        <defs>
-          <clipPath id="cl"><rect x="0" y="0" width="224" height="520"/></clipPath>
-          <clipPath id="cr"><rect x="456" y="0" width="224" height="520"/></clipPath>
-          <clipPath id="ct"><rect x="224" y="0" width="232" height="102"/></clipPath>
-          <clipPath id="cb"><rect x="224" y="418" width="232" height="102"/></clipPath>
-        </defs>
-
-        <!-- Grand Lake body -->
-        <g clip-path="url(#cl)">
-          <path fill="#a8cfe8" fill-opacity="0.55" stroke="#5a9ec0" stroke-width="0.8" opacity="0.8"
-            d="M28,348 Q44,338 62,335 Q80,332 96,336 Q112,340 122,338 Q136,334 148,338 Q162,342 172,348 Q186,356 192,366 Q196,378 190,390 Q182,402 168,408 Q152,412 136,410 Q118,408 102,412 Q84,416 66,412 Q46,406 34,396 Q20,384 20,370 Q20,358 28,348 Z"/>
-          <path fill="#a8cfe8" fill-opacity="0.45" stroke="#5a9ec0" stroke-width="0.6" opacity="0.7"
-            d="M148,440 Q162,434 176,438 Q188,444 188,456 Q186,468 172,472 Q156,474 146,466 Q136,458 140,448 Q142,442 148,440 Z"/>
-          <path fill="none" stroke="#5a9ec0" stroke-width="1.2" opacity="0.6" d="M172,408 Q178,420 178,432 Q176,436 172,438"/>
-        </g>
-
-        <!-- LEFT contours -->
-        <g clip-path="url(#cl)" fill="none" stroke="#b5935a" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="0.4" opacity="0.4"  d="M0,310 Q30,306 58,310 Q80,314 100,310 Q118,306 138,312 Q158,318 178,314 Q200,310 222,316"/>
-          <path stroke-width="0.4" opacity="0.4"  d="M0,328 Q32,323 62,328 Q88,333 112,328 Q136,323 160,329 Q184,335 210,330 Q218,328 222,330"/>
-          <path stroke-width="1.2" opacity="0.65" d="M0,356 Q16,350 32,354 Q48,358 58,354 Q66,350 74,344 Q84,336 96,332 Q108,328 120,332 Q132,336 144,332 Q158,326 170,330 Q184,336 196,342 Q208,348 216,352 Q220,354 222,356"/>
-          <path stroke-width="0.4" opacity="0.45" d="M0,370 Q20,364 44,368 Q64,372 80,366 Q96,360 114,364 Q132,368 148,364 Q166,358 184,364 Q202,370 218,366 Q222,365 222,366"/>
-          <path stroke-width="0.4" opacity="0.4"  d="M0,384 Q24,378 50,382 Q72,386 90,380 Q108,374 128,378 Q148,382 164,378 Q182,372 202,378 Q218,384 222,382"/>
-          <path stroke-width="1.2" opacity="0.65" d="M0,402 Q18,394 40,398 Q62,402 78,396 Q94,388 110,386 Q126,384 140,388 Q154,392 168,388 Q184,382 202,388 Q216,394 222,398"/>
-          <path stroke-width="0.4" opacity="0.45" d="M0,418 Q22,410 48,414 Q70,418 88,410 Q106,400 122,398 Q136,396 150,400 Q164,404 178,400 Q196,394 218,400 Q222,402 222,404"/>
-          <path stroke-width="0.4" opacity="0.42" d="M0,434 Q26,424 54,428 Q76,432 94,422 Q112,410 130,408 Q146,406 160,410 Q174,416 188,410 Q208,402 222,410"/>
-          <path stroke-width="1.2" opacity="0.6"  d="M0,452 Q28,440 58,444 Q82,448 100,436 Q118,422 136,420 Q152,418 166,424 Q180,430 194,424 Q212,414 222,422"/>
-          <path stroke-width="0.4" opacity="0.5"  d="M0,468 Q32,454 64,458 Q90,462 108,448 Q126,432 144,430 Q160,428 172,436 Q184,444 198,438 Q214,430 222,438"/>
-          <path stroke-width="0.4" opacity="0.48" d="M0,484 Q36,468 70,472 Q98,476 116,460 Q134,442 152,440 Q170,438 182,448 Q194,458 210,450 Q220,444 222,450"/>
-          <path stroke-width="1.2" opacity="0.58" d="M0,500 Q40,482 76,486 Q106,490 124,472 Q142,452 160,450 Q178,448 190,460 Q202,472 218,462 Q222,458 222,464"/>
-          <path stroke-width="0.4" opacity="0.45" d="M0,516 Q44,496 82,500 Q114,504 132,484 Q150,462 168,460 Q188,458 200,472 Q212,484 222,476"/>
-          <path stroke-width="0.4" opacity="0.38" d="M40,460 Q52,450 64,444 Q72,440 80,446 Q86,452 80,460 Q70,466 56,464 Q44,460 40,460"/>
-          <path stroke-width="0.4" opacity="0.35" d="M46,472 Q58,460 72,454 Q82,450 92,456 Q98,464 90,474 Q78,480 62,477 Q48,473 46,472"/>
-          <!-- Streams -->
-          <path stroke="#5a9ec0" stroke-width="1.0" fill="none" opacity="0.65" d="M222,280 Q204,290 188,304 Q172,320 158,340 Q146,358 140,378 Q136,396 136,410"/>
-          <path stroke="#5a9ec0" stroke-width="0.8" fill="none" opacity="0.55" d="M222,200 Q210,210 198,224 Q186,240 176,258 Q168,274 168,294 Q168,316 170,335 Q170,342 168,348"/>
-          <path stroke="#5a9ec0" stroke-width="0.6" fill="none" opacity="0.45" d="M100,370 Q106,380 108,392 Q108,404 104,412"/>
-        </g>
-
-        <!-- RIGHT contours + Shadow Mountain -->
-        <g clip-path="url(#cr)" fill="none" stroke="#b5935a" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="0.4" opacity="0.4"  d="M458,80  Q490,76 524,80 Q558,84 592,80 Q624,76 658,80 Q672,82 680,82"/>
-          <path stroke-width="0.4" opacity="0.4"  d="M458,100 Q492,95 528,100 Q564,105 598,100 Q632,95 664,100 Q674,102 680,102"/>
-          <path stroke-width="1.2" opacity="0.6"  d="M458,122 Q494,116 532,122 Q570,128 606,122 Q640,116 670,122 Q678,124 680,124"/>
-          <path stroke-width="0.4" opacity="0.45" d="M458,148 Q496,140 538,146 Q576,152 610,146 Q644,140 672,148 Q678,150 680,150"/>
-          <path stroke-width="0.4" opacity="0.43" d="M458,172 Q498,163 542,170 Q582,177 618,170 Q652,163 676,172 Q680,174 680,174"/>
-          <path stroke-width="1.2" opacity="0.62" d="M458,198 Q500,187 546,196 Q588,204 624,196 Q658,188 678,198 Q680,200 680,200"/>
-          <path stroke-width="0.4" opacity="0.48" d="M458,228 Q504,214 554,224 Q598,234 634,224 Q662,215 680,228"/>
-          <path stroke-width="0.4" opacity="0.5"  d="M458,262 Q508,244 562,256 Q608,266 646,254 Q668,244 680,258"/>
-          <path stroke-width="1.2" opacity="0.64" d="M458,300 Q512,278 570,292 Q620,304 658,290 Q674,282 680,296"/>
-          <path stroke-width="0.4" opacity="0.52" d="M458,342 Q516,316 578,332 Q628,344 664,328 Q678,320 680,336"/>
-          <path stroke-width="0.4" opacity="0.5"  d="M468,388 Q524,358 586,376 Q634,390 668,372 Q680,362 680,378"/>
-          <path stroke-width="1.2" opacity="0.62" d="M482,438 Q534,404 596,424 Q642,440 672,420 Q680,412 680,428"/>
-          <!-- Shadow Mtn closed contours -->
-          <path stroke-width="0.4" opacity="0.55" d="M544,296 Q560,286 576,292 Q584,300 578,312 Q564,320 548,314 Q536,306 544,296"/>
-          <path stroke-width="1.2" opacity="0.65" d="M548,306 Q560,298 572,304 Q578,312 572,322 Q560,328 548,320 Q540,312 548,306"/>
-          <path stroke-width="0.4" opacity="0.6"  d="M552,314 Q560,308 568,314 Q572,320 566,328 Q558,332 550,326 Q544,318 552,314"/>
-          <circle cx="560" cy="318" r="2.2" fill="#b5935a" stroke="none" opacity="0.7"/>
-          <path stroke-width="0.4" opacity="0.35" d="M458,480 Q520,464 590,474 Q640,482 680,468"/>
-          <path stroke-width="0.4" opacity="0.32" d="M458,504 Q524,488 596,500 Q648,510 680,494"/>
-          <!-- Colorado River -->
-          <path stroke="#5a9ec0" stroke-width="1.1" fill="none" opacity="0.65" d="M458,372 Q476,368 494,372 Q514,378 534,374 Q558,368 578,374 Q600,382 622,376 Q648,368 672,376 Q678,378 680,378"/>
-          <path stroke="#5a9ec0" stroke-width=".7"  fill="none" opacity="0.5"  d="M458,220 Q472,232 480,250 Q488,270 486,292 Q484,314 488,334 Q494,356 494,374"/>
-          <!-- Shadow Mtn Lake right -->
-          <path fill="#a8cfe8" fill-opacity="0.45" stroke="#5a9ec0" stroke-width="0.7" opacity="0.7"
-            d="M458,390 Q470,382 486,386 Q500,390 506,402 Q508,416 498,424 Q484,430 470,424 Q458,416 458,404 Q456,396 458,390 Z"/>
-        </g>
-
-        <!-- TOP strip -->
-        <g clip-path="url(#ct)" fill="none" stroke="#b5935a" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="0.4" opacity="0.4"  d="M224,98 Q258,91 300,87 Q338,84 374,88 Q408,93 440,90 Q450,89 456,90"/>
-          <path stroke-width="1.2" opacity="0.62" d="M224,82 Q260,74 304,70 Q342,67 378,71 Q412,76 442,72 Q452,70 456,72"/>
-          <path stroke-width="0.4" opacity="0.42" d="M224,65 Q262,56 308,52 Q348,49 384,54 Q416,59 444,54 Q452,52 456,54"/>
-          <path stroke-width="0.4" opacity="0.4"  d="M228,48 Q266,39 312,35 Q352,32 386,38 Q418,43 446,37 Q454,35 456,37"/>
-          <path stroke-width="1.2" opacity="0.6"  d="M234,31 Q272,21 318,18 Q356,15 390,22 Q420,28 448,22 Q454,20 456,22"/>
-          <path stroke-width="0.4" opacity="0.38" d="M244,14 Q280,4 322,1 Q360,-2 392,5 Q422,12 450,5"/>
-        </g>
-
-        <!-- BOTTOM strip -->
-        <g clip-path="url(#cb)" fill="none" stroke="#b5935a" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="0.4" opacity="0.42" d="M224,422 Q260,433 302,429 Q340,425 376,430 Q410,436 444,431 Q452,429 456,431"/>
-          <path stroke-width="1.2" opacity="0.62" d="M224,440 Q262,452 306,447 Q344,442 380,448 Q412,454 446,449 Q454,447 456,449"/>
-          <path stroke-width="0.4" opacity="0.42" d="M224,459 Q264,472 308,466 Q346,461 382,467 Q414,473 448,467 Q454,465 456,467"/>
-          <path stroke-width="0.4" opacity="0.4"  d="M226,478 Q266,492 312,486 Q350,480 384,487 Q416,493 450,487 Q454,485 456,487"/>
-          <path stroke-width="1.2" opacity="0.6"  d="M228,498 Q268,513 314,507 Q352,501 386,508 Q418,514 452,507 Q454,505 456,507"/>
-          <path stroke-width="0.4" opacity="0.38" d="M232,516 Q274,532 320,526 Q358,520 392,527 Q422,533 454,526"/>
-        </g>
-
-        <!-- Labels -->
-        <text x="52"  y="380" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="9"   fill="#3a7aaa" opacity="0.8">Grand Lake</text>
-        <text x="164" y="457" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="7"   fill="#3a7aaa" opacity="0.7">Shadow Mtn Lake</text>
-        <text x="490" y="408" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="7"   fill="#3a7aaa" opacity="0.65">Shadow Mtn Lake</text>
-        <path fill="none" stroke="#d4a060" stroke-width="1.5" opacity="0.5" stroke-dasharray="6,3" d="M458,340 Q476,332 498,330 Q524,328 548,334 Q572,340 592,334"/>
-        <text x="530" y="326" font-family="'Courier New',monospace" font-size="7" fill="#8a6a3a" opacity="0.5" text-anchor="middle">Co. Rd. 278</text>
-        <text x="556" y="308" text-anchor="middle" font-family="'Courier New',monospace" font-size="6.5" fill="#6a4a1a" opacity="0.6">Shadow</text>
-        <text x="556" y="317" text-anchor="middle" font-family="'Courier New',monospace" font-size="6.5" fill="#6a4a1a" opacity="0.6">Mountain</text>
-        <text x="556" y="333" text-anchor="middle" font-family="'Courier New',monospace" font-size="6"   fill="#6a4a1a" opacity="0.5">9,923 ft</text>
-        <text x="196" y="270" font-family="Georgia,serif" font-style="italic" font-size="6.5" fill="#3a7aaa" opacity="0.55" transform="rotate(-52,196,270)">N. Inlet</text>
-        <text x="155" y="330" font-family="Georgia,serif" font-style="italic" font-size="6.5" fill="#3a7aaa" opacity="0.55" transform="rotate(-65,155,330)">E. Inlet</text>
-        <text x="530" y="376" font-family="Georgia,serif" font-style="italic" font-size="6.5" fill="#3a7aaa" opacity="0.55">Colorado R.</text>
-        <text x="60"  y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="7.5" fill="#2a2218" opacity="0.55" letter-spacing="0.06em">GRAND LAKE</text>
-        <text x="60"  y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="6"   fill="#2a2218" opacity="0.4">BM 8437</text>
-        <text x="112" y="510" font-family="'Courier New',monospace" font-size="6.5" fill="#2a2218" opacity="0.4" letter-spacing="0.1em">ROCKY MOUNTAIN NATIONAL PARK BOUNDARY</text>
-        <!-- Elevation labels -->
-        <text x="6"   y="360" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">8800</text>
-        <text x="6"   y="406" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9000</text>
-        <text x="6"   y="456" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9200</text>
-        <text x="6"   y="504" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9400</text>
-        <text x="462" y="130" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9200</text>
-        <text x="462" y="205" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9400</text>
-        <text x="462" y="305" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9600</text>
-        <text x="462" y="405" font-family="'Courier New',monospace" font-size="6.5" fill="#8a6a3a" opacity="0.6">9200</text>
-        <!-- Summit label -->
-        <text x="340" y="52" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#6a4a1a" opacity="0.72" letter-spacing="0.08em">MT. BALDY (MT. CRAIG)  &#9650;  12,007 ft</text>
-        <!-- Photo registration crosshairs -->
-        <g stroke="#2e2416" stroke-width="1.1" opacity="0.65">
-          <line x1="224" y1="90"  x2="224" y2="114"/><line x1="212" y1="102" x2="236" y2="102"/>
-          <line x1="456" y1="90"  x2="456" y2="114"/><line x1="444" y1="102" x2="468" y2="102"/>
-          <line x1="224" y1="406" x2="224" y2="430"/><line x1="212" y1="418" x2="236" y2="418"/>
-          <line x1="456" y1="406" x2="456" y2="430"/><line x1="444" y1="418" x2="468" y2="418"/>
-        </g>
-        <!-- Photo frame -->
-        <rect x="224" y="102" width="232" height="316" fill="none" stroke="#2e2416" stroke-width="1.8" opacity="0.75"/>
-        <rect x="228" y="106" width="224" height="308" fill="none" stroke="#2e2416" stroke-width="0.4" opacity="0.3"/>
-        <!-- Compass rose -->
-        <g transform="translate(638,46)">
-          <line x1="0" y1="-18" x2="0" y2="18"    stroke="#6a4a1a" stroke-width="1"   opacity="0.6"/>
-          <line x1="-18" y1="0" x2="18" y2="0"    stroke="#6a4a1a" stroke-width="1"   opacity="0.6"/>
-          <line x1="-12" y1="-12" x2="12" y2="12" stroke="#6a4a1a" stroke-width="0.5" opacity="0.25"/>
-          <line x1="12" y1="-12" x2="-12" y2="12" stroke="#6a4a1a" stroke-width="0.5" opacity="0.25"/>
-          <polygon points="0,-18 4,-8 0,-13 -4,-8" fill="#6a4a1a" opacity="0.65"/>
-          <circle cx="0" cy="0" r="2.5" fill="none" stroke="#6a4a1a" stroke-width="0.7" opacity="0.4"/>
-          <text x="0"   y="-22" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#6a4a1a" opacity="0.65">N</text>
-          <text x="0"   y="30"  text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#6a4a1a" opacity="0.4">S</text>
-          <text x="22"  y="5"   font-family="'Courier New',monospace" font-size="7" fill="#6a4a1a" opacity="0.4">E</text>
-          <text x="-28" y="5"   font-family="'Courier New',monospace" font-size="7" fill="#6a4a1a" opacity="0.4">W</text>
-        </g>
-        <!-- Scale bar -->
-        <g transform="translate(278,500)">
-          <rect x="0"  y="0" width="18" height="5" fill="#6a4a1a" opacity="0.55"/>
-          <rect x="18" y="0" width="18" height="5" fill="#ede8de" stroke="#6a4a1a" stroke-width="0.5" opacity="0.6"/>
-          <rect x="36" y="0" width="18" height="5" fill="#6a4a1a" opacity="0.55"/>
-          <rect x="54" y="0" width="18" height="5" fill="#ede8de" stroke="#6a4a1a" stroke-width="0.5" opacity="0.6"/>
-          <rect x="72" y="0" width="18" height="5" fill="#6a4a1a" opacity="0.55"/>
-          <text x="-2" y="15" font-family="'Courier New',monospace" font-size="6.5" fill="#6a4a1a" opacity="0.5">0</text>
-          <text x="88" y="15" font-family="'Courier New',monospace" font-size="6.5" fill="#6a4a1a" opacity="0.5">1 MI</text>
-          <text x="45" y="15" text-anchor="middle" font-family="'Courier New',monospace" font-size="6.5" fill="#6a4a1a" opacity="0.5">0.5</text>
-        </g>
-        <!-- Footer text -->
-        <text x="14"  y="516" font-family="'Courier New',monospace" font-size="6" fill="#6a4a1a" opacity="0.4" letter-spacing="0.03em">USGS &#183; GRAND LAKE QUADRANGLE &#183; COLORADO &#183; 7.5 MINUTE SERIES (TOPOGRAPHIC)</text>
-        <text x="666" y="516" text-anchor="end" font-family="'Courier New',monospace" font-size="6" fill="#6a4a1a" opacity="0.4" letter-spacing="0.03em">CONTOUR INTERVAL 200 FT &#183; NGVD 1929</text>
-      </svg>
+    <div class="hero-content">
+      <div class="hero-tag">Grand Lake, Colorado &middot; 8,369 ft</div>
+      <h1>Escape to the Cabin Life</h1>
+      <p class="hero-sub">Wake up to forest views, unwind in a cozy mountain retreat, and enjoy a stay designed for relaxation and comfort.</p>
+      <a href="#contact" class="btn-hero">Book Your Stay</a>
     </div>
-
-    <!-- Photo sits centered over the topo map -->
-    <div class="hero-photo-wrap">
-      <div class="hero-photo-mat">
-        <div class="hero-photo-inner">
-          <img src="images/hero-rmnp.jpg" alt="Grand Lake, Colorado">
-          <div class="hero-photo-cap">
-            <span>Grand Lake, Colorado</span>
-            <small>8,369 ft &middot; Gateway to Rocky Mountain National Park</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Title block below/beside photo -->
-    <div class="hero-title-block">
-      <p class="hero-eyebrow">Grand Lake &middot; Colorado</p>
-      <h1>Mountain<br>Escape</h1>
-      <a href="#contact" class="hero-book-btn">Check Availability</a>
-    </div>
-
-    <div class="hero-scroll-cue">
-      <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-
   </section>
 
-  <!-- Stats strip -->
-  <div class="stats-strip">
-    <div class="stat"><span class="stat-n">3</span><span class="stat-l">Bedrooms</span></div>
-    <div class="stat"><span class="stat-n">8</span><span class="stat-l">Guests</span></div>
-    <div class="stat"><span class="stat-n">8,437</span><span class="stat-l">Elevation ft</span></div>
-    <div class="stat"><span class="stat-n">&#9733; 4.9</span><span class="stat-l">Guest Rating</span></div>
+  <!-- Stats bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-val">3</span>
+      <span class="stat-lbl">Bedrooms</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">8</span>
+      <span class="stat-lbl">Guests</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">8,369</span>
+      <span class="stat-lbl">Elevation ft</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">&#9733; 4.9</span>
+      <span class="stat-lbl">Guest Rating</span>
+    </div>
   </div>
 
   <!-- About -->
   <section class="about" id="about">
-    <div class="wrap">
+    <div class="section-wrap">
       <div class="about-grid">
         <div class="about-text">
-          <span class="label">The Cabin</span>
-          <h2>A Cozy Retreat in the Heart of the Rockies</h2>
-          <p>Nestled near the shores of Grand Lake &mdash; Colorado's largest natural lake &mdash; this mountain cabin puts you steps away from world-class hiking, skiing, boating, and stargazing. Whether you're here to summit peaks or simply unwind on the deck, this is your home base for unforgettable Rocky Mountain memories.</p>
-          <p>The western entrance to Rocky Mountain National Park is just minutes away, giving you access to over 350 miles of trails, abundant wildlife, and breathtaking alpine scenery without the crowds.</p>
-          <div class="about-pills">
-            <span class="pill">3 Bedrooms</span>
-            <span class="pill">Sleeps 8</span>
-            <span class="pill">Grand Lake, CO</span>
-            <span class="pill">Pet Friendly</span>
+          <span class="section-tag">The Cabin</span>
+          <h2 class="section-title">A Cozy Retreat in the Heart of the Rockies</h2>
+          <p>Nestled near the shores of Grand Lake &mdash; Colorado's largest natural lake &mdash; this charming mountain cabin puts you steps away from world-class hiking, skiing, boating, and stargazing.</p>
+          <p>The western entrance to Rocky Mountain National Park is just minutes away, giving you access to over 350 miles of trails, abundant wildlife, and breathtaking alpine scenery without the crowds of the eastern side.</p>
+          <div class="about-tags">
+            <span class="tag">3 Bedrooms</span>
+            <span class="tag">Sleeps 8</span>
+            <span class="tag">Grand Lake, CO</span>
+            <span class="tag">Pet Friendly</span>
+            <span class="tag">Hot Tub</span>
+            <span class="tag">Fireplace</span>
           </div>
         </div>
-        <div class="about-visual">
+        <div class="about-photo">
           <img src="images/cabin.jpg" alt="Grand Lake Getaway cabin exterior">
-          <div class="about-card">
-            <span class="about-card-num">350+</span>
-            <span class="about-card-label">Miles of trails nearby</span>
+          <div class="about-badge">
+            <span class="about-badge-num">350+</span>
+            <span class="about-badge-lbl">Miles of trails</span>
           </div>
         </div>
       </div>
@@ -260,9 +88,9 @@
 
   <!-- Gallery -->
   <section class="gallery" id="gallery">
-    <div class="gallery-header">
-      <div><span class="label">Photo Tour</span><h2>The Space</h2></div>
-      <p>Every room designed for warmth after a long day on the mountain.</p>
+    <div class="gallery-intro">
+      <span class="section-tag">Photo Tour</span>
+      <h2 class="section-title">See the Space</h2>
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <div class="g-item"><img src="images/cabin1.jpg" alt="Living area"><div class="g-overlay"><span class="g-label">Living Area</span></div></div>
@@ -270,7 +98,7 @@
       <div class="g-item"><img src="images/cabin3.jpg" alt="Kitchen"><div class="g-overlay"><span class="g-label">Kitchen</span></div></div>
       <div class="g-item"><img src="images/cabin4.jpg" alt="Bedroom"><div class="g-overlay"><span class="g-label">Master Bedroom</span></div></div>
       <div class="g-item"><img src="images/hero.jpg" alt="Mountain view"><div class="g-overlay"><span class="g-label">Mountain Views</span></div></div>
-      <div class="g-item"><img src="images/cabin.jpg" alt="Cabin exterior"><div class="g-overlay"><span class="g-label">Cabin Exterior</span></div></div>
+      <div class="g-item"><img src="images/cabin.jpg" alt="Exterior"><div class="g-overlay"><span class="g-label">Cabin Exterior</span></div></div>
     </div>
   </section>
 
@@ -285,30 +113,30 @@
 
   <!-- Amenities -->
   <section class="amenities" id="amenities">
-    <div class="wrap">
-      <span class="label">What's Included</span>
-      <h2>Amenities</h2>
-      <div class="amenities-list">
-        <div class="amenity"><span class="amenity-icon">&#9731;</span><h3>Hot Tub</h3><p>Soak under the stars in your private hot tub</p></div>
-        <div class="amenity"><span class="amenity-icon">&#128293;</span><h3>Wood Fireplace</h3><p>Cozy up by the crackling fire on cool mountain nights</p></div>
-        <div class="amenity"><span class="amenity-icon">&#127763;</span><h3>Full Kitchen</h3><p>Fully equipped for home-cooked mountain meals</p></div>
-        <div class="amenity"><span class="amenity-icon">&#128246;</span><h3>High-Speed Wi-Fi</h3><p>Stay connected &mdash; or completely unplug</p></div>
-        <div class="amenity"><span class="amenity-icon">&#128021;</span><h3>Pet Friendly</h3><p>Your furry family members are welcome</p></div>
-        <div class="amenity"><span class="amenity-icon">&#128663;</span><h3>Free Parking</h3><p>Private driveway with ample space</p></div>
-        <div class="amenity"><span class="amenity-icon">&#128250;</span><h3>Smart TV</h3><p>Stream your favorite shows and movies</p></div>
-        <div class="amenity"><span class="amenity-icon">&#129495;</span><h3>Mountain Views</h3><p>Wake up to stunning Rocky Mountain scenery</p></div>
+    <div class="section-wrap">
+      <span class="section-tag">What's Included</span>
+      <h2 class="section-title">Amenities</h2>
+      <div class="amenities-grid">
+        <div class="amenity-card"><span class="amenity-icon">&#9731;</span><h3>Hot Tub</h3><p>Soak under the stars in your private hot tub</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#128293;</span><h3>Wood Fireplace</h3><p>Cozy up by the fire on cool mountain nights</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#127763;</span><h3>Full Kitchen</h3><p>Fully equipped for home-cooked mountain meals</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#128246;</span><h3>High-Speed Wi-Fi</h3><p>Stay connected &mdash; or completely unplug</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#128021;</span><h3>Pet Friendly</h3><p>Your furry family members are welcome</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#128663;</span><h3>Free Parking</h3><p>Private driveway with ample space</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#128250;</span><h3>Smart TV</h3><p>Stream your favorite shows and movies</p></div>
+        <div class="amenity-card"><span class="amenity-icon">&#129495;</span><h3>Mountain Views</h3><p>Wake up to stunning Rocky Mountain scenery</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Explore -->
+  <!-- Things To Do -->
   <section class="explore" id="explore">
-    <div class="wrap">
-      <span class="label">The Area</span>
-      <h2>Explore Grand Lake</h2>
+    <div class="section-wrap" style="position:relative;">
+      <span class="section-tag">The Area</span>
+      <h2 class="section-title">Explore Grand Lake &amp; RMNP</h2>
       <div class="explore-grid">
         <div class="explore-col">
-          <h3>Summer Adventures</h3>
+          <h3>&#9968; Summer Adventures</h3>
           <ul>
             <li>Hike 350+ miles of RMNP trails</li>
             <li>Kayak &amp; paddleboard on Grand Lake</li>
@@ -319,14 +147,14 @@
           </ul>
         </div>
         <div class="explore-col">
-          <h3>Winter Adventures</h3>
+          <h3>&#9731; Winter Adventures</h3>
           <ul>
             <li>Ski &amp; snowboard at SolVista Basin</li>
             <li>Snowshoe through Rocky Mountain NP</li>
             <li>Cross-country ski on groomed trails</li>
             <li>Ice fishing on Grand Lake</li>
             <li>Snowmobile on 300+ miles of trails</li>
-            <li>Apr&egrave;s-ski in Grand Lake Village</li>
+            <li>Cozy apr&egrave;s-ski in Grand Lake Village</li>
           </ul>
         </div>
       </div>
@@ -335,22 +163,52 @@
 
   <!-- Availability -->
   <section class="availability" id="availability">
-    <div class="wrap center">
-      <span class="label">Plan Your Stay</span>
-      <h2>Check Availability</h2>
-      <p class="availability-note">Reach out to check open dates and book your stay.</p>
+    <div class="section-wrap">
+      <span class="section-tag">Plan Your Stay</span>
+      <h2 class="section-title">Check Availability</h2>
+      <p class="avail-note">Reach out to check open dates and book your stay.</p>
       <div class="cal-placeholder">
         <p>&#128197;&nbsp; Availability calendar coming soon &mdash; <a href="#contact">contact us</a> to check open dates.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- FAQs -->
+  <section class="faqs" id="faqs">
+    <div class="section-wrap">
+      <span class="section-tag">Questions</span>
+      <h2 class="section-title">FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">What is the check-in and check-out time? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Check-in is at 4:00 PM and check-out is at 11:00 AM. Early check-in or late check-out may be available upon request depending on availability.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is the cabin pet friendly? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! Well-behaved pets are welcome. We ask that pets stay off the furniture and that you clean up after them. A small pet fee may apply.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How close is it to Rocky Mountain National Park? <span class="faq-icon">+</span></button>
+          <div class="faq-a">The western entrance to RMNP is just minutes away. Grand Lake is the quieter, less-crowded western gateway, making it ideal for exploring the park.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What is the minimum stay? <span class="faq-icon">+</span></button>
+          <div class="faq-a">We require a 2-night minimum stay. During peak season (summer and winter holidays) a 3-night minimum may apply.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is there parking available? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes, there is a private driveway with space for multiple vehicles. No street parking needed.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Book -->
   <section class="contact" id="contact">
-    <div class="wrap center">
-      <span class="label">Get In Touch</span>
-      <h2>Book Your Stay</h2>
-      <p>Ready to plan your Rocky Mountain getaway? Send us a message with your dates and we'll get back to you quickly.</p>
+    <div class="section-wrap" style="position:relative;">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Book Your Stay</h2>
+      <p class="section-lead">Ready to plan your Rocky Mountain getaway? Send us a message with your dates and we'll get back to you quickly.</p>
       <form class="booking-form" action="mailto:mygrandlakegetaway@gmail.com" method="POST" enctype="text/plain">
         <div class="form-row">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -362,7 +220,7 @@
         </div>
         <input type="number" name="guests" placeholder="Number of Guests (max 8)" min="1" max="8">
         <textarea name="message" rows="4" placeholder="Questions or special requests?"></textarea>
-        <button type="submit" class="btn btn-dark">Send Inquiry</button>
+        <button type="submit" class="btn-submit">Send Inquiry</button>
       </form>
     </div>
   </section>
@@ -371,49 +229,65 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <h3>Grand Lake Getaway</h3>
+        <h3>My Grand Lake Getaway</h3>
         <p>Grand Lake, Colorado<br>Western Gateway to Rocky Mountain National Park</p>
       </div>
-      <nav class="footer-nav">
+      <nav class="footer-links">
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#amenities">Amenities</a>
-        <a href="#explore">Explore</a>
+        <a href="#explore">Things To Do</a>
+        <a href="#faqs">FAQs</a>
         <a href="#contact">Book Now</a>
       </nav>
     </div>
-    <div class="footer-bottom">&copy; 2026 Grand Lake Getaway. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 My Grand Lake Getaway. All rights reserved.</div>
   </footer>
 
   <script>
+    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
+
+    // Gallery lightbox
     const lb = document.getElementById('lightbox');
     const lbImg = document.getElementById('lbImg');
     const lbCount = document.getElementById('lbCount');
     const imgs = Array.from(document.querySelectorAll('.g-item img'));
     let cur = 0;
-    function show(i) {
+    function showLb(i) {
       cur = (i + imgs.length) % imgs.length;
       lbImg.src = imgs[cur].src;
       lbImg.alt = imgs[cur].alt;
       lbCount.textContent = (cur + 1) + ' / ' + imgs.length;
     }
     imgs.forEach((img, i) => {
-      img.closest('.g-item').addEventListener('click', () => { show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; });
+      img.closest('.g-item').addEventListener('click', () => {
+        showLb(i); lb.classList.add('open'); document.body.style.overflow = 'hidden';
+      });
     });
     function closeLb() { lb.classList.remove('open'); document.body.style.overflow = ''; }
     document.getElementById('lbClose').addEventListener('click', closeLb);
-    document.getElementById('lbNext').addEventListener('click', () => show(cur + 1));
-    document.getElementById('lbPrev').addEventListener('click', () => show(cur - 1));
+    document.getElementById('lbNext').addEventListener('click', () => showLb(cur + 1));
+    document.getElementById('lbPrev').addEventListener('click', () => showLb(cur - 1));
     lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
     document.addEventListener('keydown', e => {
       if (!lb.classList.contains('open')) return;
-      if (e.key === 'ArrowRight') show(cur + 1);
-      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') showLb(cur + 1);
+      if (e.key === 'ArrowLeft') showLb(cur - 1);
       if (e.key === 'Escape') closeLb();
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
 
