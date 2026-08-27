@@ -1,0 +1,177 @@
+/* borders, colors and backgrounds */
+.light-bg {
+  background-color: $lightColor;
+}
+
+.hero-bg {
+  background-color: $backgroundColor;
+}
+
+.muted-bg {
+  background-color: rgba($darkgreyColor, 0.06);
+}
+
+.response,
+.color-main {
+  color: $colorMain;
+  border-color: $colorMain;
+}
+
+.color-main2 {
+  color: $colorMain2;
+  border-color: $colorMain2;
+}
+
+.color-main3 {
+  color: $colorMain3;
+  border-color: $colorMain3;
+}
+
+.color-dark {
+  color: $darkColor;
+  border-color: $darkColor;
+}
+
+.color-darkgrey {
+  color: $darkgreyColor;
+  border-color: $darkgreyColor;
+}
+
+//bootstrap colors
+.color-success {
+  color: $colorSuccess;
+}
+
+.color-info {
+  color: $colorInfo;
+}
+
+.color-warning {
+  color: $colorWarning;
+}
+
+.required,
+.color-danger {
+  color: $colorDanger;
+}
+
+.bordered {
+  border: 1px solid $borderColor;
+}
+
+.box-shadow {
+  border-color: transparent;
+  box-shadow: $boxShadow;
+}
+
+.links-maincolor a {
+  color: $colorMain;
+  &:hover{
+    color: $darkgreyColor;
+  }
+}
+
+.links-maincolor2 a {
+  color: $colorMain2;
+  &:hover{
+    color: $darkgreyColor;
+  }
+}
+
+.links-maincolor3 a {
+  color: $colorMain3;
+  &:hover{
+    color: $darkgreyColor;
+  }
+}
+
+.links-grey a {
+  color: $fontColor;
+  &:hover {
+    color: $colorMain;
+  }
+}
+
+.ls{
+  .links-darkgrey a {
+    color: $darkgreyColor;
+    &:hover {
+      color: $colorMain;
+    }
+  }
+}
+
+//theme background colors
+.bg-maincolor {
+  background-color: $colorMain;
+}
+
+.bg-maincolor2 {
+  background-color: $colorMain2;
+}
+
+.bg-maincolor3 {
+  background-color: $colorMain3;
+}
+
+.bg-dark {
+  background-color: $darkColor;
+}
+
+.bg-darkblue {
+  color: $lightColor;
+  background-color: $darkBlueColor;
+}
+
+.bg-darkgrey {
+  color: $lightColor;
+  background-color: $darkgreyColor;
+}
+
+.bg-gradient{
+  background: linear-gradient(to right, rgba($colorMain, 1) 0%, rgba($colorMain2, 1) 100%);
+}
+
+.ls{
+  .bg-lighhblue{
+    background-color: #f0f7fa;
+    h5{
+      color: $darkgreyColor;
+    }
+  }
+}
+
+//bootstrap background colors
+.bg-success {
+  background-color: $colorSuccess !important;
+}
+
+.bg-info {
+  background-color: $colorInfo !important;
+}
+
+.bg-warning {
+  background-color: $colorWarning !important;
+}
+
+.bg-danger {
+  background-color: $colorDanger !important;
+}
+
+//setting colors for elements inside color or dark background to light color - add :not('.bg-faded')?
+[class*='bg-'] {
+  color: $lightColor;
+  a, h1, h2, h3, h4, h5, h6 {
+    color: $lightColor;
+  }
+}
+
+/*padding for inline elements with theme backgrounds*/
+span[class*='bg-'],
+span.bordered,
+span.light-bg,
+span.hero-bg,
+span.muted-bg {
+  padding-left: 0.37em;
+  padding-right: 0.37em;
+}

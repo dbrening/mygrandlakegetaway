@@ -1,0 +1,46 @@
+/* bootstrap breadcrumbs*/
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  text-transform: uppercase;
+  .breadcrumb-item+.breadcrumb-item::before{
+    opacity: 0;
+  }
+  & > li {
+    display: inline-block;
+    padding: 0;
+    float: none;
+    a:not(.btn){
+      color: #dedfdf;
+    }
+  }
+
+  .text-center & {
+    justify-content: center;
+  }
+  @media (min-width: 992px) {
+    .text-lg-right & {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.breadcrumb > .active {
+  color:$colorMain3;
+  &::before{
+    color: #6c757d;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding: 0 7px;
+  color: #c2dfee;
+}

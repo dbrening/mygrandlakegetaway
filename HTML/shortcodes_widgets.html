@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Mountis</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-custom.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class=""></button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<div class="header_absolute cover-background ds s-overlay s-parallax">
+				<!--topline section visible only on small screens|-->
+				<section class="page_topline ds s-py-10 c-my-10">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-12 col-md-4 col-xl-4">
+								<div class="media">
+									<span class="icon-styled ">
+										<i class="fa color-main2 fa-phone"></i>
+									</span>
+									<div class="media-body">
+										<span class="small-text">BOOK YOUR STAY</span>
+										<p>(303) 919 3238</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center hidden-below-md">
+								<a href="./" class="logo">
+									<img src="images/logo.png" alt="img">
+								</a>
+							</div>
+							<div class="col-12 col-md-4 col-xl-4">
+								<div class="media">
+									<div class="media-body align-items-end">
+										<span class="small-text">our emailaddress</span>
+										<p>mygrandlakegetaway@gmail.com</p>
+									</div>
+									<span class="icon-styled ">
+										<i class="fa color-main2 fa-pencil"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--eof topline-->
+
+				<!-- header with two Bootstrap columns - left for logo and right for navigation and includes (search, social icons, additional links and buttons etc -->
+				<header class="page_header ls justify-nav-center">
+					<div class="container">
+						<div class="row align-items-lg-end align-items-center">
+							<div class="col-10 col-md-4 hidden-above-md d-flex">
+								<a href="./" class="logo">
+									<img src="images/logo.png" alt="img">
+								</a>
+
+								<div class="media-wrap">
+									<div class="media">
+										<span class="icon-styled ">
+											<i class="fa color-main2 fa-phone"></i>
+										</span>
+										<div class="media-body">
+											<span class="small-text">BOOK YOUR STAY</span>
+											<p>(303) 919 3238</p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-body align-items-end">
+											<span class="small-text">our emailaddress</span>
+											<p>mygrandlakegetaway@gmail.com</p>
+										</div>
+										<span class="icon-styled ">
+											<i class="fa color-main2 fa-pencil"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-12 col-1">
+								<!-- main nav start -->
+								<nav class="top-nav">
+									<ul class="nav sf-menu">
+
+
+										<li class="active">
+											<a href="index.html">HomePage</a>
+											<ul>
+												<li>
+													<a href="index.html">MultiPage</a>
+												</li>
+												<li>
+													<a href="index_static.html">Static Intro</a>
+												</li>
+												<li>
+													<a href="index_singlepage.html">Single Page</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="about.html">Pages</a>
+											<ul>
+
+
+												<li>
+													<a href="about.html">About</a>
+												</li>
+
+
+												<!-- features -->
+												<li>
+													<a href="shortcodes_iconbox.html">Shortcodes</a>
+													<ul>
+														<li>
+															<a href="shortcodes_typography.html">Typography</a>
+														</li>
+														<li>
+															<a href="shortcodes_buttons.html">Buttons</a>
+														</li>
+														<li>
+															<a href="shortcodes_pricing.html">Pricing</a>
+														</li>
+														<li>
+															<a href="shortcodes_iconbox.html">Icon Boxes</a>
+														</li>
+														<li>
+															<a href="shortcodes_progress.html">Progress</a>
+														</li>
+														<li>
+															<a href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
+														</li>
+														<li>
+															<a href="shortcodes_bootstrap.html">Bootstrap Elements</a>
+														</li>
+														<li>
+															<a href="shortcodes_animation.html">Animation</a>
+														</li>
+														<li>
+															<a href="shortcodes_icons.html">Template Icons</a>
+														</li>
+														<li>
+															<a href="shortcodes_socialicons.html">Social Icons</a>
+														</li>
+													</ul>
+												</li>
+												<!-- eof shortcodes -->
+
+												<li>
+													<a href="shortcodes_widgets_default.html">Widgets</a>
+													<ul>
+														<li>
+															<a href="shortcodes_widgets_default.html">Default Widgets</a>
+														</li>
+														<li>
+															<a href="shortcodes_widgets_shop.html">Shop Widgets</a>
+														</li>
+														<li>
+															<a href="shortcodes_widgets_custom.html">Custom Widgets</a>
+														</li>
+													</ul>
+
+												</li>
+
+												<!-- events -->
+												<li>
+													<a href="events-left.html">Events</a>
+													<ul>
+														<li>
+															<a href="events-left.html">Left Sidebar</a>
+														</li>
+														<li>
+															<a href="events-right.html">Right Sidebar</a>
+														</li>
+														<li>
+															<a href="events-full.html">Full Width</a>
+														</li>
+														<li>
+															<a href="event-single-left.html">Single Event</a>
+															<ul>
+																<li>
+																	<a href="event-single-left.html">Left Sidebar</a>
+																</li>
+																<li>
+																	<a href="event-single-right.html">Right Sidebar</a>
+																</li>
+																<li>
+																	<a href="event-single-full.html">Full Width</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<!-- eof events -->
+												<li>
+													<a href="comingsoon.html">Comingsoon</a>
+												</li>
+
+												<li>
+													<a href="faq.html">FAQ</a>
+													<ul>
+														<li>
+															<a href="faq.html">FAQ</a>
+														</li>
+														<li>
+															<a href="faq2.html">FAQ 2</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="404.html">404</a>
+												</li>
+
+											</ul>
+										</li>
+										<!-- eof pages -->
+										<li>
+											<a href="routs.html">Routs</a>
+											<ul>
+												<li>
+													<a href="routs.html">Routs</a>
+												</li>
+												<li>
+													<a href="rout-single.html">Single Rout</a>
+												</li>
+											</ul>
+										</li>
+										<!-- eof services -->
+										<li>
+											<a href="#">Features</a>
+											<div class="mega-menu">
+												<ul class="mega-menu-row">
+													<li class="mega-menu-col">
+														<a href="#">Headers</a>
+														<ul>
+															<li>
+																<a href="header1.html">Header Type 1</a>
+															</li>
+															<li>
+																<a href="header2.html">Header Type 2</a>
+															</li>
+															<li>
+																<a href="header3.html">Header Type 3</a>
+															</li>
+															<li>
+																<a href="header4.html">Header Type 4</a>
+															</li>
+															<li>
+																<a href="header5.html">Header Type 5</a>
+															</li>
+															<li>
+																<a href="header6.html">Header Type 6</a>
+															</li>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="#">Side Menus</a>
+														<ul>
+															<li>
+																<a href="header-side.html">Push Left</a>
+															</li>
+															<li>
+																<a href="header-side-right.html">Push Right</a>
+															</li>
+															<li>
+																<a href="header-side-slide.html">Slide Left</a>
+															</li>
+															<li>
+																<a href="header-side-slide-right.html">Slide Right</a>
+															</li>
+															<li>
+																<a href="header-side-sticked.html">Sticked Left</a>
+															</li>
+															<li>
+																<a href="header-side-sticked-right.html">Sticked Right</a>
+															</li>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="title1.html">Title Sections</a>
+														<ul>
+															<li>
+																<a href="title1.html">Title section 1</a>
+															</li>
+															<li>
+																<a href="title2.html">Title section 2</a>
+															</li>
+															<li>
+																<a href="title3.html">Title section 3</a>
+															</li>
+															<li>
+																<a href="title4.html">Title section 4</a>
+															</li>
+															<li>
+																<a href="title5.html">Title section 5</a>
+															</li>
+															<li>
+																<a href="title6.html">Title section 6</a>
+															</li>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="footer1.html#footer">Footers</a>
+														<ul>
+															<li>
+																<a href="footer1.html#footer">Footer Type 1</a>
+															</li>
+															<li>
+																<a href="footer2.html#footer">Footer Type 2</a>
+															</li>
+															<li>
+																<a href="footer3.html#footer">Footer Type 3</a>
+															</li>
+															<li>
+																<a href="footer4.html#footer">Footer Type 4</a>
+															</li>
+															<li>
+																<a href="footer5.html#footer">Footer Type 5</a>
+															</li>
+															<li>
+																<a href="footer6.html#footer">Footer Type 6</a>
+															</li>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="copyright1.html#copyright">Copyright</a>
+
+														<ul>
+															<li>
+																<a href="copyright1.html#copyright">Copyright 1</a>
+															</li>
+															<li>
+																<a href="copyright2.html#copyright">Copyright 2</a>
+															</li>
+															<li>
+																<a href="copyright3.html#copyright">Copyright 3</a>
+															</li>
+															<li>
+																<a href="copyright4.html#copyright">Copyright 4</a>
+															</li>
+															<li>
+																<a href="copyright5.html#copyright">Copyright 5</a>
+															</li>
+															<li>
+																<a href="copyright6.html#copyright">Copyright 6</a>
+															</li>
+														</ul>
+													</li>
+
+												</ul>
+											</div> <!-- eof mega menu -->
+										</li>
+										<!-- eof features -->
+										<!-- gallery -->
+										<li>
+											<a href="gallery-image.html">Gallery</a>
+											<ul>
+												<!-- Gallery image only -->
+												<li>
+													<a href="gallery-image.html">Regular</a>
+													<ul>
+														<li>
+															<a href="gallery-image-2-cols.html">2 columns</a>
+														</li>
+														<li>
+															<a href="gallery-image.html">3 columns</a>
+														</li>
+														<li>
+															<a href="gallery-image-4-cols-fullwidth.html">4 columns fullwidth</a>
+														</li>
+
+													</ul>
+												</li>
+												<!-- eof Gallery image only -->
+
+												<!-- Gallery with title -->
+												<li>
+													<a href="gallery-title.html">Image With Title</a>
+													<ul>
+														<li>
+															<a href="gallery-title-2-cols.html">2 columns</a>
+														</li>
+														<li>
+															<a href="gallery-title.html">3 column</a>
+														</li>
+														<li>
+															<a href="gallery-title-4-cols-fullwidth.html">4 columns fullwidth</a>
+														</li>
+													</ul>
+												</li>
+												<!-- eof Gallery with title -->
+
+												<!-- Gallery with excerpt -->
+												<li>
+													<a href="gallery-excerpt.html">Extended</a>
+													<ul>
+														<li>
+															<a href="gallery-excerpt-2-cols.html">2 columns</a>
+														</li>
+														<li>
+															<a href="gallery-excerpt.html">3 column</a>
+														</li>
+														<li>
+															<a href="gallery-excerpt-4-cols-fullwidth.html">4 columns fullwdith</a>
+														</li>
+													</ul>
+												</li>
+												<!-- eof Gallery with excerpt -->
+
+												<li>
+													<a href="gallery-tiled.html">Tiled Gallery</a>
+												</li>
+
+												<!-- Gallery item -->
+												<li>
+													<a href="gallery-single.html">Gallery Item</a>
+													<ul>
+														<li>
+															<a href="gallery-single.html">Style 1</a>
+														</li>
+														<li>
+															<a href="gallery-single2.html">Style 2</a>
+														</li>
+													</ul>
+												</li>
+												<!-- eof Gallery item -->
+											</ul>
+										</li>
+										<!-- eof Gallery -->
+										<!-- blog -->
+										<li>
+											<a href="blog-left.html">Tips & Tricks</a>
+											<ul>
+
+												<li>
+													<a href="blog-right.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a href="blog-left.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a href="blog-full.html">No Sidebar</a>
+												</li>
+												<li>
+													<a href="blog-grid.html">News Grid</a>
+												</li>
+
+												<li>
+													<a href="blog-single-right.html">Post</a>
+													<ul>
+														<li>
+															<a href="blog-single-right.html">Right Sidebar</a>
+														</li>
+														<li>
+															<a href="blog-single-left.html">Left Sidebar</a>
+														</li>
+														<li>
+															<a href="blog-single-full.html">No Sidebar</a>
+														</li>
+													</ul>
+												</li>
+
+												<li>
+													<a href="blog-single-video-right.html">Video Post</a>
+													<ul>
+														<li>
+															<a href="blog-single-video-right.html">Right Sidebar</a>
+														</li>
+														<li>
+															<a href="blog-single-video-left.html">Left Sidebar</a>
+														</li>
+														<li>
+															<a href="blog-single-video-full.html">No Sidebar</a>
+														</li>
+													</ul>
+												</li>
+
+											</ul>
+										</li>
+										<!-- eof blog -->
+										<!-- shop -->
+										<li>
+											<a href="shop-right.html">Shop</a>
+											<ul>
+												<li>
+													<a href="shop-account-dashboard.html">Account</a>
+													<ul>
+
+														<li>
+															<a href="shop-account-details.html">Account details</a>
+														</li>
+														<li>
+															<a href="shop-account-addresses.html">Addresses</a>
+														</li>
+														<li>
+															<a href="shop-account-address-edit.html">Edit Address</a>
+														</li>
+														<li>
+															<a href="shop-account-orders.html">Orders</a>
+														</li>
+														<li>
+															<a href="shop-account-order-single.html">Single Order</a>
+														</li>
+														<li>
+															<a href="shop-account-downloads.html">Downloads</a>
+														</li>
+														<li>
+															<a href="shop-account-password-reset.html">Password Reset</a>
+														</li>
+														<li>
+															<a href="shop-account-login.html">Login/Logout</a>
+														</li>
+
+													</ul>
+												</li>
+												<li>
+													<a href="shop-right.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a href="shop-left.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a href="shop-product.html">Product</a>
+												</li>
+												<li>
+													<a href="shop-cart.html">Cart</a>
+												</li>
+												<li>
+													<a href="shop-checkout.html">Checkout</a>
+												</li>
+												<li>
+													<a href="shop-order-received.html">Order Received</a>
+												</li>
+
+											</ul>
+										</li>
+										<!-- eof shop -->
+										<!-- contacts -->
+										<li>
+											<a href="contact.html">Contacts</a>
+											<ul>
+												<li>
+													<a href="contact.html">Contact 1</a>
+												</li>
+												<li>
+													<a href="contact2.html">Contact 2</a>
+												</li>
+												<li>
+													<a href="contact3.html">Contact 3</a>
+												</li>
+												<li>
+													<a href="contact4.html">Contact 4</a>
+												</li>
+											</ul>
+										</li>
+										<!-- eof contacts -->
+										<li>
+											<a href="booking.html">Booking</a>
+										</li>
+									</ul>
+
+
+								</nav>
+								<!-- eof main nav -->
+							</div>
+
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+				<section class="page_title ds s-py-5">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 text-center">
+								<h1 class="bold">Shortcodes: Widgets</h1>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="./">Home</a>
+									</li>
+									<li class="breadcrumb-item">
+										<a href="#">Pages</a>
+									</li>
+									<li class="breadcrumb-item active">
+										Shortcodes: Widgets
+									</li>
+								</ol>
+							</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+			<section class="ls s-py-50 c-gutter-60 c-mb-30">
+				<div class="container">
+					<div class="row">
+
+						<div class="d-none d-lg-block divider-70"></div>
+
+
+						<main class="col-lg-7 col-xl-8">
+
+							<h1 class="entry-title mt-0">All Widgets</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+
+							<h1 class="entry-title mt-0">All Widgets</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-6">
+									<h3>1/2</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolorem nisi unde itaque,
+										aliquid. Necessitatibus, dolorem tempora repudiandae modi. Quis, esse eveniet suscipit! Enim
+										dicta voluptate quas ea, facilis repellat!
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro numquam?
+									</p>
+								</div>
+								<div class="col-xl-4">
+									<h3>1/3</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus obcaecati incidunt
+										quas iusto eos nobis. Laudantium veniam, reprehenderit nemo alias ducimus, illo, omnis
+										voluptas doloribus cupiditate repudiandae porro.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+
+						</main>
+						<!--eof .col-md-* (main content)-->
+
+
+						<!-- sidebar -->
+						<aside class="col-lg-5 col-xl-4">
+
+							<div class="widget widget_text">
+								<h2>Default widgets</h2>
+								<hr>
+							</div>
+
+							<div class="widget widget_archive">
+
+								<h3 class="widget-title">Archive widget</h3>
+
+								<ul>
+									<li>
+										<a href="blog-right.html">May 2018</a>&nbsp;/ 375
+									</li>
+									<li>
+										<a href="blog-right.html">April 2018</a>&nbsp;/ 75
+									</li>
+									<li>
+										<a href="blog-right.html">March 2018</a>&nbsp;/ 142
+									</li>
+									<li>
+										<a href="blog-right.html">February 2018</a>&nbsp;/ 269
+									</li>
+									<li>
+										<a href="blog-right.html">January 2018</a>&nbsp;/ 3
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget widget_recent_comments">
+
+								<h3 class="widget-title">Recent Comments</h3>
+
+								<ul>
+									<li class="recentcomments">
+										<span class="comment-author-link">
+											<a href="https://wordpress.org/" rel="external nofollow" class="url">A WordPress Commenter</a>
+										</span>
+										on
+										<a href="blog-single-right.html#comment-1">Hello world!</a>
+									</li>
+									<li class="recentcomments">
+										<span class="comment-author-link">Admin</span>
+										on
+										<a href="blog-single-right.html#comment-1">
+											Simple blog post
+										</a>
+									</li>
+									<li class="recentcomments">
+										<span class="comment-author-link">John Doe</span>
+										on
+										<a href="blog-single-right.html#comment-1">
+											Post with gallery
+										</a>
+									</li>
+									<li class="recentcomments">
+										<span class="comment-author-link">Maria Jones</span>
+										on
+										<a href="blog-single-right.html#comment-1">
+											Our latest news
+										</a>
+									</li>
+									<li class="recentcomments">
+										<span class="comment-author-link">Alex Smith</span>
+										on
+										<a href="blog-single-right.html#comment-1">
+											Blockquote post
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="widget widget_recent_entries">
+
+								<h3 class="widget-title">Recent Entries</h3>
+
+								<ul>
+									<li>
+										<a href="blog-single-right.html">How I Lost The Secret Of My Dazzling Success For 20 Years</a>
+										<span class="post-date">26 dec 2017</span>
+									</li>
+									<li>
+										<a href="blog-single-right.html">Make It Your Destiny To Accomplish Great Things In Your Life</a>
+										<span class="post-date">27 dec 2017</span>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget widget_calendar">
+								<h3 class="widget-title">Calendar</h3>
+								<div id="calendar_wrap" class="calendar_wrap">
+									<table id="wp-calendar">
+										<caption>March '18</caption>
+										<thead>
+											<tr>
+												<th scope="col" title="Monday">sun</th>
+												<th scope="col" title="Tuesday">mon</th>
+												<th scope="col" title="Wednesday">tue</th>
+												<th scope="col" title="Thursday">wed</th>
+												<th scope="col" title="Friday">thu</th>
+												<th scope="col" title="Saturday">fri</th>
+												<th scope="col" title="Sunday">sat</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td colspan="1" class="pad">31</td>
+												<td>1</td>
+												<td>2</td>
+												<td>3</td>
+												<td>4</td>
+												<td>
+													<a href="blog-right.html" aria-label="Posts published on January 5, 2017">5</a>
+												</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>8</td>
+												<td>
+													<a href="blog-right.html" aria-label="Posts published on January 9, 2017">9</a>
+												</td>
+												<td>
+													<a href="blog-right.html" aria-label="Posts published on January 10, 2017">10</a>
+												</td>
+												<td>
+													<a href="blog-right.html" aria-label="Posts published on January 11, 2017">11</a>
+												</td>
+												<td>12</td>
+												<td>13</td>
+											</tr>
+											<tr>
+												<td>14</td>
+												<td>15</td>
+												<td>16</td>
+												<td>17</td>
+												<td>18</td>
+												<td>19</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td>21</td>
+												<td>22</td>
+												<td>23</td>
+												<td>24</td>
+												<td>25</td>
+												<td>26</td>
+												<td>27</td>
+											</tr>
+											<tr>
+												<td>28</td>
+												<td>29</td>
+												<td>30</td>
+												<td>31</td>
+												<td colspan="1" class="pad">1</td>
+												<td colspan="1" class="pad">2</td>
+												<td colspan="1" class="pad">3</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="3" id="prev">
+													<a href="blog-right.html">« Mar</a>
+												</td>
+												<td class="pad">&nbsp;</td>
+												<td colspan="3" id="next">
+													<a href="blog-right.html">May »</a>
+												</td>
+											</tr>
+										</tfoot>
+
+
+									</table>
+								</div>
+							</div>
+
+
+							<div class="widget widget_categories">
+
+								<h3 class="widget-title">Categories</h3>
+
+								<ul>
+									<li class="cat-item">
+										<a href="blog-right.html">Corporate</a>
+										/ 12
+										<ul class="children">
+											<li class="cat-item">
+												<a href="blog-right.html">Business
+												</a>
+												/ 1
+											</li>
+										</ul>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Entertainment</a>
+										/ 21
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Innovations</a>
+										/ 18
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">News</a>
+										/ 43
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Knowledge
+										</a>
+										/ 8
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget widget_categories">
+
+								<h3 class="widget-title">Categories Dropdown</h3>
+
+								<label class="screen-reader-text" for="cat">
+									Categories dropdown
+								</label>
+								<select name="cat" id="cat" class="postform">
+									<option value="-1">Select Month</option>
+									<option class="level-0" value="3">January</option>
+									<option class="level-0" value="4">February</option>
+									<option class="level-0" value="5">March</option>
+									<option class="level-0" value="6">April</option>
+									<option class="level-0" value="8">May</option>
+									<option class="level-0" value="9">June</option>
+								</select>
+							</div>
+
+
+							<div class="widget widget_meta">
+
+								<h3 class="widget-title">Meta Widget</h3>
+
+								<ul>
+									<li>
+										<a href="#">Site Admin
+										</a>
+									</li>
+									<li>
+										<a href="#">Log out
+										</a>
+									</li>
+									<li>
+										<a href="#">Entries <abbr title="Really Simple Syndication">RSS</abbr>
+										</a>
+									</li>
+									<li>
+										<a href="#">Comments <abbr title="Really Simple Syndication">RSS</abbr>
+										</a>
+									</li>
+									<li>
+										<a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget widget_nav_menu">
+
+								<h3 class="widget-title">Custom Menu</h3>
+
+								<div class="menu-container">
+
+									<ul class="menu">
+
+										<li class="menu-item">
+											<a href="./">
+												Home
+											</a>
+											<ul class="sub-menu">
+												<li class="menu-item">
+													<a href="about.html">Sub page</a>
+												</li>
+												<li class="menu-item">
+													<a href="about.html">One more sub page</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item">
+											<a href="blog-right.html">
+												Blog
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="about.html">
+												About Us
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="faq.html">
+												FAQ
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="gallery-regular.html">
+												Gallery
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="contact.html">
+												Contact Us
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+
+							<div class="widget widget_pages">
+
+								<h3 class="widget-title">Pages</h3>
+
+								<ul>
+									<li class="page_item">
+										<a href="./">
+											Home
+										</a>
+									</li>
+									<li class="page_item page_item_has_children">
+										<a href="blog-right.html">
+											Blog
+										</a>
+										<ul class="children">
+											<li class="page_item">
+												<a href="about.html">
+													Sub page
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="page_item">
+										<a href="about.html">
+											About Us
+										</a>
+									</li>
+									<li class="page_item">
+										<a href="gallery-regular.html">
+											Gallery
+										</a>
+									</li>
+									<li class="page_item">
+										<a href="contact.html">
+											Contact Us
+										</a>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget widget_search">
+								<h3 class="widget-title">Search Widget</h3>
+								<form role="search" method="get" class="search-form" action="/">
+									<label for="search-form-widget">
+										<span class="screen-reader-text">Search for:</span>
+									</label>
+									<input type="search" id="search-form-widget" class="search-field" placeholder="Search here..." value="" name="search">
+									<button type="submit" class="search-submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+
+
+							<div class="widget widget_tag_cloud">
+
+								<h3 class="widget-title">Tags</h3>
+
+								<div class="tagcloud">
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										Corporate
+										<span class="tag-link-count">(7)</span>
+									</a>
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										Business
+										<span class="tag-link-count">(12)</span>
+									</a>
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										Entertainment
+										<span class="tag-link-count">(9)</span>
+									</a>
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										Innovations
+										<span class="tag-link-count">(6)</span>
+									</a>
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										News
+										<span class="tag-link-count">(8)</span>
+									</a>
+
+									<a href="blog-right.html" class="tag-cloud-link">
+										Knowledge
+										<span class="tag-link-count">(11)</span>
+									</a>
+								</div>
+							</div>
+
+
+							<div class="widget widget_text">
+								<h3 class="widget-title">Text Widget</h3>
+
+								<div class="textwidget">
+									<p>Text <strong class="color-dark">bold</strong> <em>italic </em> <a href="http://google.com">link</a>
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore
+									</p>
+									<ul class="list-styled">
+										<li>item 1</li>
+										<li>item 2</li>
+										<li>item 3</li>
+									</ul>
+								</div>
+							</div>
+
+
+							<!-- template custom widgets -->
+							<div class="widget widget_text">
+								<h2>Custom widgets</h2>
+								<hr>
+							</div>
+
+							<div class="widget widget_popular_entries">
+
+								<h3 class="widget-title">Popular</h3>
+								<ul class="list-unstyled">
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/01.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Eod tempor invidunt labore dolore magna</a>
+											</h4>
+											<div class="star-rating" title="Rated 5 out of 5">
+												<span style="width:100%">
+													<strong class="rating">5</strong> out of 5
+												</span>
+											</div>
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/02.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Aliquyam erat, sed voluptua vero eos </a>
+											</h4>
+											<div class="star-rating" title="Rated 4.0 out of 5">
+												<span style="width:60%">
+													<strong class="rating">4</strong> out of 5
+												</span>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/01.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Et justo duo dolores et ea rebum</a>
+											</h4>
+											<div class="star-rating" title="Rated 4.50 out of 5">
+												<span style="width:80%">
+													<strong class="rating">4.50</strong> out of 5
+												</span>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/02.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Stetclita kasd gubergren no sea takimata</a>
+											</h4>
+											<div class="star-rating" title="Rated 3.00 out of 5">
+												<span style="width:40%">
+													<strong class="rating">3</strong> out of 5
+												</span>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/01.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Lorem ipsum dolor sitmet amet consetetur </a>
+											</h4>
+											<div class="star-rating" title="Rated 4.50 out of 5">
+												<span style="width:90%">
+													<strong class="rating">4.50</strong> out of 5
+												</span>
+											</div>
+
+										</div>
+									</li>
+
+								</ul>
+							</div>
+
+							<div class="widget widget_recent_posts">
+
+								<h3 class="widget-title">Recent Posts</h3>
+								<ul class="list-unstyled">
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/01.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Travel Prudently Luggage And Carry On Worries</a>
+											</h4>
+											<p class="item-meta">
+												<i class="fa fa-calendar color-main3"></i>
+												20 mar, 18
+											</p>
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/02.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Cheap Airline Tickets Great Ways To Save</a>
+											</h4>
+											<p class="item-meta">
+												<i class="fa fa-calendar color-main3"></i>
+												21 mar, 18
+											</p>
+
+										</div>
+									</li>
+
+									<li class="media">
+										<a class="media-image" href="blog-single-right.html">
+											<img src="images/events/03.jpg" alt="img">
+										</a>
+										<div class="media-body">
+											<h4>
+												<a href="blog-single-right.html">Cheap Airline Tickets Great Ways To Save</a>
+											</h4>
+											<p class="item-meta">
+												<i class="fa fa-calendar color-main3"></i>
+												22 mar, 18
+											</p>
+
+										</div>
+									</li>
+
+								</ul>
+							</div>
+
+							<div class="widget widget_slider">
+
+								<h3 class="widget-title">Slider</h3>
+								<div class="owl-carousel top-right-nav" data-nav="false" data-dots="true" data-loop="true" data-autoplay="false" data-items="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1">
+
+									<div class="vertical-item">
+										<div class="item-media ds s-overlay">
+											<img src="images/widgets/01.jpg" alt="img">
+										</div>
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="widgets-title m-0">
+													<a href="blog-right.html" rel="bookmark">
+														Sample Post With Youtube Video
+													</a>
+												</h4>
+												<div class="entry-meta">
+													<div class="entry-date">
+														<a href="blog-right.html" rel="bookmark">
+															<i class="fa fa-calendar color-main"></i>
+															<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																dec 20 2017
+															</time>
+														</a>
+													</div>
+												</div>
+											</header>
+										</div>
+									</div>
+									<!-- .vertical-item -->
+
+									<div class="vertical-item">
+										<div class="item-media ds s-overlay">
+											<img src="images/widgets/02.jpg" alt="img">
+										</div>
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="widgets-title m-0">
+													<a href="blog-right.html" rel="bookmark">
+														Why Boutique Design Matters
+													</a>
+												</h4>
+												<div class="entry-meta">
+													<div class="entry-date">
+														<a href="blog-right.html" rel="bookmark">
+															<i class="fa fa-calendar color-main"></i>
+															<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																24 mar, 18
+															</time>
+														</a>
+													</div>
+												</div>
+											</header>
+										</div>
+									</div>
+									<!-- .vertical-item -->
+
+									<div class="vertical-item">
+										<div class="item-media ds s-overlay">
+											<img src="images/widgets/03.jpg" alt="img">
+										</div>
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="widgets-title m-0">
+													<a href="blog-right.html" rel="bookmark">
+														Sample Post With Youtube Video
+													</a>
+												</h4>
+												<div class="entry-meta">
+													<div class="entry-date">
+														<a href="blog-right.html" rel="bookmark">
+															<i class="fa fa-calendar color-main"></i>
+															<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																dec 20 2017
+															</time>
+														</a>
+													</div>
+												</div>
+											</header>
+										</div>
+									</div>
+									<!-- .vertical-item -->
+
+								</div>
+								<!-- .owl-carousel -->
+
+							</div>
+							<!-- .widget_slider -->
+
+
+							<div class="widget widget_post_tabs small-tabs">
+
+								<h3 class="widget-title">Tabs Posts</h3>
+
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" href="#widget-tab4" role="tab" data-toggle="tab">Recent</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#widget-tab5" role="tab" data-toggle="tab">Popular</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#widget-tab6" role="tab" data-toggle="tab">Rated</a>
+									</li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content top-color-border no-border">
+
+
+									<div class="tab-pane fade show active" id="widget-tab4">
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/01.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															See The Unmatched Beauty Of The Great Lakes
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	25 mar, 18
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/02.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Lorem sadipscing elitr
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/03.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Elitr onsetetur sadip
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+
+									</div><!-- eof tab -->
+
+
+									<div class="tab-pane fade" id="widget-tab5">
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/02.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Lorem sadipscing elitr
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/01.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Consetetur elitr
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/03.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Elitr onsetetur sadip
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+									</div><!-- eof tab -->
+
+
+									<div class="tab-pane fade" id="widget-tab6">
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/03.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Elitr onsetetur sadip
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/01.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Consetetur elitr
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+
+										</div>
+
+										<div class="vertical-item">
+											<div class="item-media">
+												<img src="images/widgets/02.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="blog-single-left.html"></a>
+												</div>
+											</div>
+											<div class="item-content">
+												<header class="entry-header">
+													<h4 class="widgets-title m-0">
+														<a href="blog-right.html" rel="bookmark">
+															Lorem sadipscing elitr
+														</a>
+													</h4>
+													<div class="entry-meta">
+														<div class="entry-date">
+															<a href="blog-right.html" rel="bookmark">
+																<i class="fa fa-calendar"></i>
+																<time class="published updated" datetime="2018-03-18T15:15:12+00:00">
+																	Jan 18, 2018
+																</time>
+															</a>
+														</div>
+													</div>
+												</header>
+											</div>
+										</div>
+									</div><!-- eof tab -->
+
+								</div><!-- eof tab-content -->
+
+							</div><!-- eof widget -->
+
+							<div class="widget widget_flickr">
+
+								<h3 class="widget-title">Flickr</h3>
+								<ul class="flickr_ul"></ul>
+							</div>
+
+							<div class="widget widget_apsc_widget">
+								<h3 class="widget-title">AccessPress</h3>
+								<div class="apsc-icons-wrapper clearfix apsc-theme-4">
+									<div class="apsc-each-profile">
+										<a class="apsc-facebook-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="fa fa-facebook apsc-facebook"></i>
+													<span class="media-name">Facebook</span>
+												</span>
+												<span class="apsc-count">9.8K</span><span class="apsc-media-type">Fans</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-twitter-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="fa fa-twitter apsc-twitter"></i>
+													<span class="media-name">Twitter</span>
+												</span>
+												<span class="apsc-count">4.9K</span><span class="apsc-media-type">Followers</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-google-plus-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-googlePlus fa fa-google-plus"></i>
+													<span class="media-name">google+</span>
+												</span>
+												<span class="apsc-count">10.1M</span><span class="apsc-media-type">Followers</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-instagram-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-instagram fa fa-instagram"></i>
+													<span class="media-name">Instagram</span>
+												</span>
+												<span class="apsc-count">4</span><span class="apsc-media-type">Followers</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-youtube-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-youtube fa fa-youtube"></i>
+													<span class="media-name">Youtube</span>
+												</span>
+												<span class="apsc-count">2.2K</span><span class="apsc-media-type">Subscriber</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-soundcloud-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-soundcloud fa fa-soundcloud"></i>
+													<span class="media-name">Soundcloud</span>
+												</span>
+												<span class="apsc-count">8K</span><span class="apsc-media-type">Followers</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-dribble-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-dribbble fa fa-dribbble"></i>
+													<span class="media-name">dribble</span>
+												</span>
+												<span class="apsc-count">0</span><span class="apsc-media-type">Followers</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-edit-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-posts fa fa-edit"></i>
+													<span class="media-name">Post</span>
+												</span>
+												<span class="apsc-count">1</span><span class="apsc-media-type">Post</span>
+											</div>
+										</a>
+									</div>
+									<div class="apsc-each-profile">
+										<a class="apsc-comment-icon clearfix" href="#">
+											<div class="apsc-inner-block">
+												<span class="social-icon">
+													<i class="apsc-comments fa fa-comments"></i>
+													<span class="media-name">Comment</span>
+												</span>
+												<span class="apsc-count">0</span><span class="apsc-media-type">Comments</span>
+											</div>
+										</a>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="widget widget_mailchimp">
+
+								<h3 class="widget-title">Mailchimp</h3>
+
+								<form class="signup" action="/">
+									<label for="mailchimp_email">
+										<span class="screen-reader-text">Subscribe:</span>
+									</label>
+
+									<input id="mailchimp_email1" name="email" type="email" class="mailchimp_email form-control" placeholder="Enter Your Email">
+
+									<button type="submit" class="search-submit">
+										<span class="screen-reader-text">Subscribe</span>
+									</button>
+									<div class="response"></div>
+								</form>
+
+								<p class="mt-15">Subscribe to our Newsletter right now to be updated. We promice not to spam!</p>
+
+							</div>
+
+
+							<div class="widget widget_twitter">
+								<h3 class="widget-title">Twitter Widget</h3>
+								<div class="twitter-item">
+									<div class="media">
+										<div class="icon-styled color-main">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+										<div class="media-body color_1">
+											<p>
+												Tamquam eligendi ex qui ex sea aliquam blandit has cum tacimates.
+											</p>
+											<a href="№">http://on.bcg.com/2enKlr7</a>
+										</div>
+									</div>
+									<div class="media">
+										<div class="icon-styled color-main">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+										<div class="media-body color_1">
+											<p>
+												Tamquam eligendi ex qui ex sea aliquam blandit has cum tacimates.
+											</p>
+											<a href="№">http://on.bcg.com/2enKlr7</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget widget_text">
+								<h2>Shop widgets</h2>
+								<hr>
+							</div>
+
+							<div class="widget widget_product_search">
+
+								<h3 class="widget-title">Product Search</h3>
+
+								<form role="search" class="woocommerce-product-search" action="/">
+
+									<label class="screen-reader-text" for="woocommerce-product-search-field-widget">
+										Search for:
+									</label>
+
+									<input type="search" id="woocommerce-product-search-field-widget" class="search-field" placeholder="Search here..." value="" name="search">
+									<input type="submit" value="Search">
+								</form>
+							</div>
+
+							<div class="widget woocommerce widget_shopping_cart">
+
+								<h3 class="widget-title">Shopping Cart</h3>
+
+								<div class="widget_shopping_cart_content">
+
+									<ul class="woocommerce-mini-cart cart_list product_list_widget ">
+										<li class="woocommerce-mini-cart-item mini_cart_item">
+											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku="">×</a>
+											<a href="shop-product-right.html">
+												<img src="images/shop/14.jpg" alt="img">Happy Ninja
+											</a>
+
+											<span class="quantity">1 X
+												<span class="woocommerce-Price-amount amount">
+													<span class="woocommerce-Price-currencySymbol">$</span>
+													15.50
+												</span>
+											</span>
+										</li>
+										<li class="woocommerce-mini-cart-item mini_cart_item">
+											<a href="#" class="remove" aria-label="Remove this item" data-product_id="76" data-product_sku="">×</a>
+											<a href="shop-product-right.html">
+												<img src="images/shop/12.jpg" alt="img">Flying Ninja
+											</a>
+
+											<span class="quantity">1 X
+												<span class="woocommerce-Price-amount amount">
+													<span class="woocommerce-Price-currencySymbol">$</span>
+													17.99
+												</span>
+											</span>
+										</li>
+										<li class="woocommerce-mini-cart-item mini_cart_item">
+											<a href="#" class="remove" aria-label="Remove this item" data-product_id="76" data-product_sku="">×</a>
+											<a href="shop-product-right.html">
+												<img src="images/shop/03.jpg" alt="img">Patient Ninja
+											</a>
+
+											<span class="quantity">3 X
+												<span class="woocommerce-Price-amount amount">
+													<span class="woocommerce-Price-currencySymbol">$</span>
+													49.99
+												</span>
+											</span>
+										</li>
+									</ul>
+
+									<p class="woocommerce-mini-cart__total total">
+										Subtotal:
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											220.00
+										</span>
+									</p>
+
+									<p class="woocommerce-mini-cart__buttons buttons">
+										<a href="shop-cart.html" class="button wc-forward">View cart</a>
+									</p>
+								</div>
+							</div>
+
+
+							<div class="widget woocommerce widget_top_rated_products">
+								<h3 class="widget-title">Top Rated Products</h3>
+								<ul class="product_list_widget">
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/16.jpg" alt="img">
+											<span class="product-title">Video Lesson №1</span>
+										</a>
+										<div class="star-rating">
+											<span style="width:60%">Rated
+												<strong class="rating">3.00 </strong>
+												out of 5
+											</span>
+										</div>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											25.99
+										</span>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/17.jpg" alt="img">
+											<span class="product-title">Video Lesson №2</span>
+										</a>
+										<div class="star-rating">
+											<span style="width:80%">Rated
+												<strong class="rating">4.00</strong>
+												out of 5
+											</span>
+										</div>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											99.99
+										</span>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/19.jpg" alt="img">
+											<span class="product-title">Video Lesson №3</span>
+										</a>
+										<div class="star-rating">
+											<span style="width:100%">Rated
+												<strong class="rating">5.00</strong>
+												out of 5
+											</span>
+										</div>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											120.00
+										</span>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_products">
+								<h3 class="widget-title">Shop Products</h3>
+								<ul class="product_list_widget">
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/01.jpg" alt="img">
+											<span class="product-title">Woo Single #2</span>
+										</a>
+										<del>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												3.00
+											</span>
+										</del>
+										<ins>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												2.00
+											</span>
+										</ins>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/02.jpg" alt="img">
+											<span class="product-title">Woo Album #4</span>
+										</a>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											9.00
+										</span>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/03.jpg" alt="img">
+											<span class="product-title">Woo Single #1</span>
+										</a>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											3.00
+										</span>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/04.jpg" alt="img">
+											<span class="product-title">Woo Album #3</span>
+										</a>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											9.00
+										</span>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/05.jpg" alt="img">
+											<span class="product-title">Woo Album #2</span>
+										</a>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>
+											9.00
+										</span>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_recently_viewed_products">
+
+								<h3 class="widget-title">Recently Viewed Products</h3>
+
+								<ul class="product_list_widget">
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/16.jpg" alt="img">
+											<span class="product-title">Premium Quality</span>
+										</a>
+										<del>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												15.00
+											</span>
+										</del>
+										<ins>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												12.00
+											</span>
+										</ins>
+									</li>
+
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/06.jpg" alt="img">
+											<span class="product-title">Flying Ninja</span>
+										</a>
+										<del>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												15.00
+											</span>
+										</del>
+										<ins>
+											<span class="woocommerce-Price-amount amount">
+												<span class="woocommerce-Price-currencySymbol">$</span>
+												12.00
+											</span>
+										</ins>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_recent_reviews">
+
+								<h3 class="widget-title">Recent Reviews</h3>
+
+								<ul class="product_list_widget">
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/03.jpg" alt="img">
+											Woo Ninja
+										</a>
+										<div class="star-rating">
+											<span style="width:80%">Rated <strong
+		class="rating">4</strong> out of 5</span>
+										</div>
+										<span class="reviewer">by Maria</span>
+									</li>
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/03.jpg" alt="img">
+											Premium Quality
+										</a>
+										<div class="star-rating">
+											<span style="width:20%">Rated <strong
+		class="rating">1</strong> out of 5</span>
+										</div>
+										<span class="reviewer">by Maria</span>
+									</li>
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/03.jpg" alt="img">
+											Woo Logo
+										</a>
+										<div class="star-rating">
+											<span style="width:100%">Rated <strong
+		class="rating">5</strong> out of 5</span>
+										</div>
+										<span class="reviewer">by Maria</span>
+									</li>
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/04.jpg" alt="img">
+											Ninja Silhouette
+										</a>
+										<div class="star-rating">
+											<span style="width:20%">Rated <strong
+		class="rating">1</strong> out of 5</span>
+										</div>
+										<span class="reviewer">by Maria</span>
+									</li>
+									<li>
+										<a href="shop-product-right.html">
+											<img src="images/shop/05.jpg" alt="img">
+											Ship Your Idea
+										</a>
+										<div class="star-rating">
+											<span style="width:60%">Rated <strong
+		class="rating">3</strong> out of 5</span>
+										</div>
+										<span class="reviewer">by Maria</span>
+									</li>
+
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_price_filter">
+
+								<h3 class="widget-title">Price Filter</h3>
+
+								<form method="get" action="/">
+									<div class="price_slider_wrapper">
+										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
+											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0; width: 65%;">
+
+											</div>
+											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0;">
+
+											</span>
+											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 65%;">
+
+											</span>
+										</div>
+										<div class="price_slider_amount">
+											<input type="text" id="min_price" name="min_price" value="" data-min="20" placeholder="Min price" style="display: none;">
+											<input type="text" id="max_price" name="max_price" value="" data-max="30" placeholder="Max price" style="display: none;">
+											<button type="submit" class="button">Filter Now</button>
+											<div class="price_label" style="">
+												Price: <span class="from">$30</span> - <span class="to">$220</span>
+											</div>
+
+											<div class="clear"></div>
+
+										</div>
+									</div>
+								</form>
+							</div>
+
+
+							<!-- shop widgets -->
+							<div class="widget woocommerce widget_product_categories">
+								<h3 class="widget-title">Shop Categories</h3>
+								<ul class="product-categories">
+									<li class="cat-item cat-parent">
+										<a href="shop-right.html">All Products</a>
+										<span class="count">/ 375</span>
+									</li>
+									<li class="cat-item cat-parent">
+										<a href="shop-right.html">Flying Ninja</a>
+										<span class="count">/ 75</span>
+									</li>
+									<li class="cat-item cat-parent">
+										<a href="shop-right.html">Patient Ninja</a>
+										<span class="count">/ 142</span>
+									</li>
+									<li class="cat-item cat-parent">
+										<a href="shop-right.html">Ninja Silhouette</a>
+										<span class="count">/ 269</span>
+									</li>
+									<li class="cat-item">
+										<a href="shop-right.html">Happy Ninja</a>
+										<span class="count">/ 142</span>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_product_categories">
+
+								<h3 class="widget-title">Shop Categories Dropdown</h3>
+
+								<select name="product_cat" class="dropdown_product_cat">
+									<option value="" selected="selected">Select a category</option>
+									<option class="level-0" value="clothing">Clothing&nbsp;(12)</option>
+									<option class="level-1" value="hoodies">Hoodies&nbsp;(6)</option>
+									<option class="level-1" value="t-shirts">T-shirts&nbsp;(6)</option>
+									<option class="level-0" value="music">Music&nbsp;(6)</option>
+									<option class="level-1" value="albums">Albums&nbsp;(4)</option>
+									<option class="level-1" value="singles">Singles&nbsp;(2)</option>
+									<option class="level-0" value="posters">Posters&nbsp;(5)</option>
+								</select>
+							</div>
+
+
+							<div class="widget woocommerce widget_layered_nav">
+								<h3 class="widget-title">Shop Nav</h3>
+								<ul>
+									<li class="wc-layered-nav-term chosen">
+										<a href="shop-right.html">Black</a>
+										<span class="count">/ 85</span>
+									</li>
+									<li class="wc-layered-nav-term">
+										<a href="#">Blue</a>
+										<span class="count">/ 12</span>
+									</li>
+									<li class="wc-layered-nav-term">
+										<a href="#">Green</a>
+										<span class="count">/ 41</span>
+									</li>
+									<li class="wc-layered-nav-term">
+										<a href="#">Yellow</a>
+										<span class="count">/ 12</span>
+									</li>
+									<li class="wc-layered-nav-term">
+										<a href="#">Red</a>
+										<span class="count">/ 26</span>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_layered_nav_filters">
+								<h3 class="widget-title">Shop Active Filters</h3>
+								<ul>
+									<li class="chosen">
+										<a aria-label="Remove filter" href="shop-right.html">Black</a>
+									</li>
+									<li class="chosen">
+										<a aria-label="Remove filter" href="shop-right.html">Green</a>
+									</li>
+									<li class="chosen">
+										<a aria-label="Remove filter" href="shop-right.html">Blue</a>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="widget woocommerce widget_product_tag_cloud">
+
+								<h3 class="widget-title">Product Tags</h3>
+
+								<div class="tagcloud">
+									<a href="shop-right.html" class="tag-cloud-link" aria-label="album (1 product)">
+										Album
+									</a>
+									<a href="shop-right.html" class="tag-cloud-link" aria-label="premium (1 product)">
+										Premium
+									</a>
+									<a href="shop-right.html" class="tag-cloud-link" aria-label="product (1 product)">
+										Product
+									</a>
+									<a href="shop-right.html" class="tag-cloud-link" aria-label="single (1 product)">
+										Single
+									</a>
+								</div>
+							</div>
+
+
+						</aside> <!-- eof aside sidebar -->
+
+
+						<div class="d-none d-lg-block divider-70"></div>
+
+					</div>
+				</div>
+			</section>
+
+			<footer class="page_footer ds s-overlay s-parallax s-pt-80 s-pb-30 s-pb-md-65 s-pt-md-120 s-pt-lg-135 s-pb-xl-110 c-mb-20 c-gutter-60">
+				<div class="container">
+					<div class="row">
+						<div class=" col-lg-4 text-center animate" data-animation="fadeInUp">
+							<div class="divider-25 d-none d-xl-block"></div>
+							<div class="widget mb-0">
+
+								<h3 class="widget-title">Newsletter</h3>
+
+								<p>
+									We promise not to spam!
+								</p>
+
+								<form class="signup" action="/">
+
+									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email text-center" placeholder="Email Address">
+
+									<button type="submit" class="btn btn-outline-maincolor mt-30">
+										Subscribe
+									</button>
+									<div class="response"></div>
+								</form>
+
+							</div>
+							<div class="divider-50"></div>
+						</div>
+
+						<div class=" col-lg-4 text-center animate" data-animation="fadeInUp">
+							<div class="widget widget_icons_list">
+								<a href="./" class="logo flex-column text-center pb-0">
+									<img src="images/logo.png" alt="logo">
+								</a>
+								<p>We are one of San Diego's most active social groups. Every month we create a variety of fun & interesting events.</p>
+								<ul class="mb-10">
+									<li class="icon-inline">
+										<div class="icon-styled icon-top color-main fs-14">
+											<i class="fa fa-map-marker"></i>
+										</div>
+										<p>192 Lemke Stream, San Diego, USA</p>
+									</li>
+									<li class="icon-inline">
+										<div class="icon-styled icon-top color-main fs-14">
+											<i class="fa fa-phone"></i>
+										</div>
+										<p>+8 (800) 247 2698 (operator)</p>
+									</li>
+									<li class="icon-inline">
+										<div class="icon-styled icon-top color-main fs-14">
+											<i class="fa fa-pencil"></i>
+										</div>
+										<p>
+											<a href="#">mountis_trip@example.com</a>
+										</p>
+									</li>
+								</ul>
+								<span class="social-icons">
+									<a href="#" class="fa fa-facebook bg-light border-icon rounded-icon" title="facebook"></a>
+									<a href="#" class="fa fa-twitter bg-light border-icon rounded-icon" title="twitter"></a>
+									<a href="#" class="fa fa-google bg-light border-icon rounded-icon" title="google"></a>
+								</span>
+							</div>
+						</div>
+
+						<div class="col-lg-4 animate" data-animation="fadeInUp">
+							<div class="divider-25 d-none d-xl-block"></div>
+							<div class="widget widget_instagram">
+								<h3 class="widget-title">Instagram</h3>
+								<div class="instafeed"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<section class="page_copyright ls s-py-5">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="divider-20 d-none d-lg-block"></div>
+						<div class="divider-10 d-none d-md-block"></div>
+						<div class="col-md-12 text-center">
+							<p>&copy; Copyright <span class="copyright_year">2018</span> All Rights Reserved</p>
+						</div>
+						<div class="divider-20 d-none d-lg-block"></div>
+						<div class="divider-10 d-none d-md-block"></div>
+					</div>
+				</div>
+			</section>
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+

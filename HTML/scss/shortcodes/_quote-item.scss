@@ -1,0 +1,30 @@
+.quote-item {
+  text-align: center;
+  border: none;
+  padding: 20px 0;
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 53%;
+  }
+
+  .star-rating{
+    font-size: 0.65em;
+    margin: -3px auto 22px auto;
+  }
+}
+
+.quote-image {
+  position: relative;
+  display: inline-block;
+  max-width: 170px;
+
+  img {
+    border-radius: 50%;
+  }
+  //testimonial author
+  & + p {
+    margin: 30px 0 20px;
+  }
+
+}

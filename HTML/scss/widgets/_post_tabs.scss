@@ -1,0 +1,30 @@
+/*.widget_post_tabs*/
+
+.widget_post_tabs {
+  h4:first-child {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    line-height: 19px;
+    margin: 0px 0 5px;
+    color: $darkFontColor;
+  }
+  .tab-content{
+    padding: 44px 38px;
+  }
+  .entry-meta{
+    i.fa{
+      color: $colorMain3;
+    }
+  }
+  .vertical-item {
+    margin-bottom: 2.2em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .item-content{
+      padding: 27px 0 0 0;
+    }
+  }
+}

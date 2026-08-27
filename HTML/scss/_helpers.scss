@@ -1,0 +1,52 @@
+/*
+** Helper Utilities
+*/
+@import 'helpers/helpers_layout';
+@import 'helpers/helpers_colors';
+@import 'helpers/helpers_spacing';
+
+.underline{
+  text-decoration: underline;
+}
+
+.tm{
+  position: relative;
+  &::after{
+    content: 'TM';
+    position: absolute;
+    font-family: 'Montserrat', serif;
+    font-size: 8px;
+    top: 0;
+    right: -12px;
+    color: $fontColor;
+  }
+}
+
+@mixin gradient-bg(){
+  background: $colorMain;
+  background: linear-gradient(to right, rgba($colorMain, 1) 0%, rgba($colorMain2, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colorMain', endColorstr='$colorMain2', GradientType=1);
+}
+
+.special-quote{
+  text-align: left;
+  margin-left: 0;
+  padding-left: 42px;
+  padding-bottom: 7px;
+  margin-top: 43px;
+  margin-bottom: 42px;
+  border-left: 4px solid $colorMain2;
+  h4{
+    font-size: 24px;
+    margin-top: 28px;
+    margin-bottom: 5px;
+  }
+  p{
+    color: $darkgreyColor;
+  }
+  .color-main3{
+    color: $colorMain3;
+  }
+}
+
+

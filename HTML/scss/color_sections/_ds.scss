@@ -1,0 +1,240 @@
+/*
+** Dark Section background and Dark Muted background sections - .ds and .ds.ms
+*/
+/* dark grey background section - .ds */
+.ds {
+  background-color: $darkgreyColor;
+  color: $darkFontColor;
+  & * & {
+    background-color: darken($darkgreyColor, 5%);
+
+  }
+  p{
+    color: $lightColor;
+  }
+  .color-main3{
+    color: $colorMain3;
+  }
+}
+
+/* dark background section - .ds.ms */
+.ds.ms {
+  background-color: $darkColor;
+  & & {
+    background-color: lighten($darkColor, 2%);
+  }
+}
+
+/* dark section blue - .ds.bs */
+.ds.bs {
+  background-color: $darkBlueColorLighter;
+}
+
+.ds {
+  a:not(.btn) {
+      color:$lightColor;
+    &:hover {
+      color:$colorMain;
+    }
+    &.color-main{
+      color: $colorMain;
+    &:hover{
+      color: $lightColor;
+    }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $lightColor;
+    a {
+      color: $lightColor;
+      &:hover {
+
+      }
+    }
+  }
+
+  //light section in dark section - .ds .ls
+  .ls {
+    background-color: $lightColor;
+    color: $fontColor;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $darkgreyColor;
+      a {
+        color: inherit;
+        &:hover {
+          color: $colorMain3;
+        }
+      }
+    }
+    a:not(.btn) {
+      color: $darkgreyColor;
+      &:hover {
+        color: $colorMain3;
+      }
+    }
+  }
+  //end of .ls inside .ds
+
+  label {
+    color: $lightColor;
+  }
+
+  hr {
+    border-color: $darkBorderColor;
+    background-color: $darkBorderColor;
+  }
+  blockquote, .blockquote {
+    color: $darkFontColor;
+  }
+
+  pre {
+    color: $darkFontColor;
+  }
+
+  .muted-bg,
+  .hero-bg {
+    background-color: $darkBackgroundColor;
+  }
+
+  .bordered {
+    border-color: $darkBorderColor;
+  }
+  .color-main {
+    color: $colorMain;
+  }
+  .color-main2 {
+    color: $colorMain2;
+  }
+  .color-dark,
+  .color-darkgrey {
+    color: $lightColor;
+    border-color: $lightColor;
+  }
+
+  .links-maincolor a {
+    color: $colorMain;
+    &:hover {
+      color: $lightColor;
+    }
+  }
+  .links-maincolor2 a {
+    color: $colorMain2;
+    &:hover {
+      color: $lightColor;
+    }
+  }
+  .links-maincolor3 a {
+    color: $colorMain3;
+    &:hover {
+      color: $lightColor;
+    }
+  }
+
+  .links-grey a {
+    color: $darkFontColor;
+    &:hover {
+      color: $lightColor;
+    }
+  }
+
+  .links-darkgrey a {
+    color: $lightColor;
+    &:hover {
+      color: $colorMain;
+    }
+  }
+  //sections with borders
+  &.s-bordertop:before,
+  &.s-borderbottom:after,
+  &.s-bordertop-container .container:before,
+  &.s-borderbottom-container .container:after {
+    background-color: $darkBorderColor;
+
+  }
+  &.s-bordered-columns {
+    [class*='col-'] + [class*='col-']:before {
+      background-color: $darkBorderColor;
+    }
+  }
+
+  //buttons
+  .btn-darkgrey {
+    background-color: $lightColor;
+    color: $darkgreyColor;
+    border: 2px solid $lightColor;
+  }
+
+  .btn-maincolor:hover,
+  .btn-maincolor2:hover,
+  .btn-maincolor3:hover{
+    color: $lightColor;
+    background-color: transparent;
+    &::before{
+      opacity: 0;
+    }
+  }
+  .btn-outline-maincolor{
+    color: $colorMain;
+  }
+  .btn-outline-maincolor2{
+    color: $colorMain2;
+  }
+  .btn-outline-maincolor3{
+    color: $colorMain3;
+  }
+  .btn-outline-maincolor:hover,
+  .btn-outline-maincolor2:hover,
+  .btn-outline-maincolor3:hover,
+  .btn-outline-darkgrey:hover {
+    color: $lightColor;
+    border-color: $lightColor;
+  }
+  .btn-outline-darkgrey {
+    color: $lightColor;
+    border-color: $lightColor;
+  }
+  .btn-outline-darkgrey:hover{
+    color: $colorMain;
+    border-color: $colorMain;
+  }
+  .btn-darkgrey:hover {
+    color: $lightColor;
+    background-color: transparent;
+  }
+
+  //social icons
+  a.fa {
+    color: $lightColor;
+    border-color: $lightColor;
+  }
+  a.bg-icon {
+    background-color: $darkBackgroundColor;
+  }
+
+  .fa.color-icon:hover {
+    color: $lightColor;
+  }
+
+  .color-icon.bg-icon {
+    background-color: $darkBackgroundColor;
+  }
+  .color-icon.bg-icon:hover {
+    color: $lightColor;
+  }
+
+  .color-bg-icon:hover {
+    background-color: $colorMain;
+  }
+}

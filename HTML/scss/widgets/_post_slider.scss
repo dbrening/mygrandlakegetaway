@@ -1,0 +1,40 @@
+/*.widget_slider*/
+
+.widget_slider {
+  .owl-carousel{
+    .owl-dots{
+      bottom: auto;
+      top: 51%;
+    }
+  }
+  .item-media{
+    &.ds.s-overlay::before{
+      z-index: 6;
+      opacity: 0.3;
+    }
+  }
+  h5:first-child {
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+    font-weight: 400;
+    margin: 0px 0 5px;
+    color: $lightColor;
+    line-height: 30px;
+  }
+  .vertical-item{
+    .item-content{
+      padding: 30px 40px 25px;
+      background-color: $greyColor;
+    }
+  }
+  .widgets-title{
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .cat-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -4px;
+  }
+}

@@ -1,0 +1,160 @@
+/*
+** WordPress Page Links and Pagination
+*/
+.page-item,
+.nav-links,
+.page-links {
+  clear: both;
+  display: flex;
+  & > span,
+  & > a:not(.btn) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $greyColor;
+    color: $fontColor;
+    background-color: transparent;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5em 1.2em;
+    min-width: 3em;
+    text-align: center;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      background-color: $darkFontColor !important;
+      color: $lightColor;
+      border-color: $darkFontColor;
+    }
+    @media (max-width: 768px){
+      height: 45px;
+      line-height: 15px;
+      padding: 1.3em 1.2em;
+      width: 45px;
+    }
+    &.prev, &.next{
+      background-color: $colorMain;
+      color: $lightColor;
+      border-color: $colorMain;
+      &:hover{
+        border-color: $darkFontColor;
+      }
+    }
+  }
+  &.active > a,
+  & > span {
+    background-color: $darkFontColor !important;
+    color:$lightColor;
+    border-color: $darkFontColor!important;
+    cursor: not-allowed;
+  }
+  .fa {
+    font-size: 10px;
+  }
+}
+
+//page and comments links smaller
+.comments-pagination,
+.page-links {
+  .page-numbers,
+  & > span,
+  a {
+    //min-width: 2em;
+  }
+}
+
+.page-links a:first-child {
+  margin-left: 1em;
+}
+
+//blog styles
+.pagination {
+  justify-content: center;
+  margin-bottom: -10px;
+}
+
+//blog post
+.post-nav {
+  margin: 60px 0 0;
+  position: relative;
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > div {
+      width: 49%;
+      height: auto;
+      position: relative;
+      padding: 32px 39px;
+      text-align: right;
+      background-position: 50% 28%;
+      .post-nav-text-wrap{
+        text-align: right;
+      }
+      &.s-overlay.ds:before{
+        opacity: 0.8;
+      }
+      transition: 0.2s opacity ease;
+      &:hover {
+        opacity: 0.9;
+      }
+      @media(max-width: 575px) {
+        width: 100%;
+        &:first-child{
+          margin-bottom: 30px;
+        }
+      }
+      .fa {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      &:first-child {
+        .post-nav-text-wrap{
+          text-align: left;
+        }
+        .fa {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+    .nav-subtitle {
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      min-width: 8em;
+      padding: 0.25em 0 0 0;
+      display: inline-block;
+    }
+    .nav-title {
+      font-size: 24px;
+      display: block;
+      margin-top: 4px;
+      text-transform: capitalize;
+      line-height: 1.2;
+      margin-bottom: -1px;
+      letter-spacing: 0.3px;
+    }
+
+    a {
+      @include cover();
+
+    }
+  }
+  //for .cover-image
+  .post-nav-image {
+    display: none;
+  }
+  .cover-image {
+    .post-nav-text-wrap {
+      text-align: center;
+    }
+  }
+}

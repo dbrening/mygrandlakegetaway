@@ -1,0 +1,148 @@
+/* access_press */
+// http://demo.accesspressthemes.com/wordpress-plugins/accesspress-social-counter/
+.apsc-facebook-icon,
+.apsc-twitter-icon,
+.apsc-youtube-icon,
+.apsc-soundcloud-icon,
+.apsc-dribble-icon,
+.apsc-comment-icon,
+.apsc-edit-icon,
+.apsc-google-plus-icon,
+.apsc-instagram-icon{
+  background-color: $greyColor;
+}
+.apsc-facebook-icon i {
+  background-color: #3b5998;
+}
+
+.apsc-twitter-icon i {
+  background-color: #1dcaff;
+}
+
+.apsc-youtube-icon i {
+  background-color: #e52d27;
+}
+
+.apsc-soundcloud-icon i {
+  background-color: #ff8800;
+}
+
+.apsc-dribble-icon i {
+  background-color: #ea4c89;
+}
+
+.apsc-comment-icon i {
+  background-color: #464646;
+}
+
+.apsc-edit-icon i {
+  background-color: #837d7d;
+}
+
+.apsc-google-plus-icon i {
+  background-color: #dd4b39;
+}
+
+.apsc-instagram-icon i {
+  background-color: #3f729b;
+}
+
+.apsc-each-profile a {
+  color: white !important;
+}
+
+.apsc-each-profile a:hover {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.apsc-theme-4 {
+  .apsc-each-profile {
+    margin-bottom: 10px;
+  }
+
+  .apsc-inner-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .social-icon {
+    display: inline-block;
+    margin-right: auto;
+    padding: 4px 0;
+    transition: all 0.5s ease-in-out;
+    span{
+      color: $darkFontColor;
+      font-weight: 600;
+    }
+  }
+
+  .apsc-each-profile a {
+    display: block;
+    position: relative;
+    padding: 11px 29px 11px 88px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: $lightColor;
+    &:hover {
+      opacity: 0.8;
+    }
+    @media (max-width: 768px){
+      padding: 13px 15px 15px 70px;
+    }
+  }
+
+  //icon
+  .apsc-each-profile a .fa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #FFFFFF;
+    width: 60px;
+    font-size: 16px;
+    transform: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+  .apsc-count {
+    border-radius: 0;
+    display: inline-block;
+    font-size: inherit;
+    text-align: center;
+    position: relative;
+    padding: 4px 4px;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $fontColor;
+  }
+
+  .apsc-media-type {
+    display: inline-block;
+    padding: 4px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $fontColor;
+  }
+}
+
+@media screen and (max-width: 479px) {
+
+  .apsc-theme-4 .apsc-each-profile a,
+  .apsc-theme-3 .apsc-each-profile a {
+
+  }
+
+  .apsc-theme-4 .apsc-each-profile,
+  .apsc-theme-3 .apsc-each-profile {
+    float: none;
+  }
+}

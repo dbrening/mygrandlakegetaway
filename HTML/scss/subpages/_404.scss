@@ -1,0 +1,97 @@
+/*
+** 404
+*/
+
+.error-404 {
+  min-height: calc(100vh - 150px);
+  &.s-overlay.ds:before{
+    opacity: 0.7;
+  }
+  .page-header {
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+    h3 {
+      font-size: 100px;
+      line-height: 1;
+      margin: 0;
+      @include gradient-bg();
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      @media (min-width: 992px) {
+        font-size: 200px;
+        line-height: 168px;
+        margin-bottom: 23px;
+      }
+    }
+    p {
+      font-size: 40px;
+      color: #fff;
+      font-weight: 600;
+      @media (max-width: 992px) {
+        font-size: 35px;
+      }
+      @media (max-width: 767px) {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+  }
+
+  .page-content{
+    padding-top: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    @media (min-width: 768px) {
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      color: #fff;
+    }
+    span{
+      font-size: 16px;
+    }
+  }
+
+  .widget_mailchimp {
+    margin: 13px 0 11px 0;
+    form{
+      [type="submit"]{
+        background: transparent;
+        &::before{
+          background: linear-gradient(to right, #dbac6d 0%, #fccc7c 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colorMain', endColorstr='$colorMain2', GradientType=1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      @media (min-width: 480px){
+        width: 410px;
+        max-width: 410px;
+        input{
+          max-width: 410px;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      background: transparent;
+      width: 100%;
+      input{
+        width: 100%;
+      }
+    }
+  }
+  .btn {
+    margin-right: 0;
+    padding: 16px 20px;
+  }
+
+  .divider_or{
+    margin-bottom: 8px;
+  }
+}

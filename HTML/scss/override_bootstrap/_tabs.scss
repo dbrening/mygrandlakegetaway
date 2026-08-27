@@ -1,0 +1,96 @@
+/* bootstrap tabs*/
+.nav-tabs {
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+  &.aside-tab{
+    @media (max-width: 1200px) and (min-width: 992px){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media(max-width:768px){
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-link {
+    border-radius: 0;
+    border: 2px solid $borderColor;
+    margin-right: 2px;
+    color: $fontColor;
+    font-size: 14px;
+    font-weight: 500;
+    &:hover {
+      border-color: $colorMain ;
+      background: $colorMain;
+      color: $lightColor ;
+    }
+    @media(max-width:768px){
+      padding: 15px 35px 15px;
+    }
+  }
+
+  .nav-item.show .nav-link,
+  .nav-link.active {
+    border-color: $colorMain ;
+    background: $colorMain;
+    color: $lightColor ;
+  }
+}
+
+.nav-link {
+  @include small-text();
+  padding: 16px 25px 16px;
+  @media(max-width: 768px){
+    min-width: 100px;
+  }
+  @media(max-width:450px){
+
+    min-width: auto;
+    width: 100%;
+    display: block;
+  }
+  min-width: 170px;
+  color: $darkgreyColor;
+  .small-tabs & {
+    padding: 16px 20px;
+    min-width: 80px;
+  }
+}
+
+.tab-content {
+  background-color: transparent;
+  padding: 54px 57px 46px 57px;
+  border: 2px solid $backgroundColor;
+  border-top: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 5px;
+    background-color: $colorMain;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: 2;
+  }
+
+  @media(max-width:450px){
+    padding: 30px;
+  }
+}
+
+.tab-pane {
+  .media {
+    img {
+      max-width: 40%;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    h3, h4, h5 {
+      font-weight: 900;
+    }
+  }
+}

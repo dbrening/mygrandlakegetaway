@@ -1,0 +1,17 @@
+.sergical{
+  .item-content{
+    padding: 55px 58px 63px;
+    @media (max-width: 478px){
+      padding: 40px 30px 45px;
+    }
+  }
+  .surgical-adds{
+    margin-bottom: 9px;
+  }
+  .star-rating{
+    font-size: 0.8em;
+  }
+  .entry-title{
+    margin-bottom: 0.85em;
+  }
+}

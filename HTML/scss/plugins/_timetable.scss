@@ -1,0 +1,79 @@
+/* 
+** Time Table 
+*/
+#timetable {
+  span {
+    display: block;
+  }
+  th, td {
+    vertical-align: middle;
+    font-weight: normal;
+    text-align: center;
+    padding: 25px 5px;
+  }
+  thead {
+    color: $lightColor;
+    th:first-child{
+      background-color: $darkgreyColor;
+    }
+    th {
+      border: 1px solid $darkBorderColor;
+      background-color: $darkColor;
+      color: $lightColor;
+      width: 147px;
+      height: 50px;
+      padding: 0;
+    }
+  }
+  tbody {
+    th{
+      background-color: $darkColor;
+      color: $lightColor;
+      width: 148px;
+      height: 109px;
+      padding: 0;
+    }
+    td:hover{
+      background-color: $colorMain;
+      a{
+        color:$lightColor;
+        span{
+          color:$lightColor;
+        }
+      }
+    }
+    th, td {
+      border: 1px solid $colorBorderColor;
+      transition: all 0.3s ease-in-out;
+      a{
+        color:$colorMain;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        display: inline-block;
+        span{
+          color:$darkFontColor;
+          font-family: Montserrat;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          display: inline-block;
+          text-transform: uppercase;
+          letter-spacing: 0.6px;
+        }
+      }
+    }
+    .current {
+      background-color: $colorMain;
+      border-color: $colorMain;
+      a {
+        color: $lightColor;
+        span{
+          color:$lightColor;
+        }
+      }
+    }
+  }
+
+}

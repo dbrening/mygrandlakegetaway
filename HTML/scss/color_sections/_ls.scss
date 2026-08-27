@@ -1,0 +1,165 @@
+/*
+** Light Background Section - .ls
+*/
+.ls {
+  background-color: $lightColor;
+  color: $fontColor;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $darkgreyColor;
+    a {
+      color: inherit;
+      &:hover {
+        color: $colorMain;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  //buttons
+  .btn-darkgrey{
+    background: $darkgreyColor;
+    border: 2px solid $darkgreyColor;
+  }
+  .btn-outline-maincolor{
+    color:$colorMain;
+  }
+  .btn-outline-maincolor2{
+    color:$colorMain2;
+  }
+  .btn-outline-maincolor3{
+    color:$colorMain3;
+  }
+  .btn-outline-darkgrey{
+    color: $darkgreyColor;
+    border: 2px solid $darkgreyColor;
+  }
+  .btn-maincolor:hover{
+    color: $lightColor;
+  }
+  .btn-maincolor2:hover{
+    color: $lightColor;
+  }
+  .btn-maincolor3:hover{
+    color: $lightColor;
+  }
+  .btn-darkgrey:hover{
+    color: $darkgreyColor;
+  }
+  .btn-outline-maincolor:hover,
+  .btn-outline-maincolor2:hover,
+  .btn-outline-maincolor3:hover{
+    color: $darkgreyColor;
+  }
+  .btn-outline-maincolor:hover{
+    color: $lightColor;
+    &::before{
+      opacity: 1;
+    }
+  }
+  .btn-maincolor:hover {
+    color: $colorMain;
+    background-color: transparent;
+    &::before{
+      opacity: 0;
+    }
+  }
+  .btn-outline-maincolor2:hover{
+    border-color: $darkgreyColor;
+  }
+  .btn-maincolor2:hover {
+    background-color: $darkgreyColor;
+    border-color: $darkgreyColor;
+  }
+  .btn-outline-maincolor3:hover{
+    border-color: $darkgreyColor;
+  }
+  .btn-maincolor3:hover {
+    background-color: $darkgreyColor;
+    border-color: $darkgreyColor;
+  }
+  .btn-outline-darkgrey:hover{
+    background-color: $darkgreyColor;
+    color: $lightColor;
+  }
+  .btn-darkgrey:hover {
+    background-color: transparent;
+    border-color: $darkgreyColor;
+    color: $darkgreyColor;
+  }
+  .links-maincolor a:hover {
+    opacity: 0.7;
+  }
+}
+
+/*
+** Grey Background Section - light section, muted section - .ls.ms
+*/
+.ls.ms {
+  background-color: $greyColor;
+  color: darken($fontColor, 7%);
+
+  .links-grey a {
+    color: darken($fontColor, 7%);
+  }
+
+  .hero-bg {
+    background-color: $lightColor;
+    hr {
+      background-color: $borderColor;
+    }
+  }
+
+  hr {
+    background-color: $lightColor;
+  }
+
+  //forms
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select,
+  .form-control {
+    background-color: $lightColor;
+  }
+
+  // .ls:not(.ms),
+  .hero-bg {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select,
+    .form-control {
+      border-color: $borderColor;
+      background-color: $greyColor;
+    }
+  }
+  td,
+  th,
+  .bordered {
+    border-color: darken($borderColor, 5%);
+  }
+
+  .btn-secondary {
+    border-color: $lightColor;
+    &:hover {
+      border-color: darken($greyColor, 6%);
+      background-color: darken($greyColor, 6%);
+    }
+  }
+
+}
