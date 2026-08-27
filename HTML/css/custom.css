@@ -575,6 +575,133 @@ textarea:focus-visible {
 }
 
 
+/* 5.11 Amenity list, grouped by room
+   ========================================================================== */
+
+.gl-amenity-group {
+	border-bottom: 1px solid var(--gl-rule);
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.gl-amenity-group:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+.gl-amenity-group h3 {
+	align-items: center;
+	display: flex;
+	font-size: 20px;
+	gap: 12px;
+	margin: 0 0 6px;
+}
+
+.gl-amenity-group h3 i.fa {
+	color: var(--gl-gold-text);
+	font-size: 18px;
+	width: 24px;
+}
+
+.gl-amenity-group .gl-group-note {
+	color: var(--gl-body);
+	font-size: 14px;
+	margin: 0 0 18px;
+}
+
+.gl-amenity-list {
+	columns: 3;
+	column-gap: 36px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gl-amenity-list li {
+	break-inside: avoid;
+	color: var(--gl-body);
+	padding: 6px 0 6px 26px;
+	position: relative;
+}
+
+.gl-amenity-list li:before {
+	content: "\f00c";
+	color: var(--gl-gold-text);
+	font-family: FontAwesome;
+	font-size: 12px;
+	left: 0;
+	position: absolute;
+	top: 9px;
+}
+
+/* Things the cabin does NOT have. Worth its own treatment — telling guests
+   what to bring prevents more complaints than any amenity list. */
+.gl-amenity-list.gl-bring li:before {
+	content: "\f0da";
+	color: var(--gl-body);
+}
+
+@media (max-width: 991px) {
+	.gl-amenity-list {
+		columns: 2;
+	}
+}
+
+@media (max-width: 575px) {
+	.gl-amenity-list {
+		columns: 1;
+	}
+}
+
+
+/* 5.12 Draft block
+   ==========================================================================
+   Wraps a long list that is a starting checklist rather than confirmed fact.
+   Flagging every line individually would make the page unreadable, so the
+   whole block is marked instead. Remove the wrapper once confirmed. */
+
+.gl-draft {
+	background-image: repeating-linear-gradient(
+		45deg,
+		rgba(176, 69, 58, 0.045) 0,
+		rgba(176, 69, 58, 0.045) 10px,
+		transparent 10px,
+		transparent 20px
+	);
+	border: 2px dashed #c98a80;
+	padding: 26px 28px 28px;
+	position: relative;
+}
+
+.gl-draft > .gl-draft-label {
+	background: #b0453a;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	margin: -38px 0 22px -30px;
+	padding: 5px 14px;
+	text-transform: uppercase;
+}
+
+.gl-draft > .gl-draft-label:before {
+	content: "\f071\00a0\00a0";
+	font-family: FontAwesome;
+	font-weight: 400;
+}
+
+@media (max-width: 575px) {
+	.gl-draft {
+		padding: 22px 18px 24px;
+	}
+
+	.gl-draft > .gl-draft-label {
+		margin-left: -20px;
+	}
+}
+
+
 /* 6. Placeholder flags
    ==========================================================================
    Anything the site still needs from you is wrapped in .needs-info so it is
