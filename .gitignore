@@ -1,0 +1,23 @@
+# OS / editor junk
+.DS_Store
+._*
+Thumbs.db
+Thumbs.db_encryptable
+__MACOSX/
+desktop.ini
+
+# Backups and archives
+*.backup
+*.bak
+*.zip
+
+# Node
+node_modules/
+
+# Not for the web server (keep locally, exclude from upload)
+PSD/
+documentation/
+
+# Keep shared project settings, ignore personal ones
+.vscode/*
+!.vscode/settings.json

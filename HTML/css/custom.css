@@ -1,0 +1,615 @@
+/* ==========================================================================
+   Grand Lake Getaway — custom styles
+   --------------------------------------------------------------------------
+   This file loads AFTER main.css and is the ONLY place site-specific styles
+   should go. Never edit main.css: it is the purchased theme, and a theme
+   update would overwrite your changes.
+
+   Contents
+   1. Tokens
+   2. Fixes to theme behaviour
+   3. Accessibility corrections
+   4. Navigation — Book Now button
+   5. New components (facts bar, reasons, distances, rates, reviews)
+   6. Placeholder flags (remove before launch)
+   ========================================================================== */
+
+
+/* 1. Tokens
+   ========================================================================== */
+
+:root {
+	--gl-gold: #dbac6d;          /* theme accent — decorative use only */
+	--gl-gold-text: #8a6428;     /* accessible gold for TEXT on light grounds (5.3:1) */
+	--gl-blue: #4d6876;          /* topline / hero sky */
+	--gl-blue-dark: #3d5460;
+	--gl-ink: #3a3630;
+	--gl-body: #585149;
+	--gl-sunk: #f0f0f0;
+	--gl-rule: #e2ded8;
+}
+
+
+/* 2. Fixes to theme behaviour
+   ========================================================================== */
+
+/* Homepage header background.
+   Set here ONCE. There is deliberately no inline style on the wrapper in
+   index.html — having both meant the !important here silently won and edits
+   to the HTML did nothing. To change the hero, change the file below. */
+.header_absolute.home {
+	background-image: url("../images/hero.jpg");
+	background-position: center center;
+	background-size: cover;
+	min-height: 520px;
+}
+
+/* Hero subtitle */
+.page_slider .intro_layers .hero-subtitle {
+	font-size: 24px;
+	line-height: 1.45;
+}
+
+@media (min-width: 992px) {
+	.page_slider .intro_layers .hero-subtitle {
+		font-size: 28px;
+		line-height: 1.5;
+	}
+}
+
+/* Topline bar — the hero sky blue, on every page */
+.page_topline {
+	background-color: var(--gl-blue);
+}
+
+.header_absolute .page_topline {
+	background-color: var(--gl-blue);
+}
+
+/* FIX: the empty blue bar between 469px and 767px.
+   The theme hid the topline's contact blocks below 768px and only brought
+   them back below 468px, leaving a bare strip in between while the header
+   showed its own duplicate copy. One location per breakpoint instead:
+   topline owns the contact details at every width, the header never does. */
+@media (max-width: 767px) {
+	.page_topline .media {
+		display: flex;
+	}
+
+	.page_header .media-wrap {
+		display: none;
+	}
+}
+
+/* Contact details are links now, not plain text — keep them looking the same
+   as the surrounding topline text, but behave like links. */
+.page_topline .media .media-body p a,
+.page_topline .media .media-body a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.page_topline .media .media-body p a:hover,
+.page_topline .media .media-body p a:focus {
+	color: var(--gl-gold);
+	text-decoration: underline;
+}
+
+/* Keyboard focus must be visible everywhere. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid var(--gl-gold-text);
+	outline-offset: 2px;
+}
+
+.ds a:focus-visible,
+.ds button:focus-visible {
+	outline-color: #fff;
+}
+
+
+/* 3. Accessibility corrections
+   ==========================================================================
+   The theme's pale golds measure 1.4:1–2.1:1 against light grounds, well
+   under the WCAG AA minimum of 4.5:1 for body text. They stay as-is on dark
+   sections (.ds), where they read fine — these rules only touch light ones. */
+
+.ls .color-main,
+.ls .color-main3,
+.ls .links-maincolor3 a,
+.ls a.more {
+	color: var(--gl-gold-text);
+}
+
+.ls .subtitle {
+	color: var(--gl-gold-text);
+}
+
+/* Small print needs the same treatment. */
+.ls .small-text.color-main3 {
+	color: var(--gl-gold-text);
+}
+
+
+/* 4. Navigation — Book Now button
+   ========================================================================== */
+
+.sf-menu > li.nav-book > a {
+	background: var(--gl-gold);
+	background: linear-gradient(to right, #dbac6d 0%, #fccc7c 100%);
+	border-radius: 2px;
+	color: #fff !important;
+	margin-left: 12px;
+	padding-left: 22px !important;
+	padding-right: 22px !important;
+}
+
+.sf-menu > li.nav-book > a:hover,
+.sf-menu > li.nav-book > a:focus {
+	background: var(--gl-blue);
+	color: #fff !important;
+}
+
+.sf-menu > li.nav-book > a:before,
+.sf-menu > li.nav-book > a:after {
+	content: none !important;
+}
+
+@media (max-width: 991px) {
+	.sf-menu > li.nav-book > a {
+		background: none;
+		border-radius: 0;
+		margin-left: 0;
+	}
+}
+
+
+/* 5. New components
+   ========================================================================== */
+
+/* 5.1 Facts bar — sleeps / bedrooms / baths / pets, directly under the hero.
+   A guest decides whether to keep reading in about four seconds. This is
+   what they decide on. */
+
+.gl-facts {
+	background: var(--gl-sunk);
+}
+
+.gl-facts .gl-facts-grid {
+	display: grid;
+	gap: 1px;
+	grid-template-columns: repeat(5, 1fr);
+	background: var(--gl-rule);
+	border: 1px solid var(--gl-rule);
+}
+
+.gl-facts-item {
+	background: var(--gl-sunk);
+	padding: 26px 16px 28px;
+	text-align: center;
+}
+
+.gl-facts-item i.fa {
+	color: var(--gl-gold-text);
+	display: block;
+	font-size: 26px;
+	margin-bottom: 12px;
+}
+
+.gl-facts-item .gl-facts-value {
+	color: var(--gl-ink);
+	display: block;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.gl-facts-item .gl-facts-label {
+	color: var(--gl-body);
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	margin-top: 6px;
+	text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+	.gl-facts .gl-facts-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 575px) {
+	.gl-facts .gl-facts-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.gl-facts-item {
+		padding: 20px 10px 22px;
+	}
+
+	.gl-facts-item .gl-facts-value {
+		font-size: 21px;
+	}
+}
+
+/* 5.2 Book-direct reasons — the whole argument for having this site */
+
+.gl-reasons {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gl-reason {
+	background: #fff;
+	border: 1px solid var(--gl-rule);
+	border-top: 3px solid var(--gl-gold);
+	padding: 34px 32px 32px;
+}
+
+.gl-reason i.fa {
+	color: var(--gl-gold-text);
+	font-size: 30px;
+}
+
+.gl-reason h4 {
+	font-size: 19px;
+	margin: 18px 0 10px;
+}
+
+.gl-reason p {
+	color: var(--gl-body);
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.gl-reasons {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* 5.3 Distances — guests planning an RMNP trip are triangulating on a map */
+
+.gl-distances {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gl-distances li {
+	align-items: baseline;
+	border-bottom: 1px solid var(--gl-rule);
+	display: flex;
+	gap: 16px;
+	justify-content: space-between;
+	padding: 14px 0;
+}
+
+.gl-distances li:last-child {
+	border-bottom: 0;
+}
+
+.gl-distances .gl-place {
+	color: var(--gl-ink);
+	font-weight: 500;
+}
+
+.gl-distances .gl-dist {
+	color: var(--gl-gold-text);
+	flex: none;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+/* 5.4 Rates table */
+
+.gl-rates {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.gl-rates th {
+	border-bottom: 2px solid var(--gl-ink);
+	color: var(--gl-ink);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	padding: 0 18px 12px 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.gl-rates td {
+	border-bottom: 1px solid var(--gl-rule);
+	padding: 18px 18px 18px 0;
+	vertical-align: top;
+}
+
+.gl-rates td:last-child,
+.gl-rates th:last-child {
+	padding-right: 0;
+	text-align: right;
+}
+
+.gl-rates .gl-season {
+	color: var(--gl-ink);
+	font-weight: 600;
+}
+
+.gl-rates .gl-months {
+	color: var(--gl-body);
+	display: block;
+	font-size: 14px;
+}
+
+.gl-rates .gl-rate {
+	color: var(--gl-ink);
+	font-size: 20px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.gl-tablewrap {
+	overflow-x: auto;
+}
+
+.gl-tablewrap .gl-rates {
+	min-width: 520px;
+}
+
+/* 5.5 Reviews — real ones, with attribution */
+
+.gl-review {
+	background: #fff;
+	border: 1px solid var(--gl-rule);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 32px 30px 28px;
+}
+
+.gl-review .gl-stars {
+	color: var(--gl-gold);
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin-bottom: 16px;
+}
+
+.gl-review blockquote {
+	border: 0;
+	color: var(--gl-body);
+	flex: 1;
+	font-size: 16px;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+.gl-review blockquote:before {
+	content: none;
+}
+
+.gl-review .gl-attrib {
+	border-top: 1px solid var(--gl-rule);
+	color: var(--gl-ink);
+	font-size: 14px;
+	font-weight: 600;
+	padding-top: 16px;
+}
+
+.gl-review .gl-source {
+	color: var(--gl-body);
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	margin-top: 3px;
+	text-transform: uppercase;
+}
+
+/* 5.6 Good-to-know accordion — plain, no images */
+
+.gl-know .card {
+	background: none;
+	border: 0;
+	border-bottom: 1px solid var(--gl-rule);
+}
+
+.gl-know .card-header {
+	background: none;
+	border: 0;
+	padding: 0;
+}
+
+.gl-know .card-header a {
+	color: var(--gl-ink);
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 20px 40px 20px 0;
+	position: relative;
+	text-decoration: none;
+}
+
+.gl-know .card-header a:after {
+	content: "\f068";
+	font-family: FontAwesome;
+	color: var(--gl-gold-text);
+	font-size: 14px;
+	position: absolute;
+	right: 4px;
+	top: 22px;
+}
+
+.gl-know .card-header a.collapsed:after {
+	content: "\f067";
+}
+
+.gl-know .card-body {
+	color: var(--gl-body);
+	padding: 0 0 22px;
+}
+
+/* 5.7 Amenity columns */
+
+.gl-amenities {
+	columns: 3;
+	column-gap: 40px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gl-amenities li {
+	break-inside: avoid;
+	color: var(--gl-body);
+	padding: 7px 0 7px 28px;
+	position: relative;
+}
+
+.gl-amenities li:before {
+	content: "\f00c";
+	color: var(--gl-gold-text);
+	font-family: FontAwesome;
+	font-size: 13px;
+	left: 0;
+	position: absolute;
+	top: 9px;
+}
+
+@media (max-width: 991px) {
+	.gl-amenities {
+		columns: 2;
+	}
+}
+
+@media (max-width: 575px) {
+	.gl-amenities {
+		columns: 1;
+	}
+}
+
+/* 5.8 Gallery tiles — consistent height regardless of photo orientation */
+
+.gl-gallery .item-media img {
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* 5.9 Booking form */
+
+.gl-form .form-group {
+	margin-bottom: 22px;
+}
+
+.gl-form label {
+	color: var(--gl-ink);
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.gl-form .required {
+	color: #b0453a;
+}
+
+.gl-form .gl-hint {
+	color: var(--gl-body);
+	display: block;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin-top: 6px;
+	text-transform: none;
+}
+
+/* Honeypot — hidden from people, visible to spam bots. Not display:none,
+   because some bots skip those; positioned off-canvas instead. */
+.gl-hp {
+	height: 0;
+	left: -9999px;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+}
+
+.contact-form-respond {
+	border-left: 3px solid var(--gl-gold);
+	background: var(--gl-sunk);
+	color: var(--gl-ink) !important;
+	padding: 14px 18px;
+}
+
+.form-errors {
+	color: #b0453a;
+}
+
+/* 5.10 Footer link row */
+
+.gl-footer-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gl-footer-links li {
+	display: inline-block;
+}
+
+.gl-footer-links li:after {
+	content: "·";
+	margin: 0 10px;
+	opacity: 0.5;
+}
+
+.gl-footer-links li:last-child:after {
+	content: none;
+}
+
+
+/* 6. Placeholder flags
+   ==========================================================================
+   Anything the site still needs from you is wrapped in .needs-info so it is
+   impossible to publish by accident. Search the project for "needs-info"
+   to find every one, or read NEEDS-YOUR-INPUT.md.
+
+   DELETE THIS WHOLE SECTION once the last one is gone. */
+
+.needs-info {
+	background: #ffe9a8;
+	border-bottom: 2px solid #b0453a;
+	color: #6b3410 !important;
+	display: inline;
+	font-family: inherit;
+	font-size: 0.95em;
+	font-style: normal;
+	font-weight: 600;
+	padding: 1px 6px;
+	text-transform: none;
+}
+
+.needs-info:before {
+	content: "\f071\00a0\00a0";
+	font-family: FontAwesome;
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.ds .needs-info,
+.gl-facts-item .needs-info {
+	display: inline-block;
+}
+
+@media print {
+	.needs-info {
+		border: 1px solid #000;
+	}
+}

@@ -933,9 +933,9 @@ function windowLoadInit() {
 		$introSlider.each(function(index){
 			var $currentSlider = $(this);
 			var data = $currentSlider.data();
-			var nav = (data.nav !== 'undefined') ? data.nav : true;
-			var dots = (data.dots !== 'undefined') ? data.dots : true;
-			var speed = (data.speed !== 'undefined') ? data.speed : 7000;
+			var nav = (typeof data.nav !== 'undefined') ? data.nav : true;
+			var dots = (typeof data.dots !== 'undefined') ? data.dots : true;
+			var speed = (typeof data.speed !== 'undefined') ? data.speed : 7000;
 
 			$currentSlider.flexslider({
 				animation: "fade",

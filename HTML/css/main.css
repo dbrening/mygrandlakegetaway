@@ -18731,20 +18731,6 @@ a img.aligncenter {
 	right: 0;
 }
 
-/* Ensure landing page header uses hero.jpg and is visible */
-.header_absolute.home {
-	background-image: url("../images/hero.jpg") !important;
-	background-size: cover !important;
-	background-position: center center !important;
-	min-height: 520px;
-}
-
-/* Hero slide subtitle size */
-.page_slider .intro_layers .hero-subtitle {
-	font-size: 24px;
-	line-height: 1.4;
-}
-
 .header_absolute.norm .page_header,
 .header_absolute.norm .page_header_wrapper,
 .header_absolute.norm .page_toplogo,
@@ -20043,11 +20029,6 @@ body.active-side-header.slide-right .page_header_side {
 	width: auto;
 }
 
-/* Stronger rule for hero subtitle to override earlier defaults */
-.page_slider .home_slider .intro_layers p.hero-subtitle {
-    font-size: 28px !important;
-    line-height: 1.5 !important;
-}
 
 .page_slider .flexslider.vertical .flex-control-nav li {
 	margin-top: 74px;
@@ -23046,7 +23027,3 @@ section .section-heading .back {
 	}
 }
 
-/* Grand Lake site: topline bar uses the hero sky blue on all pages */
-.page_topline {
-	background-color: #4d6876 !important;
-}

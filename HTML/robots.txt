@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Working files, not for indexing
+Disallow: /_partials/
+Disallow: /_template-reference/
+
+Sitemap: https://www.mygrandlakegetaway.com/sitemap.xml

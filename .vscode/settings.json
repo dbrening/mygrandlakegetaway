@@ -1,0 +1,54 @@
+{
+	// ---------------------------------------------------------------------
+	// Live Server (Ritwick Dey) — the "Open with Live Server" right-click item
+	// ---------------------------------------------------------------------
+	// The website lives in HTML/, not the workspace root. Without this, Live
+	// Server serves the repo root and http://127.0.0.1:5500/ shows a directory
+	// listing with PSD/ and documentation/ in it. With it, the root URL opens
+	// the homepage directly and every relative link resolves the way it will
+	// on the real server.
+	"liveServer.settings.root": "/HTML",
+	"liveServer.settings.ignoreFiles": [
+		".vscode/**",
+		"**/_template-reference/**",
+		"**/_partials/**",
+		"**/*.scss",
+		"**/*.md"
+	],
+
+	// ---------------------------------------------------------------------
+	// Live Preview (Microsoft) — the "Show Preview" right-click item
+	// ---------------------------------------------------------------------
+	// Same idea, for the other common extension. Harmless if unused.
+	"livePreview.serverRoot": "HTML",
+
+	// ---------------------------------------------------------------------
+	// Search
+	// ---------------------------------------------------------------------
+	// Keep the 110 unused template pages out of Ctrl+Shift+F results, so
+	// searching for your own content actually finds it. They stay visible in
+	// the Explorer — this only affects search.
+	"search.exclude": {
+		"**/_template-reference": true,
+		"**/PSD": true,
+		"**/documentation": true,
+		"**/css/main.css": true,
+		"**/css/bootstrap*.css": true,
+		"**/js/compressed.js": true
+	},
+
+	// ---------------------------------------------------------------------
+	// Editing
+	// ---------------------------------------------------------------------
+	// The theme uses tabs; matching it keeps diffs clean.
+	"[html]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[css]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"files.eol": "\n",
+	"files.trimTrailingWhitespace": true
+}
