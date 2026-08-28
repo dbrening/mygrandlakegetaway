@@ -4,7 +4,7 @@ Everything structural is done. What is left is information only you have.
 
 Every gap is marked in the pages with a **yellow highlighted flag** starting
 `TELL CLAUDE:`, so you cannot publish one by accident — they are impossible to
-miss on the page. There are 144 of them, but most are one-word answers and they
+miss on the page. There are 133 of them, but most are one-word answers and they
 group into seven sittings.
 
 Answer them however you like — type them here, send me a list, or just tell me
@@ -14,23 +14,23 @@ in conversation and I will fill them in and delete the flags.
 
 ## Sitting 1 — The numbers (15 minutes, unblocks the most)
 
-These appear in the biggest, most prominent place on the site: the bar directly
-under the hero photo, which is the first thing a guest reads.
+These appear in the facts bar directly under the hero photo, which is the first
+thing a guest reads. Most of this section is now answered.
 
-- [ ] How many does it sleep?
-- [ ] How many bedrooms?
-- [ ] How many bathrooms?
-- [ ] Dogs allowed? Fee? Size limit? Is the yard fenced?
-- [ ] Square footage
+- [x] ~~How many does it sleep?~~ &rarr; **5**
+- [x] ~~How many bedrooms?~~ &rarr; **2**
+- [x] ~~How many bathrooms?~~ &rarr; **1**
+- [x] ~~Pets?~~ &rarr; **No pets**
+- [x] ~~Maximum guests~~ &rarr; **5**
+- [x] ~~Square footage~~ &rarr; **1,000 sq ft**
 - [ ] Check-in and check-out times
-- [ ] Maximum guests
 - [ ] Minimum age to book
 
-**Sleeping arrangements** — what is in each room. "Sleeps 8" means nothing to a
-family until they know whether that is four real beds or two beds and a sofa.
+**Sleeping arrangements** — done. Queen in bedroom 1; twin XL bunks plus a
+lofted twin XL in bedroom 2. That is your five.
 
-- [ ] Bedroom 1 / 2 / 3 / loft — what bed is in each
-- [ ] Sofa bed in the living room?
+- [x] ~~Bedroom 1~~ &rarr; **queen**
+- [x] ~~Bedroom 2~~ &rarr; **twin XL bunk beds + lofted twin XL** (that is the five)
 - [ ] Travel cot and high chair available?
 
 *Files: `index.html`, `cabin.html`, `house-rules.html`*
@@ -42,7 +42,7 @@ family until they know whether that is four real beds or two beds and a sofa.
 Guests planning a Rocky Mountain trip are working this out on a map. Rough
 driving times are fine.
 
-- [ ] RMNP west entrance (Kawuneeche)
+- [x] ~~RMNP west entrance (Kawuneeche)~~ **10 minutes**
 - [ ] Grand Lake boardwalk and village — and is it genuinely walkable?
 - [ ] Grand Lake marina / boat launch
 - [ ] Nearest real grocery store
@@ -61,7 +61,7 @@ to a listing that shows a number.
 - [ ] Nightly rate by season — winter / spring / summer / fall / holidays
 - [ ] Which months count as which season
 - [ ] Minimum stay for each
-- [ ] Cleaning fee, pet fee, security deposit, tax rate
+- [ ] Cleaning fee, security deposit, tax rate (no pet fee needed now)
 - [ ] Cancellation policy
 - [ ] Deposit amount, when the balance is due, how you take payment
 - [ ] Do you have a rental agreement PDF? Send it and I will link it.
@@ -80,7 +80,7 @@ order I would recommend them:
 Tell me which and I will wire it in. An out-of-date calendar is worse than none,
 because it generates enquiries for dates you have already sold.
 
-*File: `rates.html`*
+*Files: `rates.html`, `availability.html`*
 
 ---
 
@@ -148,7 +148,7 @@ cannot draft for you.
 - [ ] **Mobile signal** — which carriers work at the cabin.
 - [ ] **Arrival** — lockbox, keypad code, or you meet them. Anywhere to leave
       bags if they arrive early?
-- [ ] **Amenities** — see the section below; this one is big enough to be its
+- [ ] **Amenities** — see Sitting 7; big enough to be its own job
       own job.
 - [ ] **On leaving** — the short list of what you ask guests to do.
 - [ ] **Fire** — fire pit rules, wood stove instructions, what happens in a

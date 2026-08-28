@@ -118,7 +118,6 @@ $labels = array(
 	'checkout' => 'Check out',
 	'adults'   => 'Adults',
 	'children' => 'Children',
-	'pets'     => 'Bringing a dog',
 	'phone'    => 'Phone',
 	'heard'    => 'Found us via',
 );

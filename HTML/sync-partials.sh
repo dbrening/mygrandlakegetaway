@@ -72,7 +72,7 @@ for page in *.html; do
 		tmp_partial="$(mktemp)"
 		if [ "$name" = "nav" ] && [ -n "$active_key" ]; then
 			case "$active_key" in
-				amenities|rules|faq) parent_key="cabin" ;;
+				about|amenities|rules|faq) parent_key="cabin" ;;
 				photos-cabin|photos-area) parent_key="photos" ;;
 				*) parent_key="" ;;
 			esac
