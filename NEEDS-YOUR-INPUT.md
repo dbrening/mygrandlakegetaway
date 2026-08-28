@@ -4,7 +4,7 @@ Everything structural is done. What is left is information only you have.
 
 Every gap is marked in the pages with a **yellow highlighted flag** starting
 `TELL CLAUDE:`, so you cannot publish one by accident — they are impossible to
-miss on the page. There are 133 of them, but most are one-word answers and they
+miss on the page. There are 138 of them, but most are one-word answers and they
 group into seven sittings.
 
 Answer them however you like — type them here, send me a list, or just tell me
@@ -148,8 +148,7 @@ cannot draft for you.
 - [ ] **Mobile signal** — which carriers work at the cabin.
 - [ ] **Arrival** — lockbox, keypad code, or you meet them. Anywhere to leave
       bags if they arrive early?
-- [ ] **Amenities** — see Sitting 7; big enough to be its own job
-      own job.
+- [ ] **Amenities** — see Sitting 7; big enough to be its own job.
 - [ ] **On leaving** — the short list of what you ask guests to do.
 - [ ] **Fire** — fire pit rules, wood stove instructions, what happens in a
       county fire ban.
@@ -199,7 +198,9 @@ Then tell me it is accurate and I will remove the red wrapper.
       the sites' front pages. If you do not have accounts, say so and I will
       remove them.
 - [ ] **Street address**, or confirm you would rather publish only
-      "Grand Lake, CO 80447".
+      "Grand Lake, CO 80447". This now also drives the map and the "Get
+      directions" button on `cabin.html#finding-us`, which currently point at
+      the village rather than the cabin.
 - [ ] **Best times to call.**
 
 ---

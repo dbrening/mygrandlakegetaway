@@ -33,15 +33,40 @@
 /* 2. Fixes to theme behaviour
    ========================================================================== */
 
-/* Homepage header background.
-   Set here ONCE. There is deliberately no inline style on the wrapper in
-   index.html — having both meant the !important here silently won and edits
-   to the HTML did nothing. To change the hero, change the file below. */
+/* Homepage hero.
+   ==========================================================================
+   The photograph is carried by the slider image in index.html, not by a
+   background on this wrapper. It used to be both, which meant hero.jpg was
+   loaded twice and the wrapper's copy sat on top of the slider's.
+
+   The theme sizes the hero at 900px tall. At that height a 4:3 photograph is
+   scaled to the full width of the screen and barely cropped, so it reads as
+   one enormous block with the middle of the picture stranded in the centre.
+   Cut to a band, it crops top and bottom instead and behaves like a
+   letterboxed banner — which is what a header photograph should do. */
+
 .header_absolute.home {
-	background-image: url("../images/hero.jpg");
-	background-position: center center;
-	background-size: cover;
-	min-height: 520px;
+	background-image: none;
+	min-height: 0;
+}
+
+.page_slider .flexslider .slides li,
+.page_slider .static-slide .slides li {
+	min-height: 500px;
+}
+
+@media (max-width: 1199px) {
+	.page_slider .flexslider .slides li,
+	.page_slider .static-slide .slides li {
+		min-height: 440px;
+	}
+}
+
+@media (max-width: 767px) {
+	.page_slider .flexslider .slides li,
+	.page_slider .static-slide .slides li {
+		min-height: 380px;
+	}
 }
 
 /* Hero subtitle */
@@ -207,9 +232,9 @@ section.s-pb-30 { padding-bottom: 26px; }
 .mt-40 { margin-top: 24px !important; }
 .mt-50 { margin-top: 30px !important; }
 
-/* Cards and panels were generously padded for a sparse layout. */
+/* Cards were generously padded for a sparse layout. (.gl-facts-item is
+   sized in section 5.1, not here.) */
 .gl-reason { padding: 26px 26px 24px; }
-.gl-facts-item { padding: 20px 16px 22px; }
 
 .gl-reasons { gap: 20px; }
 
@@ -289,6 +314,237 @@ section.s-pb-30 { padding-bottom: 26px; }
 @media (min-width: 768px) {
 	.page_topline .col-md-6:last-child .media {
 		justify-content: flex-end;
+	}
+}
+
+
+/* 4·0 Where the header tabs go, and when
+   ==========================================================================
+   The theme swaps the horizontal nav for a burger at 1199px. That is an
+   unusually high breakpoint: a tablet, or a laptop window that is not
+   maximised, both get the phone treatment, which is why the tabs seemed to
+   disappear. They were never removed, just hidden earlier than they needed
+   to be.
+
+   Below, the real nav is restored for 992-1199px, so only genuine phone
+   widths fall back to the burger. Seven items need roughly 870px, so 992px
+   is about as low as it can honestly go.
+   ========================================================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	/* Undo the full-screen overlay treatment. */
+	.page_header .top-nav {
+		background: none;
+		bottom: auto;
+		opacity: 1;
+		position: static;
+		visibility: visible;
+		z-index: auto;
+	}
+
+	.page_header .sf-menu {
+		background: none;
+		border-top: 0;
+		bottom: auto;
+		display: block;
+		left: auto;
+		opacity: 1;
+		overflow: visible;
+		padding: 0;
+		position: static;
+		right: auto;
+		text-align: center;
+		top: auto;
+	}
+
+	.page_header .sf-menu > li {
+		display: inline-block;
+		position: relative;
+	}
+
+	.page_header .top-nav .sf-menu > li > a {
+		font-size: 12px;
+		letter-spacing: .04em;
+		padding: 22px 0;
+		margin: 0 8px;
+	}
+
+	/* Second level back to a floating panel. */
+	.page_header .sf-menu li > ul {
+		background-color: #fff;
+		border-top: 2px solid var(--gl-gold);
+		box-shadow: 0 12px 28px rgba(58, 54, 48, .14);
+		display: none;
+		left: 50%;
+		min-width: 200px;
+		padding: 8px 0;
+		position: absolute;
+		top: 100%;
+		transform: translateX(-50%);
+		z-index: 99;
+	}
+
+	.page_header .sf-menu li:hover > ul,
+	.page_header .sf-menu li.sfHover > ul {
+		display: block;
+	}
+
+	.page_header .sf-menu li > ul > li {
+		display: block;
+	}
+
+	.page_header .top-nav .sf-menu li > ul > li > a {
+		font-size: 12px;
+		margin: 0;
+		padding: 9px 18px;
+		text-align: left;
+	}
+
+	.page_header .top-nav .sf-menu li > ul > li > a:hover {
+		background-color: var(--gl-sunk);
+		color: var(--gl-gold-text);
+	}
+
+	/* No burger at this width, and the mobile logo row is not needed. */
+	.page_header .toggle_menu {
+		display: none;
+	}
+
+	.page_header .hidden-above-md {
+		display: none !important;
+	}
+
+	.page_header .sf-menu-item-mobile-toggler {
+		display: none;
+	}
+}
+
+
+/* 4·0b Phone navigation
+   ==========================================================================
+   Below 992px the burger stays, but two things about the theme's version
+   were wrong for this site:
+
+     - the button sat on the right, and
+     - opening it slid a full-height black frame across from the left edge,
+       which is a lot of ceremony for six links.
+
+   It now sits on the left and drops a panel down from under the header,
+   which is what a phone menu is normally expected to do.
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+
+	/* Burger on the left. */
+	.page_header .toggle_menu {
+		left: 15px;
+		right: auto;
+	}
+
+	/* Push the wordmark clear of it. */
+	.page_header .col-10.hidden-above-md {
+		justify-content: flex-end;
+	}
+}
+
+@media (max-width: 991px) {
+
+	/* The panel hangs off the bottom of the header rather than being pinned
+	   to a hardcoded pixel offset, so it stays put whatever height the
+	   header ends up and follows it when it becomes sticky. */
+	.page_header {
+		position: relative;
+	}
+
+	.page_header .top-nav {
+		background: none;
+		bottom: auto;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		transition: opacity .25s ease, visibility .25s ease;
+		visibility: hidden;
+		z-index: 1001;
+	}
+
+	.page_header.mobile-active .top-nav {
+		background: none;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.page_header .sf-menu {
+		background-color: #fff;
+		border-top: 3px solid var(--gl-gold);
+		bottom: auto;
+		box-shadow: 0 18px 40px rgba(26, 22, 18, .28);
+		left: auto;
+		max-height: calc(100vh - 140px);
+		opacity: 1;
+		overflow-y: auto;
+		padding: 6px 0 10px;
+		position: static;
+		right: auto;
+		text-align: left;
+		top: auto;
+		transform: translateY(-10px);
+		transition: transform .25s ease;
+	}
+
+	.page_header.mobile-active .sf-menu {
+		transform: translateY(0);
+	}
+
+	.page_header .top-nav .sf-menu > li {
+		border-bottom: 1px solid var(--gl-rule);
+		display: block;
+	}
+
+	.page_header .top-nav .sf-menu > li:last-child {
+		border-bottom: 0;
+	}
+
+	.page_header .top-nav .sf-menu a {
+		color: var(--gl-ink);
+		font-size: 15px;
+		letter-spacing: .06em;
+		padding: 15px 20px;
+	}
+
+	.page_header .top-nav .sf-menu > li.active > a {
+		color: var(--gl-gold-text);
+	}
+
+	/* Sub-items indented and quieter, so the hierarchy is readable. */
+	.page_header .top-nav .sf-menu ul {
+		background: var(--gl-sunk);
+		padding-left: 0;
+	}
+
+	.page_header .top-nav .sf-menu ul li a {
+		font-size: 13px;
+		padding-left: 38px;
+		text-transform: none;
+	}
+
+	/* Book Now reads as the action it is, not another list row. */
+	.page_header .top-nav .sf-menu > li.nav-book > a {
+		background: var(--gl-gold);
+		color: #fff !important;
+		margin: 10px 20px 4px;
+		padding: 14px 20px;
+		text-align: center;
+	}
+}
+
+/* The panel hangs below the header, so it has to know how tall that is. */
+@media (max-width: 767px) {
+	.page_header .sf-menu {
+		max-height: calc(100vh - 84px);
+		top: 84px;
 	}
 }
 
@@ -461,25 +717,27 @@ section.s-pb-30 { padding-bottom: 26px; }
 	border: 1px solid var(--gl-rule);
 }
 
+/* A compact strip, not five panels. The numbers are one or two characters,
+   so the boxes only need to be tall enough to hold them. */
 .gl-facts-item {
 	background: var(--gl-sunk);
-	padding: 26px 16px 28px;
+	padding: 13px 10px 14px;
 	text-align: center;
 }
 
 .gl-facts-item i.fa {
 	color: var(--gl-gold-text);
 	display: block;
-	font-size: 26px;
-	margin-bottom: 12px;
+	font-size: 15px;
+	margin-bottom: 6px;
 }
 
 .gl-facts-item .gl-facts-value {
 	color: var(--gl-ink);
 	display: block;
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 600;
-	line-height: 1.2;
+	line-height: 1.15;
 }
 
 .gl-facts-item .gl-facts-value .gl-facts-unit {
@@ -492,10 +750,10 @@ section.s-pb-30 { padding-bottom: 26px; }
 .gl-facts-item .gl-facts-label {
 	color: var(--gl-body);
 	display: block;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 600;
-	letter-spacing: 0.12em;
-	margin-top: 6px;
+	letter-spacing: 0.1em;
+	margin-top: 3px;
 	text-transform: uppercase;
 }
 
@@ -511,11 +769,11 @@ section.s-pb-30 { padding-bottom: 26px; }
 	}
 
 	.gl-facts-item {
-		padding: 20px 10px 22px;
+		padding: 11px 8px 12px;
 	}
 
 	.gl-facts-item .gl-facts-value {
-		font-size: 21px;
+		font-size: 17px;
 	}
 }
 
@@ -971,6 +1229,67 @@ section.s-pb-30 { padding-bottom: 26px; }
 .gl-calendar-inner p {
 	color: var(--gl-body);
 	margin-bottom: 0;
+}
+
+
+/* 5.11c Map mount point
+   ==========================================================================
+   Holds the shape a Google Maps embed will occupy, so the page does not jump
+   when the iframe goes in. Replace the whole .gl-map-slot with the iframe
+   from Google Maps -> Share -> Embed a map. */
+
+.gl-map-slot {
+	aspect-ratio: 4 / 3;
+	background: var(--gl-sunk);
+	border: 2px dashed var(--gl-rule);
+	display: grid;
+	place-items: center;
+	padding: 30px 24px;
+	text-align: center;
+}
+
+.gl-map-inner {
+	max-width: 40ch;
+}
+
+.gl-map-inner i.fa {
+	color: var(--gl-gold-text);
+	display: block;
+	font-size: 30px;
+	margin-bottom: 14px;
+}
+
+.gl-map-inner h3 {
+	font-size: 19px;
+	margin-bottom: 10px;
+}
+
+.gl-map-inner p {
+	color: var(--gl-body);
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+/* A real embed should fill the same box and lose the browser default border. */
+.gl-map-slot iframe,
+.gl-map-embed iframe {
+	border: 0;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.gl-map-embed {
+	aspect-ratio: 4 / 3;
+	border: 1px solid var(--gl-rule);
+	overflow: hidden;
+}
+
+@media (max-width: 575px) {
+	.gl-map-slot,
+	.gl-map-embed {
+		aspect-ratio: 3 / 2;
+	}
 }
 
 

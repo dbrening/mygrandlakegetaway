@@ -92,15 +92,9 @@
 											<a href="cabin.html">THE CABIN</a>
 											<ul>
 												<li data-nav="about" class="active"><a href="cabin.html">ABOUT</a></li>
+												<li data-nav="photos-cabin"><a href="gallery-cabin.html">PHOTOS</a></li>
 												<li data-nav="amenities"><a href="amenities.html">WHAT'S PROVIDED</a></li>
 												<li data-nav="rules"><a href="house-rules.html">HOUSE RULES</a></li>
-											</ul>
-										</li>
-										<li data-nav="photos">
-											<a href="gallery-cabin.html">PHOTOS</a>
-											<ul>
-												<li data-nav="photos-cabin"><a href="gallery-cabin.html">THE CABIN</a></li>
-												<li data-nav="photos-area"><a href="gallery-area.html">GRAND LAKE</a></li>
 											</ul>
 										</li>
 										<li data-nav="rates">
@@ -109,8 +103,12 @@
 										<li data-nav="availability">
 											<a href="availability.html">AVAILABILITY</a>
 										</li>
-										<li data-nav="things">
-											<a href="things-to-do.html">THINGS TO DO</a>
+										<li data-nav="area">
+											<a href="things-to-do.html">THE AREA</a>
+											<ul>
+												<li data-nav="things"><a href="things-to-do.html">THINGS TO DO</a></li>
+												<li data-nav="photos-area"><a href="gallery-area.html">PHOTOS</a></li>
+											</ul>
 										</li>
 										<li data-nav="book" class="nav-book">
 											<a href="booking.html">BOOK NOW</a>
@@ -269,7 +267,79 @@
 				</div>
 			</section>
 
-			<section class="ls ms s-pt-60 s-pb-60 s-pt-md-90 s-pb-md-90">
+			<!-- ============================================================
+			     Where it is
+			     ------------------------------------------------------------
+			     TO ADD A REAL MAP: open Google Maps, find the cabin, then
+			     Share -> Embed a map -> Copy HTML. Paste that <iframe> in
+			     place of the .gl-map-slot div below. Add loading="lazy" to
+			     the iframe so it does not slow the page down.
+
+			     If you would rather not pin the exact house, embedding the
+			     village centre is common practice and perfectly acceptable.
+			     ============================================================ -->
+			<section class="ls ms s-pt-60 s-pb-60 s-pt-md-90 s-pb-md-90" id="finding-us">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5">
+							<p class="top-subtitle">Finding us</p>
+							<h2 class="section-heading">Where It Is <span class="back">map</span></h2>
+							<p class="mt-20">
+								Grand Lake sits on the western edge of Rocky Mountain National Park &mdash;
+								the quieter gate, about ten minutes from our door.
+							</p>
+
+							<ul class="gl-distances mt-20">
+								<li>
+									<span class="gl-place">RMNP west entrance</span>
+									<span class="gl-dist">10 min</span>
+								</li>
+								<li>
+									<span class="gl-place">Grand Lake boardwalk</span>
+									<span class="gl-dist"><span class="needs-info">min</span></span>
+								</li>
+								<li>
+									<span class="gl-place">Marina &amp; boat launch</span>
+									<span class="gl-dist"><span class="needs-info">min</span></span>
+								</li>
+								<li>
+									<span class="gl-place">Nearest grocery store</span>
+									<span class="gl-dist"><span class="needs-info">min</span></span>
+								</li>
+								<li>
+									<span class="gl-place">Denver airport</span>
+									<span class="gl-dist"><span class="needs-info">hrs</span></span>
+								</li>
+							</ul>
+
+							<p class="mt-30">
+								<a class="btn btn-maincolor" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand+Lake%2C+CO+80447" target="_blank" rel="noopener">
+									<i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Get directions
+								</a>
+							</p>
+							<p class="small-text mt-20">
+								<span class="needs-info">TELL CLAUDE: the directions button currently points at Grand Lake town, not the cabin. Give me the street address (or a Google Maps link to the pin) and I will point it at the right place and embed the map.</span>
+							</p>
+						</div>
+
+						<div class="col-lg-7">
+							<div class="divider-40 d-lg-none"></div>
+							<div class="gl-map-slot">
+								<div class="gl-map-inner">
+									<i class="fa fa-map-o" aria-hidden="true"></i>
+									<h3>Map goes here</h3>
+									<p>
+										Google Maps &rarr; find the cabin &rarr; Share &rarr; Embed a map
+										&rarr; Copy HTML, and this panel gets replaced by the real thing.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ls s-pt-60 s-pb-60 s-pt-md-90 s-pb-md-90">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-8 text-center">
@@ -330,10 +400,11 @@
 								<ul class="list-styled">
 									<li><a href="cabin.html">The cabin</a></li>
 									<li><a href="amenities.html">What&rsquo;s provided</a></li>
-									<li><a href="gallery-cabin.html">Photos</a></li>
+									<li><a href="gallery-cabin.html">Cabin photos</a></li>
 									<li><a href="rates.html">Rates</a></li>
 									<li><a href="availability.html">Availability</a></li>
 									<li><a href="things-to-do.html">Things to do</a></li>
+									<li><a href="gallery-area.html">Grand Lake photos</a></li>
 									<li><a href="house-rules.html">House rules</a></li>
 									<li><a href="faq.html">Frequently asked questions</a></li>
 									<li><a href="contact.html">Contact us</a></li>
