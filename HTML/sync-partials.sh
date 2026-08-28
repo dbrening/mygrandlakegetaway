@@ -67,11 +67,23 @@ for page in *.html; do
 		fi
 
 		# Mark the active nav item for this page before splicing it in.
+		# When the active page is inside a dropdown, its parent is highlighted
+		# too, so the top-level menu still shows where you are.
 		tmp_partial="$(mktemp)"
 		if [ "$name" = "nav" ] && [ -n "$active_key" ]; then
-			sed "s|<li data-nav=\"$active_key\">|<li data-nav=\"$active_key\" class=\"active\">|; \
-			     s|<li data-nav=\"$active_key\" class=\"nav-book\">|<li data-nav=\"$active_key\" class=\"nav-book active\">|" \
-			     "$src" > "$tmp_partial"
+			case "$active_key" in
+				about|amenities|rules|faq) parent_key="cabin" ;;
+				photos-cabin|photos-area) parent_key="photos" ;;
+				*) parent_key="" ;;
+			esac
+
+			cp "$src" "$tmp_partial"
+			for key in "$active_key" $parent_key; do
+				sed -i \
+					-e "s|<li data-nav=\"$key\">|<li data-nav=\"$key\" class=\"active\">|" \
+					-e "s|<li data-nav=\"$key\" class=\"nav-book\">|<li data-nav=\"$key\" class=\"nav-book active\">|" \
+					"$tmp_partial"
+			done
 		else
 			cp "$src" "$tmp_partial"
 		fi

@@ -4,8 +4,8 @@ Everything structural is done. What is left is information only you have.
 
 Every gap is marked in the pages with a **yellow highlighted flag** starting
 `TELL CLAUDE:`, so you cannot publish one by accident — they are impossible to
-miss on the page. There are 142 of them, but most are one-word answers and they
-group into six sittings.
+miss on the page. There are 133 of them, but most are one-word answers and they
+group into seven sittings.
 
 Answer them however you like — type them here, send me a list, or just tell me
 in conversation and I will fill them in and delete the flags.
@@ -14,23 +14,23 @@ in conversation and I will fill them in and delete the flags.
 
 ## Sitting 1 — The numbers (15 minutes, unblocks the most)
 
-These appear in the biggest, most prominent place on the site: the bar directly
-under the hero photo, which is the first thing a guest reads.
+These appear in the facts bar directly under the hero photo, which is the first
+thing a guest reads. Most of this section is now answered.
 
-- [ ] How many does it sleep?
-- [ ] How many bedrooms?
-- [ ] How many bathrooms?
-- [ ] Dogs allowed? Fee? Size limit? Is the yard fenced?
-- [ ] Square footage
+- [x] ~~How many does it sleep?~~ &rarr; **5**
+- [x] ~~How many bedrooms?~~ &rarr; **2**
+- [x] ~~How many bathrooms?~~ &rarr; **1**
+- [x] ~~Pets?~~ &rarr; **No pets**
+- [x] ~~Maximum guests~~ &rarr; **5**
+- [x] ~~Square footage~~ &rarr; **1,000 sq ft**
 - [ ] Check-in and check-out times
-- [ ] Maximum guests
 - [ ] Minimum age to book
 
-**Sleeping arrangements** — what is in each room. "Sleeps 8" means nothing to a
-family until they know whether that is four real beds or two beds and a sofa.
+**Sleeping arrangements** — done. Queen in bedroom 1; twin XL bunks plus a
+lofted twin XL in bedroom 2. That is your five.
 
-- [ ] Bedroom 1 / 2 / 3 / loft — what bed is in each
-- [ ] Sofa bed in the living room?
+- [x] ~~Bedroom 1~~ &rarr; **queen**
+- [x] ~~Bedroom 2~~ &rarr; **twin XL bunk beds + lofted twin XL** (that is the five)
 - [ ] Travel cot and high chair available?
 
 *Files: `index.html`, `cabin.html`, `house-rules.html`*
@@ -42,7 +42,7 @@ family until they know whether that is four real beds or two beds and a sofa.
 Guests planning a Rocky Mountain trip are working this out on a map. Rough
 driving times are fine.
 
-- [ ] RMNP west entrance (Kawuneeche)
+- [x] ~~RMNP west entrance (Kawuneeche)~~ **10 minutes**
 - [ ] Grand Lake boardwalk and village — and is it genuinely walkable?
 - [ ] Grand Lake marina / boat launch
 - [ ] Nearest real grocery store
@@ -61,7 +61,7 @@ to a listing that shows a number.
 - [ ] Nightly rate by season — winter / spring / summer / fall / holidays
 - [ ] Which months count as which season
 - [ ] Minimum stay for each
-- [ ] Cleaning fee, pet fee, security deposit, tax rate
+- [ ] Cleaning fee, security deposit, tax rate (no pet fee needed now)
 - [ ] Cancellation policy
 - [ ] Deposit amount, when the balance is due, how you take payment
 - [ ] Do you have a rental agreement PDF? Send it and I will link it.
@@ -80,7 +80,7 @@ order I would recommend them:
 Tell me which and I will wire it in. An out-of-date calendar is worse than none,
 because it generates enquiries for dates you have already sold.
 
-*File: `rates.html`*
+*Files: `rates.html`, `availability.html`*
 
 ---
 
@@ -148,9 +148,8 @@ cannot draft for you.
 - [ ] **Mobile signal** — which carriers work at the cabin.
 - [ ] **Arrival** — lockbox, keypad code, or you meet them. Anywhere to leave
       bags if they arrive early?
-- [ ] **Amenities** — I listed 22 on `cabin.html` that guests filter for on the
-      booking platforms. Tick off which are true and add anything missing. The
-      more you can honestly claim, the more searches you appear in.
+- [ ] **Amenities** — see Sitting 7; big enough to be its own job
+      own job.
 - [ ] **On leaving** — the short list of what you ask guests to do.
 - [ ] **Fire** — fire pit rules, wood stove instructions, what happens in a
       county fire ban.
@@ -162,6 +161,35 @@ cannot draft for you.
       what a confirmed guest receives before arrival.
 
 *Files: `index.html`, `cabin.html`, `faq.html`, `house-rules.html`, `booking.html`*
+
+---
+
+## Sitting 7 — The amenity list (`amenities.html`)
+
+This is the new **What's Provided** page, in the THE CABIN dropdown. It answers
+the questions guests actually email about — is there a crock pot, do I need to
+bring beach towels, how many wine glasses are there.
+
+I have pre-filled about 130 items across eight groups (kitchen cooking, kitchen
+dishes and staples, bedrooms, bathrooms, living and laundry, outside, mountain
+and winter, safety) with what a well-equipped cabin usually has. **The whole
+block is wrapped in a red dashed "Draft" box** because none of it is confirmed.
+
+**Your job is deletion, not writing.** Go down the list and cut anything you do
+not have. An amenity list promising a crock pot you do not own is worse than no
+list at all — it becomes a complaint on arrival.
+
+- [ ] Delete every item you do not have
+- [ ] Add anything I missed
+- [ ] Say how many the dishes and glasses set for — a group of eight wants to
+      know there are eight of everything
+- [ ] Fill in **"What to bring yourself"** at the bottom. This is the most
+      valuable part of the page and almost no rental site has one. What do
+      guests routinely arrive without?
+
+Then tell me it is accurate and I will remove the red wrapper.
+
+*File: `amenities.html`*
 
 ---
 
@@ -213,13 +241,13 @@ Do the same for any cabin photos before adding them.
 Short version: 48 findings from the audit, all addressed except the two image
 tasks above.
 
-- **Navigation** rebuilt — 5 pages plus a Book Now button, replacing 22 links of
+- **Navigation** rebuilt — 5 top-level items plus a Book Now button, replacing 22 links of
   which 16 were 404s. It now lives in `HTML/_partials/nav.html` as a single
   source of truth; run `HTML/sync-partials.sh` after editing it and every page
   updates. (Right-click in the `HTML` folder → "Git Bash Here", then
   `./sync-partials.sh`.)
-- **Nine new or rebuilt pages**: cabin, gallery-cabin, gallery-area, rates,
-  things-to-do, booking, house-rules, faq, contact, 404.
+- **Ten new or rebuilt pages**: cabin, gallery-cabin, gallery-area, rates,
+  things-to-do, booking, house-rules, faq, contact, 404, amenities.
 - **The booking form now works** — it was missing the class that wires it to the
   mail script, had `type="email"` on a number field, and two dropdowns sharing a
   name. Rebuilt around check-in / check-out / adults / children / pets.

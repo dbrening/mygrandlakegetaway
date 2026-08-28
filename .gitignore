@@ -14,10 +14,15 @@ desktop.ini
 # Node
 node_modules/
 
-# Not for the web server (keep locally, exclude from upload)
-PSD/
-documentation/
-
-# Keep shared project settings, ignore personal ones
+# Keep shared project settings, ignore personal editor state
 .vscode/*
 !.vscode/settings.json
+
+# NOTE ON PSD/ AND documentation/
+# Both are tracked already, so listing them here would do nothing — .gitignore
+# only affects files git is not yet tracking. They stay in the repo on purpose:
+# PSD/ is your purchased template source, and losing it on a fresh clone would
+# be worse than the 275 MB it costs.
+#
+# They must NOT go on the web server, but that is a deployment concern, not a
+# git one. The full do-not-upload list is in NEEDS-YOUR-INPUT.md.

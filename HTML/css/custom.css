@@ -111,6 +111,118 @@ textarea:focus-visible {
 }
 
 
+/* 2b. Inner page heads — no photograph
+   ==========================================================================
+   Only the home page carries a hero image now. Every other page opens with a
+   compact title band on white: the title, a rule, and straight into content.
+   Removes a full screen of scrolling before anyone reads anything. */
+
+.header_absolute.page-head {
+	background-color: #fff;
+	background-image: none;
+}
+
+.page_title.page-head-title {
+	background: none;
+	border-bottom: 1px solid var(--gl-rule);
+	padding-bottom: 22px;
+	padding-top: 34px;
+	text-align: left;
+}
+
+.page_title.page-head-title .col-md-12 {
+	text-align: left;
+}
+
+.page_title.page-head-title h1 {
+	color: var(--gl-ink);
+	font-size: 34px;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.page_title.page-head-title h1:after {
+	background: var(--gl-gold);
+	content: "";
+	display: block;
+	height: 3px;
+	margin-top: 14px;
+	width: 46px;
+}
+
+@media (min-width: 768px) {
+	.page_title.page-head-title {
+		padding-bottom: 26px;
+		padding-top: 44px;
+	}
+
+	.page_title.page-head-title h1 {
+		font-size: 44px;
+	}
+}
+
+
+/* 2c. Vertical rhythm
+   ==========================================================================
+   The theme is built for a spacious one-page marketing site and spreads
+   sections roughly 110-120px apart. On a content site that reads as drifty
+   and pushes everything below the fold, so the whole scale is pulled in by
+   about 40%. Change the numbers here rather than editing every page. */
+
+.ls.s-pt-50, .ls.s-pt-60, .ls.s-pt-70, .ls.s-pt-80,
+section.s-pt-50, section.s-pt-60, section.s-pt-70, section.s-pt-80 { padding-top: 42px; }
+
+.ls.s-pb-40, .ls.s-pb-50, .ls.s-pb-60, .ls.s-pb-70, .ls.s-pb-80,
+section.s-pb-40, section.s-pb-50, section.s-pb-60, section.s-pb-70, section.s-pb-80 { padding-bottom: 42px; }
+
+section.s-pt-30, section.s-py-30 { padding-top: 26px; }
+section.s-pb-30 { padding-bottom: 26px; }
+
+@media (min-width: 768px) {
+	section.s-pt-md-60, section.s-pt-md-70 { padding-top: 54px; }
+	section.s-pt-md-90, section.s-pt-md-100, section.s-pt-md-110, section.s-pt-md-120 { padding-top: 66px; }
+
+	section.s-pb-md-40, section.s-pb-md-60, section.s-pb-md-70 { padding-bottom: 54px; }
+	section.s-pb-md-80, section.s-pb-md-90, section.s-pb-md-110, section.s-pb-md-120 { padding-bottom: 66px; }
+
+	section.s-py-md-50 { padding-bottom: 40px; padding-top: 40px; }
+}
+
+@media (min-width: 1200px) {
+	section[class*="s-pt-xl-"] { padding-top: 76px; }
+	section[class*="s-pb-xl-"] { padding-bottom: 76px; }
+}
+
+/* The theme's spacer divs are sized for the same wide rhythm. */
+.divider-80 { height: 40px; }
+.divider-60 { height: 32px; }
+.divider-50 { height: 28px; }
+.divider-40 { height: 24px; }
+.divider-35, .divider-30 { height: 20px; }
+
+/* Section headings sat a long way from the content beneath them. */
+.section-heading { margin-bottom: 14px; }
+.top-subtitle { margin-bottom: 6px; }
+
+.mt-40 { margin-top: 24px !important; }
+.mt-50 { margin-top: 30px !important; }
+
+/* Cards and panels were generously padded for a sparse layout. */
+.gl-reason { padding: 26px 26px 24px; }
+.gl-facts-item { padding: 20px 16px 22px; }
+
+.gl-reasons { gap: 20px; }
+
+/* Footer was the single largest block of empty space on every page. */
+.page_footer.s-pt-80 { padding-top: 52px; }
+.page_footer.s-pb-40 { padding-bottom: 30px; }
+
+@media (min-width: 768px) {
+	.page_footer.s-pt-md-100 { padding-top: 62px; }
+	.page_footer.s-pb-md-60 { padding-bottom: 38px; }
+}
+
+
 /* 3. Accessibility corrections
    ==========================================================================
    The theme's pale golds measure 1.4:1–2.1:1 against light grounds, well
@@ -134,7 +246,170 @@ textarea:focus-visible {
 }
 
 
-/* 4. Navigation — Book Now button
+/* 4. Navigation
+   ========================================================================== */
+
+/* Text wordmark, standing in for the logo image in the mobile header.
+   The logo now appears only in the footer. */
+.wordmark {
+	align-items: baseline;
+	color: var(--gl-ink);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 19px;
+	font-weight: 600;
+	gap: 0 6px;
+	letter-spacing: 0.01em;
+	line-height: 1.1;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.wordmark span {
+	color: var(--gl-gold-text);
+	font-weight: 400;
+}
+
+.wordmark:hover,
+.wordmark:focus {
+	color: var(--gl-ink);
+	text-decoration: none;
+}
+
+.wordmark:hover span {
+	color: var(--gl-blue);
+}
+
+@media (max-width: 380px) {
+	.wordmark { font-size: 16px; }
+}
+
+/* With the logo gone, the topline is two columns rather than three. Keep the
+   phone left and the email right at desktop width. */
+@media (min-width: 768px) {
+	.page_topline .col-md-6:last-child .media {
+		justify-content: flex-end;
+	}
+}
+
+
+/* 4a. Dropdown menus — Cabin and Photos
+   ==========================================================================
+   Three things were wrong with these.
+
+   1. VERTICAL BARS. At 1200px and up the theme gives top-level nav links
+      33px of padding above and below but none at the sides, so the link box
+      is 80px tall and only as wide as its text. Any focus ring drawn round
+      that reads as two tall bars either side of the word. Replaced with an
+      underline, which is just as visible and does not distort the header.
+
+   2. NO INDICATOR. Every one of the theme's dropdown-arrow rules sits inside
+      a max-width:1199px block, so on a desktop there was nothing at all to
+      show that Cabin and Photos even had pulldowns.
+
+   3. FRAGILE OVERFLOW. The theme's menuHideExtraElements() measures the nav
+      and, if it thinks it overflows, clones the tail items into a "..."
+      menu -- submenus and all, nested two deep, which renders badly. With
+      seven top-level items that is easy to trigger. Neutralised below, and
+      the spacing tightened so the menu fits without it.
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+
+	/* 1. Focus that does not draw bars. */
+	.top-nav .sf-menu > li > a:focus-visible {
+		outline: none;
+		text-decoration: underline;
+		text-decoration-color: var(--gl-gold-text);
+		text-decoration-thickness: 2px;
+		text-underline-offset: 5px;
+	}
+
+	/* 2. A caret on anything that opens a pulldown. */
+	.top-nav .sf-menu > li > a.sf-with-ul::after {
+		content: "\f107";
+		font-family: FontAwesome;
+		font-size: 12px;
+		font-weight: 400;
+		margin-left: 7px;
+		opacity: .75;
+		position: static;
+		vertical-align: 1px;
+	}
+
+	.top-nav .sf-menu > li:hover > a.sf-with-ul::after,
+	.top-nav .sf-menu > li.sfHover > a.sf-with-ul::after {
+		opacity: 1;
+	}
+
+	/* 3. Never let the theme collapse the menu into a "..." clone. */
+	.top-nav .sf-more-li {
+		display: none !important;
+	}
+
+	.top-nav .sf-menu > li.sf-xl-hidden {
+		display: inline-block !important;
+	}
+
+	/* Seven top-level items need less air between them than the theme's
+	   15px (25px above 1500px) to sit on one line comfortably. */
+	.top-nav .sf-menu > li > a {
+		margin-left: 11px;
+		margin-right: 11px;
+	}
+}
+
+@media (min-width: 1500px) {
+	.top-nav .sf-menu > li > a {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+/* The dropdown panel itself — tighter, with an edge so it reads as a panel
+   rather than floating text. */
+@media (min-width: 1200px) {
+	.top-nav .sf-menu li > ul {
+		border-top: 2px solid var(--gl-gold);
+		box-shadow: 0 12px 28px rgba(58, 54, 48, .14);
+		min-width: 218px;
+		padding-bottom: 8px;
+		padding-top: 8px;
+	}
+
+	.top-nav .sf-menu li > ul > li > a {
+		font-size: 13px;
+		letter-spacing: .06em;
+		padding-bottom: 9px;
+		padding-top: 9px;
+	}
+
+	/* The grey fill is a hover state and nothing else, so it tracks the
+	   mouse down the list. Giving it to .active as well pinned it to
+	   whichever page you were already on, which read as a stuck highlight. */
+	.top-nav .sf-menu li > ul > li > a:hover,
+	.top-nav .sf-menu li > ul > li > a:focus-visible {
+		background-color: var(--gl-sunk);
+		color: var(--gl-gold-text);
+	}
+
+	/* The page you are on is marked with colour and weight only — no fill,
+	   and no change to padding, so every row stays aligned. */
+	.top-nav .sf-menu li > ul > li.active > a {
+		background-color: transparent;
+		color: var(--gl-gold-text);
+		font-weight: 700;
+	}
+
+	/* Hover still wins over the active page, so the fill follows the mouse
+	   even across the item you are currently on. */
+	.top-nav .sf-menu li > ul > li.active > a:hover {
+		background-color: var(--gl-sunk);
+	}
+}
+
+
+/* 4b. Book Now button
    ========================================================================== */
 
 .sf-menu > li.nav-book > a {
@@ -205,6 +480,13 @@ textarea:focus-visible {
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 1.2;
+}
+
+.gl-facts-item .gl-facts-value .gl-facts-unit {
+	color: var(--gl-body);
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 3px;
 }
 
 .gl-facts-item .gl-facts-label {
@@ -572,6 +854,171 @@ textarea:focus-visible {
 
 .gl-footer-links li:last-child:after {
 	content: none;
+}
+
+
+/* 5.11 Amenity list, grouped by room
+   ========================================================================== */
+
+.gl-amenity-group {
+	border-bottom: 1px solid var(--gl-rule);
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.gl-amenity-group:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+.gl-amenity-group h3 {
+	align-items: center;
+	display: flex;
+	font-size: 20px;
+	gap: 12px;
+	margin: 0 0 6px;
+}
+
+.gl-amenity-group h3 i.fa {
+	color: var(--gl-gold-text);
+	font-size: 18px;
+	width: 24px;
+}
+
+.gl-amenity-group .gl-group-note {
+	color: var(--gl-body);
+	font-size: 14px;
+	margin: 0 0 18px;
+}
+
+.gl-amenity-list {
+	columns: 3;
+	column-gap: 36px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gl-amenity-list li {
+	break-inside: avoid;
+	color: var(--gl-body);
+	padding: 6px 0 6px 26px;
+	position: relative;
+}
+
+.gl-amenity-list li:before {
+	content: "\f00c";
+	color: var(--gl-gold-text);
+	font-family: FontAwesome;
+	font-size: 12px;
+	left: 0;
+	position: absolute;
+	top: 9px;
+}
+
+/* Things the cabin does NOT have. Worth its own treatment — telling guests
+   what to bring prevents more complaints than any amenity list. */
+.gl-amenity-list.gl-bring li:before {
+	content: "\f0da";
+	color: var(--gl-body);
+}
+
+@media (max-width: 991px) {
+	.gl-amenity-list {
+		columns: 2;
+	}
+}
+
+@media (max-width: 575px) {
+	.gl-amenity-list {
+		columns: 1;
+	}
+}
+
+
+/* 5.11b Calendar mount point
+   ==========================================================================
+   Holds the space the live calendar will occupy, so the page does not jump
+   when the embed goes in. Replace the whole .gl-calendar-slot with the
+   provider's iframe or script tag. */
+
+.gl-calendar-slot {
+	background: var(--gl-sunk);
+	border: 2px dashed var(--gl-rule);
+	display: grid;
+	min-height: 380px;
+	place-items: center;
+	padding: 40px 28px;
+	text-align: center;
+}
+
+.gl-calendar-inner {
+	max-width: 46ch;
+}
+
+.gl-calendar-inner i.fa {
+	color: var(--gl-gold-text);
+	display: block;
+	font-size: 34px;
+	margin-bottom: 16px;
+}
+
+.gl-calendar-inner h3 {
+	font-size: 21px;
+	margin-bottom: 12px;
+}
+
+.gl-calendar-inner p {
+	color: var(--gl-body);
+	margin-bottom: 0;
+}
+
+
+/* 5.12 Draft block
+   ==========================================================================
+   Wraps a long list that is a starting checklist rather than confirmed fact.
+   Flagging every line individually would make the page unreadable, so the
+   whole block is marked instead. Remove the wrapper once confirmed. */
+
+.gl-draft {
+	background-image: repeating-linear-gradient(
+		45deg,
+		rgba(176, 69, 58, 0.045) 0,
+		rgba(176, 69, 58, 0.045) 10px,
+		transparent 10px,
+		transparent 20px
+	);
+	border: 2px dashed #c98a80;
+	padding: 26px 28px 28px;
+	position: relative;
+}
+
+.gl-draft > .gl-draft-label {
+	background: #b0453a;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	margin: -38px 0 22px -30px;
+	padding: 5px 14px;
+	text-transform: uppercase;
+}
+
+.gl-draft > .gl-draft-label:before {
+	content: "\f071\00a0\00a0";
+	font-family: FontAwesome;
+	font-weight: 400;
+}
+
+@media (max-width: 575px) {
+	.gl-draft {
+		padding: 22px 18px 24px;
+	}
+
+	.gl-draft > .gl-draft-label {
+		margin-left: -20px;
+	}
 }
 
 

@@ -41,13 +41,13 @@
 	<div id="canvas">
 		<div id="box_wrapper">
 
-			<div class="header_absolute cover-background ds s-overlay">
+			<div class="header_absolute ls page-head">
 
 				<!-- @partial:topline -->
 				<section class="page_topline ds s-py-10 c-my-10">
 					<div class="container">
 						<div class="row align-items-center">
-							<div class="col-12 col-md-4 col-xl-4">
+							<div class="col-12 col-md-6">
 								<div class="media">
 									<span class="icon-styled">
 										<i class="fa color-main2 fa-phone" aria-hidden="true"></i>
@@ -58,12 +58,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 text-center hidden-below-md">
-								<a href="index.html" class="logo">
-									<img src="images/logo.png" alt="Grand Lake Getaway" width="1536" height="1024">
-								</a>
-							</div>
-							<div class="col-12 col-md-4 col-xl-4">
+							<div class="col-12 col-md-6">
 								<div class="media">
 									<div class="media-body align-items-end">
 										<span class="small-text">Email us</span>
@@ -83,9 +78,7 @@
 					<div class="container-fluid">
 						<div class="row align-items-lg-end align-items-center">
 							<div class="col-10 col-md-4 hidden-above-md d-flex">
-								<a href="index.html" class="logo">
-									<img src="images/logo.png" alt="Grand Lake Getaway" width="1536" height="1024">
-								</a>
+								<a href="index.html" class="wordmark">Grand&nbsp;Lake <span>Getaway</span></a>
 							</div>
 
 							<div class="col-lg-12 col-1">
@@ -97,6 +90,11 @@
 										</li>
 										<li data-nav="cabin">
 											<a href="cabin.html">THE CABIN</a>
+											<ul>
+												<li data-nav="about"><a href="cabin.html">ABOUT</a></li>
+												<li data-nav="amenities"><a href="amenities.html">WHAT'S PROVIDED</a></li>
+												<li data-nav="rules"><a href="house-rules.html">HOUSE RULES</a></li>
+											</ul>
 										</li>
 										<li data-nav="photos">
 											<a href="gallery-cabin.html">PHOTOS</a>
@@ -106,7 +104,10 @@
 											</ul>
 										</li>
 										<li data-nav="rates" class="active">
-											<a href="rates.html">RATES &amp; AVAILABILITY</a>
+											<a href="rates.html">RATES</a>
+										</li>
+										<li data-nav="availability">
+											<a href="availability.html">AVAILABILITY</a>
 										</li>
 										<li data-nav="things">
 											<a href="things-to-do.html">THINGS TO DO</a>
@@ -123,7 +124,7 @@
 					<span class="toggle_menu"><span></span></span>
 				</header>
 
-				<section class="page_title ds s-py-30 s-py-md-50">
+				<section class="page_title ls page-head-title">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12 text-center">
@@ -211,7 +212,6 @@
 									<h3 class="mb-3">Also payable</h3>
 									<ul class="gl-distances">
 										<li><span class="gl-place">Cleaning fee</span> <span class="gl-dist"><span class="needs-info">$</span></span></li>
-										<li><span class="gl-place">Pet fee</span> <span class="gl-dist"><span class="needs-info">$ / n/a</span></span></li>
 										<li><span class="gl-place">Security deposit</span> <span class="gl-dist"><span class="needs-info">$ / none</span></span></li>
 										<li><span class="gl-place">Taxes</span> <span class="gl-dist"><span class="needs-info">%</span></span></li>
 									</ul>
@@ -222,29 +222,6 @@
 									<p>Booking through a listing site typically adds a guest service fee of roughly 12&ndash;15% on top of everything above. Booking here does not.</p>
 									<p><span class="needs-info">TELL CLAUDE: if you want, I can put a worked example here - "a 4-night summer stay costs $X here vs $Y on Airbnb". It is the single most persuasive thing you can put on this page.</span></p>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="ls ms s-pt-70 s-pb-80 s-pt-md-110 s-pb-md-120">
-				<div class="container">
-					<div class="row">
-						<div class="col-12 text-center">
-							<p class="top-subtitle">Availability</p>
-							<h2 class="section-heading d-inline-block">When Is It Free? <span class="back">calendar</span></h2>
-							<div class="mt--15"></div>
-						</div>
-					</div>
-					<div class="row justify-content-center mt-30">
-						<div class="col-lg-9">
-							<div class="gl-reason">
-								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<h4>A live calendar goes here</h4>
-								<p>This is the one thing on the site that has to be right, because a calendar that is out of date is worse than no calendar at all &mdash; it produces enquiries for dates you have already sold.</p>
-								<p class="mt-3">The usual answer is a booking engine that syncs with Airbnb and VRBO automatically: <strong>Lodgify</strong>, <strong>OwnerRez</strong>, <strong>Hostaway</strong> or <strong>Uplisting</strong>. They give you an embed code for a calendar and a real &ldquo;Book&rdquo; button that takes payment. A free alternative is to publish your Airbnb calendar as an iCal feed and embed it read-only through Google Calendar &mdash; less pretty, but honest and automatic.</p>
-								<p class="mt-3"><span class="needs-info">TELL CLAUDE: which of these you want and I will wire it in. If you would rather not run one at all, say so and I will replace this whole block with a plain "email to check dates" panel, which is a perfectly reasonable choice for one property.</span></p>
 							</div>
 						</div>
 					</div>
@@ -341,7 +318,7 @@
 								<a href="index.html" class="logo flex-column pb-0">
 									<img src="images/logo.png" alt="Grand Lake Getaway" width="1536" height="1024">
 								</a>
-								<p>A private cabin on the quiet side of the Rockies — minutes from the west entrance of Rocky Mountain National Park and the Grand Lake boardwalk.</p>
+								<p>A private retreat on the quiet side of the Rockies — ten minutes from the west entrance of Rocky Mountain National Park.</p>
 								<ul class="mb-10">
 									<li class="icon-inline">
 										<div class="icon-styled icon-top color-main fs-14">
@@ -375,8 +352,10 @@
 								<h3 class="widget-title">Explore</h3>
 								<ul class="list-styled">
 									<li><a href="cabin.html">The cabin</a></li>
+									<li><a href="amenities.html">What&rsquo;s provided</a></li>
 									<li><a href="gallery-cabin.html">Photos</a></li>
-									<li><a href="rates.html">Rates &amp; availability</a></li>
+									<li><a href="rates.html">Rates</a></li>
+									<li><a href="availability.html">Availability</a></li>
 									<li><a href="things-to-do.html">Things to do</a></li>
 									<li><a href="house-rules.html">House rules</a></li>
 									<li><a href="faq.html">Frequently asked questions</a></li>
