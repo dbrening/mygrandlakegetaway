@@ -1293,6 +1293,60 @@ section.s-pb-30 { padding-bottom: 26px; }
 }
 
 
+/* 5.11d Attribution panel
+   ==========================================================================
+   Points at an outside source (the Chamber of Commerce) without pretending
+   the content originated here. */
+
+.gl-source {
+	background: #fff;
+	border: 1px solid var(--gl-rule);
+	border-left: 3px solid var(--gl-gold);
+	display: flex;
+	gap: 22px;
+	padding: 28px 30px;
+}
+
+.gl-source-icon {
+	color: var(--gl-gold-text);
+	flex: none;
+	font-size: 28px;
+	line-height: 1;
+	padding-top: 4px;
+}
+
+.gl-source h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.gl-source p {
+	color: var(--gl-body);
+	margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+	.gl-source {
+		flex-direction: column;
+		gap: 12px;
+		padding: 24px 20px;
+	}
+
+	.gl-source .btn {
+		display: block;
+		margin: 0 0 10px !important;
+		text-align: center;
+	}
+}
+
+/* External links get a subtle marker so it is clear they leave the site. */
+.gl-source a[target="_blank"]:not(.btn),
+.gl-distances a[target="_blank"] {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+
 /* 5.12 Draft block
    ==========================================================================
    Wraps a long list that is a starting checklist rather than confirmed fact.
